@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback , useRef} from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
@@ -12,6 +12,15 @@ import { Parallax, ParallaxProvider } from 'react-scroll-parallax';
 import Typography from './valuesComponents/Typography';
 import { Directions } from '@material-ui/icons';
 import Portal from './Portal.js'
+
+import {
+  useViewportScroll,
+  motion,
+  useTransform,
+  useMotionValue
+} from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
+
 
 const styles = (theme) => ({
   root: {
@@ -97,12 +106,35 @@ const parallaxData = {
   y: [],
 };
 
+
+
+const [ref, inView, entry] = useInView({
+  /* Optional options */
+  threshold: 0.5,
+  triggerOnce: false
+});
+const variants = {
+  visible: { opacity: 1, scale: 1, y: 0 },
+  hidden: {
+    opacity: 0,
+    scale: 0.65,
+    y: 50
+  }
+};
+
   const { classes } = props;
   const sectionCards = cardData.map((card, ind) => (
    
       <Grid  lg={sizeChart.xs} spacing={1} style={{flexDirection: `${flexDir}`,display: 'flex', justifyContent: 'center'}}>
       <Container  style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-          {card[1]}  
+          
+      <motion.div
+        animate={inView ? 'visible' : 'hidden'}
+        variants={variants}
+        transition={{ duration: 2, ease: 'easeOut' }}
+        ref={ref}
+        className="magic"
+      >{card[1]}   </motion.div>
           <Typography variant="h5" className={classes.title}>
             {card[2]}
           </Typography>

@@ -1,3 +1,4 @@
+import zIndex from '@material-ui/core/styles/zIndex';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const imageData = [
@@ -18,17 +19,17 @@ const imageData = [
 ];
 const variants = {
   enter: (direction) => ({
-    x: direction > 0 ? 800 : -800,
+    x: direction > 0 ? 1000 : -1000,
     opacity: 0,
   }),
   center: {
-    zIndex: 1,
+    zIndex: 0,
     x: 0,
     opacity: 1,
   },
   exit: (direction) => ({
     zIndex: 0,
-    x: direction < 0 ? 800 : -800,
+    x: direction < 0 ? 1000 : -1000,
     opacity: 0,
   }),
 };
@@ -43,6 +44,7 @@ const PortalGallery = ({
       <AnimatePresence initial={false} custom={direction}>
         <motion.img
           className="portal-imgs"
+          zIndex={0}
           key={page}
           src={imageData[imageIndex]}
           custom={direction}
@@ -51,7 +53,7 @@ const PortalGallery = ({
           animate="center"
           exit="exit"
           transition={{
-            opacity: { duration: 0.1 },
+            opacity: { duration: 0.3 },
           }}
           drag="x"
           dragConstraints={{ left: 0, right: 0 }}

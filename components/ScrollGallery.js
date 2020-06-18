@@ -102,9 +102,12 @@ const ScrollGallery = () => (
   <>
     <section className="scroll-gallery">
       <div className="scroll-gallery-container">
+      <div className="content-container">
+          </div>
         {images.map((image) => (
           <ParallaxImage key={image.src} {...image} />
         ))}
+
       </div>
     </section>
   </>

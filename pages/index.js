@@ -20,6 +20,8 @@ const Index = () => (
     <div className="main-container">
       <NavBar />
       <FeatureScroll />
+      <DynamicValues />
+      <DynamicScrollGallery />
     </div>
   </>
 

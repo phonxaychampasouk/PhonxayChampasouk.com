@@ -16,8 +16,8 @@ const imageData = [
   '/flower.JPG',
   '/gardenofgods.JPG',
   '/lake.JPG',
-  '/landscape.JPG',
-  '/landscape2.JPG',
+  '/yellow.jpg',
+  '/flow.jpg',
   '/moosesmiles.JPG',
   '/open.jpg',
   '/stickme.jpg',
@@ -67,12 +67,22 @@ const Portal = ({screenWidth}) => {
   return (
 
       <section className="portal-outer-container">
+                
+          <PortalGallery
+          className="portal-grid-display"
+            paginate={paginate}
+            imageIndex={imageIndex}
+            direction={direction}
+            page={page}
+          />
+          
+        
         <div className="portal-navigation-container">
          
-             <div className="prev" role="button" tabIndex={-1} onKeyDown={() => paginate(-1)} onClick={() => paginate(1)}>
+             <div className="prev" role="button" tabIndex={-1} onKeyDown={() => paginate(-1)} onClick={() => paginate(-1)}>
             ‣
           </div>
-          <div className="next" role="button" tabIndex={0} onKeyUp={() => paginate(1)} onClick={() => paginate(-1)}>
+          <div className="next" role="button" tabIndex={0} onKeyUp={() => paginate(1)} onClick={() => paginate(1)}>
             ‣
           </div>
           <motion.div
@@ -95,15 +105,7 @@ const Portal = ({screenWidth}) => {
              </motion.div>
         </div>         
             
-        <div className="portal-grid-display">
-          <PortalGallery
-            paginate={paginate}
-            imageIndex={imageIndex}
-            direction={direction}
-            page={page}
-          />
-          
-        </div>
+        
 
       
       </section>
