@@ -1,3 +1,5 @@
+@import "../theme/theme";
+// we are importing the attributes from theme which include font and background color
 .Header {
     display: flex;
     justify-content: flex-start;
@@ -8,13 +10,13 @@
   
     padding: 0 20px;
   
-    font-family: Arial, sans-serif;
+    font-family: $logo-font;
     font-size: 24px;
     font-weight: bold;
-    color: white;
+    color: $on-secondary;
     text-transform: uppercase;
   
-    background: crimson;
+    background: $highlight;
   
     cursor: pointer;
   }

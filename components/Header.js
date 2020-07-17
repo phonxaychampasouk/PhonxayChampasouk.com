@@ -1,5 +1,11 @@
+import Link from 'next/link';
+
 import './Header.scss';
 
-const Header = () => <div className="Header">HEADER</div>;
+const Header = ({ appTitle }) => (
+  <Link href="/">
+    <div className="Header">{appTitle}</div>
+  </Link>
+);
 
 export default Header;
