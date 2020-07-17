@@ -35,4 +35,4 @@ const CountrySelector = ({ handleChange, stats }) => (
     margin-bottom: 10px;
   `
   
-  export default CountrySelector
+  export default CountrySelector;
