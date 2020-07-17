@@ -15,8 +15,8 @@ const contentStyle = {
   flexDirection: 'column',
 };
 
-// inorder to have a document title on every page, use the <head> block in the Layout component template
-// be sure to import Head from 'next/head' to modify the title.
+/* inorder to have a document title on every page, use the <head> block
+in the Layout component template be sure to import Head from 'next/head' to modify the title. */
 
 const Layout = ({ children }) => (
   <div className="Layout" style={layoutStyle}>

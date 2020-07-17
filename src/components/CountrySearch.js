@@ -1,13 +1,11 @@
-import React from 'react'
+import React from 'react';
 
-const CountrySearch = ({ handleChange }) => {
-  return (
-    <input
-      onChange={handleChange}
-      placeholder="Search for a country"
-      type="search"
-    />
-  )
-}
+const CountrySearch = ({ handleChange }) => (
+  <input
+    onChange={handleChange}
+    placeholder="Search for a country"
+    type="search"
+  />
+);
 
-export default CountrySearch
+export default CountrySearch;
