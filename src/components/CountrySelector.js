@@ -1,19 +1,19 @@
+/* eslint-disable react/no-array-index-key */
 import React from 'react';
-import styled from "styled-components"
-
+import styled from 'styled-components';
 
 const CountrySelector = ({ handleChange, stats }) => (
-    <div>
-      <Selector onChange={handleChange}>
-        <option>Select a country</option>
-        {stats.map((stat, i) => (
-          <option key={`${stat.country}-${i}`}>{stat.country}</option>
-        ))}
-      </Selector>
-    </div>
-  )
-  
-  const Selector = styled.select`
+  <div>
+    <Selector onChange={handleChange}>
+      <option>Select a country</option>
+      {stats.map((stat, i) => (
+        <option key={`${stat.country}-${i}`}>{stat.country}</option>
+      ))}
+    </Selector>
+  </div>
+);
+
+const Selector = styled.select`
     -webkit-box-align: center;
     align-items: center;
     background-color: rgb(255, 255, 255);
@@ -33,6 +33,6 @@ const CountrySelector = ({ handleChange, stats }) => (
     outline: 0px !important;
     font-size: 15px;
     margin-bottom: 10px;
-  `
-  
-  export default CountrySelector;
+  `;
+
+export default CountrySelector;

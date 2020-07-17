@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /* eslint-disable no-async-promise-executor */
 import React from 'react';
 import { assign, Machine } from 'xstate';
@@ -30,7 +31,7 @@ const statsMachine = Machine(
             }
           }),
           /*
-           onDone's target is the next target state, actions is how the state saves the 
+           onDone's target is the next target state, actions is how the state saves the
            returned promise to the machine
            actions simutaneously assigns the stats and the state moves to the target state
           */
