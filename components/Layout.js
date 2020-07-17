@@ -1,4 +1,4 @@
-
+import Head from "next/head";
 import Header from "./Header";
 import NavBar from "./NavBar";
 
@@ -15,8 +15,16 @@ const contentStyle = {
   flexDirection: "column"
 };
 
+//inorder to have a document title on every page, use the <head> block in the Layout component template
+// be sure to import Head from 'next/head' to modify the title. 
+
 const Layout = props => (
   <div className="Layout" style={layoutStyle}>
+
+    <Head>
+      <title>PHONXAY</title>
+    </Head>
+
     <Header />
     <div className="Content" style={contentStyle}>
       {props.children}
