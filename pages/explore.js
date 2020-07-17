@@ -1,5 +1,5 @@
-import Layout from "../components/Layout";
+import Layout from '../components/Layout';
 
-const ExploreView = props => <Layout>{`Explore View`}</Layout>
+const ExploreView = () => <Layout>Explore View</Layout>;
 
 export default ExploreView;

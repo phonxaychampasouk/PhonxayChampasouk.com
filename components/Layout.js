@@ -1,24 +1,24 @@
-import Head from "next/head";
-import Header from "./Header";
-import NavBar from "./NavBar";
+import Head from 'next/head';
+import Header from './Header';
+import NavBar from './NavBar';
 
 const layoutStyle = {
-  display: "flex",
-  flexDirection: "column",
-  height: "100%",
-  width: "100%"
+  display: 'flex',
+  flexDirection: 'column',
+  height: '100%',
+  width: '100%',
 };
 
 const contentStyle = {
   flex: 1,
-  display: "flex",
-  flexDirection: "column"
+  display: 'flex',
+  flexDirection: 'column',
 };
 
-//inorder to have a document title on every page, use the <head> block in the Layout component template
-// be sure to import Head from 'next/head' to modify the title. 
+// inorder to have a document title on every page, use the <head> block in the Layout component template
+// be sure to import Head from 'next/head' to modify the title.
 
-const Layout = props => (
+const Layout = ({ children }) => (
   <div className="Layout" style={layoutStyle}>
 
     <Head>
@@ -27,7 +27,7 @@ const Layout = props => (
 
     <Header />
     <div className="Content" style={contentStyle}>
-      {props.children}
+      {children}
     </div>
     <NavBar />
   </div>
