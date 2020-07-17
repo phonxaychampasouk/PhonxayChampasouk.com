@@ -10,4 +10,4 @@ const CountrySearch = ({ handleChange }) => {
   )
 }
 
-export default CountrySearch
+export default CountrySearch;
