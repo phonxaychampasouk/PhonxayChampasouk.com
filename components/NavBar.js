@@ -12,4 +12,3 @@ const navBarStyle = {
   );
   
   export default NavBar;
-  
