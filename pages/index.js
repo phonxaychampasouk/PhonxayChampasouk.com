@@ -4,10 +4,7 @@ const Index = () => {
 
     return (
 <Layout>
-    <div className="container">
-<img className="image" src="/me_resided.jpg" />
-</div>
-
+<img className="image" src="/me.jpg" />
 </Layout>
     );
 }
