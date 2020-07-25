@@ -1,9 +1,15 @@
 @import '../theme/theme';
 
+.container{
+position: flex;
+justify-content: flex-end;
+}
+
 .NavBar {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
+    flex-direction: row-reverse;
 
     height: 60px;
     width: 100%;
@@ -14,8 +20,10 @@
     font-family: $core-font;
     font-size: 22px;
     color: $on-primary-light;
-  
+    opacity: 75%;
     box-shadow: 0px -2px 15px rgba(50, 50, 50, 0.45);
+
+    z-index: 1;
   
     a {
       color: inherit;

@@ -8,7 +8,6 @@ import './index.scss';
 /* inorder to have a document title on every page, use the <head> block
 in the Layout component template be sure to import Head from 'next/head' to modify the title. */
 
-
 // Layout.js is a good data data hydration point for apps UI
 const Layout = ({ children }) => {
   const appTitle = '> Phonxay Champasouk';
@@ -25,7 +24,7 @@ const Layout = ({ children }) => {
       <div className="Content">
         {children}
       </div>
-      <NavBar />
+        <NavBar />
     </div>
   );
 };
