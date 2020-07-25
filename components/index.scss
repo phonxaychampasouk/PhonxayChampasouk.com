@@ -21,15 +21,4 @@
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
   }
-.container{
-    display: flex;
-    flex-direction: column;
-}
-  .image{
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    max-width:100%;
-    min-height:100%; 
-    object-fit: cover; 
- }
+
