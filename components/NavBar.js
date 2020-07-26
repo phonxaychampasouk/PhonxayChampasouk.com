@@ -1,10 +1,10 @@
-import './NavBar.scss';
+// import './NavBar.scss';
 
-const NavBar = () => (
-  <div className="container">
-    <div className="NavBar">NAVBAR</div>
-  </div>
+// const NavBar = () => (
+//   <div className="container">
+//     <div className="NavBar">NAVBAR</div>
+//   </div>
 
-);
+// );
 
-export default NavBar;
+// export default NavBar;

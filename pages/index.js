@@ -1,9 +1,13 @@
-import Layout from '../components/Layout';
+// import Layout from '../components/Layout';
 import Feature from '../components/Feature';
+import Slider from '../components/Slider';
+import '../components/index.scss';
 
 const Index = () => (
-  <Layout>
+  <div className="main-container">
     <Feature />
-  </Layout>
+    <Slider />
+  </div>
+
 );
 export default Index;

@@ -28,7 +28,10 @@ body, button, input {
 }
 
 .Layout{
-  display: block; 
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center; 
 }
 
 .main{
