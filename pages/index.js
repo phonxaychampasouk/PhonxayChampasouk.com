@@ -4,8 +4,8 @@ import Feature from '../components/Feature';
 
 const Index = () => (
   <Layout>
-      <Feature />
-      <Carousel />
+    <Feature />
+    <Carousel />
   </Layout>
 );
 export default Index;

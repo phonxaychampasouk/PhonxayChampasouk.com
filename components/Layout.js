@@ -3,7 +3,6 @@ import Header from './Header';
 import NavBar from './NavBar';
 
 import './Layout.scss';
-import './index.scss';
 
 /* inorder to have a document title on every page, use the <head> block
 in the Layout component template be sure to import Head from 'next/head' to modify the title. */
@@ -12,7 +11,7 @@ in the Layout component template be sure to import Head from 'next/head' to modi
 const Layout = ({ children }) => {
   const appTitle = '> Phonxay Champasouk';
   return (
-    <div className="Layout">
+    <main className="Layout">
 
       <Head>
         <title>PHONXAY</title>
@@ -21,11 +20,11 @@ const Layout = ({ children }) => {
       </Head>
 
       <Header appTitle={appTitle} />
-      <div className="Content">
+      <div className="main">
         {children}
       </div>
-        <NavBar />
-    </div>
+      <NavBar />
+    </main>
   );
 };
 export default Layout;

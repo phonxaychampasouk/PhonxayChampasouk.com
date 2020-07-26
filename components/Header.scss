@@ -1,27 +1,35 @@
 @import "../theme/theme";
 // we are importing the attributes from theme which include font and background color
 
+.primary{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 200;
+  transition: top 0s .1s,opacity .3s cubic-bezier(.38,.41,.27,1),transform .6s cubic-bezier(.38,.41,.27,1);
+}
 .Header {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-  
-    height: 100px;
+    position: relative;
     width: 100%;
-  
-    padding: 0 20px;
-  
-    font-family: $logo-font;
-    font-size: 24px;
-    font-weight: bold;
-    color: $on-secondary;
-    text-transform: uppercase;
-  
-    background: $highlight;
-    opacity: 75%;
+    height: 12rem;
+    padding: 0 4rem;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: opacity .3s cubic-bezier(.38,.41,.27,1),height .3s cubic-bezier(.38,.41,.27,1),visibility .3s; 
 
-    z-index:1;
-  
-    cursor: pointer;
-  }
+    background-color: grey;
+    opacity: 75%;
+}
+    .title{
+        position: relative;
+        flex: 0 0 auto;
+        z-index: 1;
+        transition: opacity .3s cubic-bezier(.38,.41,.27,1);
+        top: .3rem;
+        cursor: pointer;
+    
+}
