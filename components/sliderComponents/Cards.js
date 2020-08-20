@@ -1,30 +1,57 @@
-import '../stylesCards.scss';
+import React from 'react';
+import { Card, Icon, Image } from 'semantic-ui-react';
 
-// Cards need src, card caption, card href
-// Need to take in data through props
-// use state machine Xstate
-// each card will have events listeners
-const Cards = () => {
-  const cardData = [
-    { src: '/card/card1.jpeg', caption: 'Following is the top-list of the best quotes on fake people and fake friends. Weve divided it into 2 parts: first part is all about fake friends and the second part includes popular fake people quotes' },
-    { src: '/card/card2.jpeg', caption: 'Following is the top-list of the best quotes on fake people and fake friends. Weve divided it into 2 parts: first part is all about fake friends and the second part includes popular fake people quotes' },
-    { src: '/card/card3.jpeg', caption: 'Following is the top-list of the best quotes on fake people and fake friends. Weve divided it into 2 parts: first part is all about fake friends and the second part includes popular fake people quotes' },
-    { src: '/card/card4.jpeg', caption: 'Following is the top-list of the best quotes on fake people and fake friends. Weve divided it into 2 parts: first part is all about fake friends and the second part includes popular fake people quotes' },
-    { src: '/card/card5.jpeg', caption: 'Following is the top-list of the best quotes on fake people and fake friends. Weve divided it into 2 parts: first part is all about fake friends and the second part includes popular fake people quotes' },
-
-  ];
-  const cards = cardData.map((card, index) => (
-    <>
-      <img className="card" key={`imgkey-${index}`} src={card.src} alt="card" />
-      <div className="card-caption" key={`captionkey-${index}`}>Caption</div>
-    </>
-  ));
-
-  return (
-    <div className="cards">
-    { cards }
-    </div>
-  );
-};
+const Cards = () => (
+<>
+  <Card className='cards'>
+    <Image src='https://react.semantic-ui.com/images/avatar/large/daniel.jpg' fluid ui={false} />
+    <Card.Content>
+      <Card.Header>Daniel</Card.Header>
+      <Card.Meta>Joined in 2016</Card.Meta>
+      <Card.Description>
+        Daniel is a comedian living in Nashville.
+      </Card.Description>
+    </Card.Content>
+    <Card.Content extra>
+      <a>
+        <Icon name='user' />
+        10 Friends
+      </a>
+    </Card.Content>
+  </Card>
+  <Card className='cards'>
+    <Image src='https://react.semantic-ui.com/images/avatar/large/daniel.jpg' fluid ui={false} />
+    <Card.Content>
+      <Card.Header>Daniel</Card.Header>
+      <Card.Meta>Joined in 2016</Card.Meta>
+      <Card.Description>
+        Daniel is a comedian living in Nashville.
+      </Card.Description>
+    </Card.Content>
+    <Card.Content extra>
+      <a>
+        <Icon name='user' />
+        10 Friends
+      </a>
+    </Card.Content>
+  </Card>
+  <Card className='cards'>
+    <Image src='https://react.semantic-ui.com/images/avatar/large/daniel.jpg' fluid ui={false} />
+    <Card.Content>
+      <Card.Header>Daniel</Card.Header>
+      <Card.Meta>Joined in 2016</Card.Meta>
+      <Card.Description>
+        Daniel is a comedian living in Nashville.
+      </Card.Description>
+    </Card.Content>
+    <Card.Content extra>
+      <a>
+        <Icon name='user' />
+        10 Friends
+      </a>
+    </Card.Content>
+  </Card>
+  </>
+);
 
 export default Cards;
