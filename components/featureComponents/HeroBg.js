@@ -1,6 +1,8 @@
+import { Image } from 'semantic-ui-react';
+
 const HeroBg = () => (
   <figure className="hero-bg">
-    <img className="hero-image" src="/me.jpg" alt="Climbing MT Index" />
+    <Image className="hero-image" src="/me.jpg" alt="Climbing MT Index" fluid />
   </figure>
 );
 

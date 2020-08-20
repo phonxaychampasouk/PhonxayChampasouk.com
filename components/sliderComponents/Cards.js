@@ -1,4 +1,4 @@
-import './Cards.scss';
+import '../stylesCards.scss';
 
 // Cards need src, card caption, card href
 // Need to take in data through props

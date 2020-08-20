@@ -1,7 +1,7 @@
-import '../styles/Slider.scss';
-import { Card, Icon, Image } from 'semantic-ui-react'
+import React from 'react';
+import { Card, Icon, Image } from 'semantic-ui-react';
 
-const Slider = () => (
+const CardsSlider = () => (
   <Card>
     <Image src='https://react.semantic-ui.com/images/avatar/large/daniel.jpg' wrapped ui={false} />
     <Card.Content>
@@ -20,4 +20,4 @@ const Slider = () => (
   </Card>
 )
 
-export default Slider;
+export default CardSlider;

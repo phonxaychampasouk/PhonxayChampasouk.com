@@ -1,4 +1,4 @@
-import './Feature.scss';
+import '../styles/Feature.scss';
 import HeroBg from './featureComponents/HeroBg';
 import HeroInner from './featureComponents/HeroInner';
 
