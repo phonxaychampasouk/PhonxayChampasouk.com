@@ -1,13 +1,10 @@
-@import "../../theme/theme";
 
-.container-card{
-    display: flex;
-    flex-direction: row;
-    flex: nowrap;
+.card {
+    padding:50px;
+
 }
 
-.cards{
-
-    width: 100%;
-
+.card-image {
+    height: auto;
+    width: 20%;
 }
