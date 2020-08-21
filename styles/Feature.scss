@@ -1,13 +1,11 @@
 #home {
     position: relative;
-    height: 800px;
-    min-height: 500px;
+    height: 100%;
     width: 100%;
-    opacity: 100%;
     background-size: cover !important;
      -webkit-background-size: cover !important;
     text-align: center;
-    overflow: hidden;
+    overflow: scroll;
  }
  
  /* vertically center banner section */
@@ -17,16 +15,44 @@
     vertical-align: middle;
     height: 100%;
  }
- header .banner {
-    display: inline-block;
-    vertical-align: middle;
-    margin: 0 auto;
-    width: 85%;
-    padding-bottom: 30px;
-    text-align: center;
+/*======BANNER=====*/
+ @media (max-width: 767px) {
+   header .banner {
+      display: inline-block;
+      vertical-align: middle;
+      margin-top: 75%;
+      height: 150%;
+      width: 85%;
+      padding-bottom: 30px;
+      text-align: center;
+      align-items: center;
+   }
  }
- 
- header .banner-text { width: 100%; }
+
+ @media (min-width: 768px) {
+   header .banner {
+      display: inline-block;
+      vertical-align: middle;
+      margin-top: 25%;
+      height: 150%;
+      width: 85%;
+      padding-bottom: 30px;
+      text-align: center;
+      align-items: center;
+   }
+ }
+/*======BANNER=====*/
+
+ @media (max-width: 480px) {
+   header .banner-text h1 {
+      font: 50px/1.1em 'opensans-bold', sans-serif;
+      color: #fff;
+      letter-spacing: -2px;
+      margin: 0 auto 18px auto;
+      text-shadow: 0px 1px 3px rgba(0, 0, 0, .8);
+   }
+ }
+ @media (min-width: 480px) {
  header .banner-text h1 {
     font: 90px/1.1em 'opensans-bold', sans-serif;
     color: #fff;
@@ -34,6 +60,7 @@
     margin: 0 auto 18px auto;
     text-shadow: 0px 1px 3px rgba(0, 0, 0, .8);
  }
+}
  header .banner-text h3 {
     font: 18px/1.9em 'librebaskerville-regular', serif;
     color: #A8A8A8;
@@ -88,3 +115,52 @@
     transition: all .3s ease-in-out;
  }
  header .scrolldown a:hover { color: #11ABB0; }
+
+ .landing-page-image {
+   position: absolute;
+   top: 0;
+   left: 0;
+   display: block;
+   height: 100%;
+   width: 100%;
+   object-fit: cover;
+   transition: filter 1s; 
+ }
+
+ /*============ABOUT ME====================*/
+
+ #about {
+
+   padding-top: 96px;
+   padding-bottom: 66px;
+   overflow: hidden;
+}
+#background-image {
+   background: #2B2B2B;
+   opacity: 0.75;
+ }
+ #about:hover > #background-image {
+    opacity: 1;
+ }
+ 
+
+
+#about a, #about a:visited  { color: #fff; }
+#about a:hover, #about a:focus { color: #11ABB0; }
+
+#about h2 {
+   font: 22px/30px 'opensans-bold', sans-serif;
+   color: #fff;
+   margin-bottom: 12px;
+}
+#about p {
+   line-height: 30px;
+   color: #7A7A7A;
+}
+#about .profile-pic {
+   position: relative;
+   width: 120px;
+   height: 120px;
+   border-radius: 100%;
+}
+#about .contact-details { width: 41.66667%; }
