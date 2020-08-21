@@ -1,50 +1,60 @@
 import React from 'react';
 import { Image } from 'semantic-ui-react';
-import '../../styles/Cards.scss';
 
 const Cards = () => (
   <>
     <div className="card-image">
       <Image
-        src="/moose.jpeg"
+        src="/mia.jpg"
         as="a"
-        size="small"
+        size="medium"
         href="http://google.com"
         target="_blank"
-        circular
+        rounded
         className="image"
       />
     </div>
     <div className="card-image">
       <Image
-        src="/moose.jpeg"
+        src="/smallimage.jpg"
         as="a"
-        size="small"
+        size="medium"
         href="http://google.com"
         target="_blank"
-        circular
+        rounded
         className="image"
       />
     </div>
     <div className="card-image">
       <Image
-        src="/moose.jpeg"
+        src="/highseth.jpg"
         as="a"
-        size="small"
+        size="medium"
         href="http://google.com"
         target="_blank"
-        circular
+        rounded
         className="image"
       />
     </div>
     <div className="card-image">
       <Image
-        src="/moose.jpeg"
+        src="/seth.jpg"
         as="a"
-        size="small"
+        size="medium"
         href="http://google.com"
         target="_blank"
-        circular
+        rounded
+        className="image"
+      />
+    </div>
+    <div className="card-image">
+      <Image
+        src="/snake.jpg"
+        as="a"
+        size="medium"
+        href="http://google.com"
+        target="_blank"
+        rounded
         className="image"
       />
     </div>

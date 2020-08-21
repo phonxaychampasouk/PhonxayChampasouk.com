@@ -1,4 +1,3 @@
-import '../styles/Slider.scss';
 import Cards from './sliderComponents/Cards';
 
 const Slider = () => (
