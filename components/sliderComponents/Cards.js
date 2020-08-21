@@ -1,5 +1,6 @@
 import React from 'react';
-import { Card, Icon, Image } from 'semantic-ui-react';
+import { Image } from 'semantic-ui-react';
+import '../../styles/Cards.scss';
 
 const Cards = () => (
   <>
@@ -7,36 +8,44 @@ const Cards = () => (
       <Image
         src="/moose.jpeg"
         as="a"
-        size="medium"
+        size="small"
         href="http://google.com"
         target="_blank"
+        circular
+        className="image"
       />
     </div>
     <div className="card-image">
       <Image
         src="/moose.jpeg"
         as="a"
-        size="medium"
+        size="small"
         href="http://google.com"
         target="_blank"
+        circular
+        className="image"
       />
     </div>
     <div className="card-image">
       <Image
         src="/moose.jpeg"
         as="a"
-        size="medium"
+        size="small"
         href="http://google.com"
         target="_blank"
+        circular
+        className="image"
       />
     </div>
     <div className="card-image">
       <Image
         src="/moose.jpeg"
         as="a"
-        size="medium"
+        size="small"
         href="http://google.com"
         target="_blank"
+        circular
+        className="image"
       />
     </div>
   </>
