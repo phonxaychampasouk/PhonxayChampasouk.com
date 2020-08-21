@@ -3,20 +3,11 @@ import Head from 'next/head';
 import Feature from '../components/Feature';
 import Slider from '../components/Slider';
 import Resume from '../components/Resume';
-import '../styles/index.scss';
 
 const Index = () => (
   <>
     <Head>
-      <link
-        async
-        rel="stylesheet"
-        href="//cdn.jsdelivr.net/npm/semantic-ui@${props.versions.sui}/dist/semantic.min.css"
-      />
-      <script
-        async
-        src="//cdn.jsdelivr.net/npm/semantic-ui@${props.versions.sui}/dist/semantic.min.js"
-      />
+      <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.11/semantic.min.css" />
     </Head>
     <div className="main-container">
       <Feature />
