@@ -1,4 +1,5 @@
 import { Image, Segment } from 'semantic-ui-react';
+import ImageGallery from './featureComponents/ImageryGallery';
 
 function Feature() {
   return (
@@ -89,6 +90,7 @@ function Feature() {
                 per, quas minimum postulant per id.
               </p>
             </Segment>
+            <ImageGallery />
           </div>
         </div>
       </header>
