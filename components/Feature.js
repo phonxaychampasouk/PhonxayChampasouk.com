@@ -1,6 +1,6 @@
 import { Image, Segment } from 'semantic-ui-react';
-import ImageGallery from './featureComponents/ImageryGallery';
-
+import ImageGallery from './featureComponents/ImageGallery';
+import ImageGaleryPreview from './featureComponents/ImageGalleryPreview';
 function Feature() {
   return (
     <>
@@ -91,6 +91,7 @@ function Feature() {
               </p>
             </Segment>
             <ImageGallery />
+            <ImageGaleryPreview />
           </div>
         </div>
       </header>
