@@ -1,6 +1,7 @@
-import { Image, Segment } from 'semantic-ui-react';
-import ImageGallery from './featureComponents/ImageGallery';
-import ImageGaleryPreview from './featureComponents/ImageGalleryPreview';
+import { Button, Icon } from 'semantic-ui-react';
+import Resume from './Resume';
+import Skills from './featureComponents/Skills';
+
 function Feature() {
   return (
     <>
@@ -9,35 +10,36 @@ function Feature() {
         <div className="row banner">
           <div className="banner-text">
             <h1 className="responsive-headline">
-              Im
-              Phonxay Champasouk
-              .
+              >> I'm
+              Phonxay Champasouk.
             </h1>
-            <h3>
+            <h3 id="banner-h3">
               Im a
               resident of Seattle Washington
               {' '}
               based
               <span>Software Developer</span>
               .
-              I did this and I want do it more
+              Let me help you build a beautiful and fast website that will keep your customers engaged.
               .
             </h3>
             <hr />
             <ul className="social" />
             <section id="about">
               <div id="background-image">
-                <div className="row">
+                <div className="about-me-row">
                   <div className="three columns">
-                    <img className="profile-pic" src="/moose.jpeg" alt="Tim Baker Profile Pic" />
+                    <img className="profile-pic" src="/smallimage.jpg" alt="Tim Baker Profile Pic" />
                   </div>
                   <div className="nine columns main-col">
                     <h2>About Me</h2>
-                    <p>Hi, I like to do a lot of things.Hi, I like to do a lot of things.Hi, I like to do a lot of things.Hi, I like to do a lot of things.Hi, I like to do a lot of things.Hi, I like to do a lot of things.Hi, I like to do a lot of things.</p>
-                    <h2>About Me</h2>
-                    <p>Hi, I like to do a lot of things.Hi, I like to do a lot of things.Hi, I like to do a lot of things.Hi, I like to do a lot of things.Hi, I like to do a lot of things.Hi, I like to do a lot of things.Hi, I like to do a lot of things.</p>
-                    <h2>About Me</h2>
-                    <p>Hi, I like to do a lot of things.Hi, I like to do a lot of things.Hi, I like to do a lot of things.Hi, I like to do a lot of things.Hi, I like to do a lot of things.Hi, I like to do a lot of things.Hi, I like to do a lot of things.</p>
+                    <p>
+                      {' '}
+                      Hi! My name is Phonxay! I like to tell people that Phonxay is pronounced like Banzai, but with a "P". Greetings,
+                      I am so happy that you have viewed my site. You can be here for many reasons, such as for photography,
+                      web development, or a social media connection. Any ways, I hope you enjoy the functionalities of my web application. It is still in Development.
+                      I will continue to deploy my application as I complete features.
+                    </p>
                     <div className="row">
                       <div className="columns contact-details">
                         <h2>Contact Details</h2>
@@ -60,39 +62,35 @@ function Feature() {
                           <br />
                           <span>phonxay.champasouk@gmail.com</span>
                         </p>
+                        <div>
+                          <Button color="github">
+                            <Icon name="github" />
+                            {' '}
+                            github
+                          </Button>
+                          <Button color="linkedin">
+                            <Icon name="linkedin" />
+                            {' '}
+                            LinkedIn
+                          </Button>
+                          <Button color="instagram">
+                            <Icon name="instagram" />
+                            {' '}
+                            Instagram
+                          </Button>
+                        </div>
+                      </div>
+                      <div className="columns download">
+                        <Button content="Download Resume" />
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </section>
-            <Segment>
-              <Image src="moose.jpeg" size="small" floated="left" />
-              <p>
-                Te eum doming eirmod, nominati pertinacia argumentum ad his. Ex eam alia
-                facete scriptorem, est autem aliquip detraxit at. Usu ocurreret
-                referrentur at, cu epicurei appellantur vix. Cum ea laoreet recteque
-                electram, eos choro alterum definiebas in. Vim dolorum definiebas an. Mei
-                ex natum rebum iisque.
-              </p>
-              <Image src="/me.jpg" size="small" floated="right" />
-              <p>
-                Audiam quaerendum eu sea, pro omittam definiebas ex. Te est latine
-                definitiones. Quot wisi nulla ex duo. Vis sint solet expetenda ne, his te
-                phaedrum referrentur consectetuer. Id vix fabulas oporteat, ei quo vide
-                phaedrum, vim vivendum maiestatis in.
-              </p>
-              <p>
-                Eu quo homero blandit intellegebat. Incorrupte consequuntur mei id. Mei ut
-                facer dolores adolescens, no illum aperiri quo, usu odio brute at. Qui te
-                porro electram, ea dico facete utroque quo. Populo quodsi te eam, wisi
-                everti eos ex, eum elitr altera utamur at. Quodsi convenire mnesarchum eu
-                per, quas minimum postulant per id.
-              </p>
-            </Segment>
-            <ImageGallery />
-            <ImageGaleryPreview />
           </div>
+          <Resume />
+
         </div>
       </header>
     </>
