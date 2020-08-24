@@ -1,18 +1,31 @@
 #resume {
     background: #fff;
-    padding-top: 90px;
-    padding-bottom: 72px;
+    padding-top: 15px;
+    padding-bottom: 20px;
     overflow: hidden;
+    padding-left: 1rem;
+    padding-right: 1rem;
  }
  
  #resume a, #resume a:visited  { color: #11ABB0; }
  #resume a:hover, #resume a:focus { color: #313131; }
- 
- #resume h1 {
-    font: 18px/24px 'opensans-bold', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+ @media (max-width: 767px) {
+   #resume h1 {
+      font: 14px/24px 'opensans-bold', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-align: center;
+   }
  }
+ @media (mix-width: 768px) {
+ #resume h1 {
+   font: 18px/24px 'opensans-bold', sans-serif;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+   text-align: left;
+}
+ }
+
  #resume h1 span {
     border-bottom: 3px solid #11ABB0;
     padding-bottom: 6px;
@@ -22,7 +35,7 @@
  }
  
  #resume .header-col { padding-top: 9px; }
- #resume .main-col { padding-right: 10%; }
+ #resume .main-col { padding: 1%; }
  
  .education, .work {
     margin-bottom: 48px;
@@ -43,3 +56,4 @@
     font: 15px/24px 'opensans-regular', sans-serif;
     margin-top: 6px;
  }
+ 

@@ -22,10 +22,10 @@
       vertical-align: middle;
       margin-top: 75%;
       height: 150%;
-      width: 85%;
+      width: 100%;
       padding-bottom: 30px;
-      text-align: center;
-      align-items: center;
+      text-align: left;
+      align-items: center; 
    }
  }
 
@@ -35,7 +35,9 @@
       vertical-align: middle;
       margin-top: 25%;
       height: 150%;
-      width: 65%;
+      width: 85%;
+      padding-left: 1rem;
+      padding-right: 1rem;
       padding-bottom: 30px;
       text-align: center;
       align-items: center;
@@ -43,19 +45,24 @@
  }
 /*======BANNER=====*/
 
- @media (max-width: 480px) {
-   header .banner-text h1 {
+ @media (max-width: 767px) {
+   header .banner-text .responsive-headline {
       font: 50px/1.1em 'opensans-bold', sans-serif;
-      color: #fff;
+      color: #d4d4dc;
       letter-spacing: -2px;
       margin: 0 auto 18px auto;
       text-shadow: 0px 1px 3px rgba(0, 0, 0, .8);
    }
+.about-me-row {
+   padding-left: 1rem;
+   padding-right: 1rem;
+}
+
  }
- @media (min-width: 480px) {
- header .banner-text h1 {
+ @media (min-width: 768px) {
+ header .banner-text .responsive-headline {
     font: 90px/1.1em 'opensans-bold', sans-serif;
-    color: #fff;
+    color: #d4d4dc;
     letter-spacing: -2px;
     margin: 0 auto 18px auto;
     text-shadow: 0px 1px 3px rgba(0, 0, 0, .8);
@@ -136,11 +143,14 @@
    overflow: hidden;
 }
 #background-image {
-   background: #2B2B2B;
+   background: #1d1e22;
+   border-radius: 25px;
+
    opacity: 0.75;
+
  }
  #about:hover > #background-image {
-    opacity: 1;
+    opacity: .95;
  }
  
 
@@ -162,8 +172,9 @@
    width: 120px;
    height: 120px;
    border-radius: 100%;
+   margin-top: 2rem;
 }
-#about .contact-details { width: 41.66667%; }
+
 
 
 /*****************IMAGE GALLERY*******************/
@@ -173,4 +184,15 @@
 width: auto !important;
    max-width: 100%;
 
+}
+
+/****************Skills********************/
+
+.VictoryContainer {
+   background-color: black;
+opacity: .5;
+}
+
+.VictoryContainer:hover {
+   opacity: 1;
 }
