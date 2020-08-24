@@ -3,7 +3,7 @@ import 'react-multi-carousel/lib/styles.css';
 import 'react-bnb-gallery/dist/style.css';
 import '../styles/index.scss';
 import '../styles/Feature.scss';
-import '../styles/Projects.scss';
+import '../styles/Resume.scss';
 import '../styles/Slider.scss';
 import '../styles/Cards.scss';
 
