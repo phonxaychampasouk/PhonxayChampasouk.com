@@ -1,130 +1,70 @@
-import { Component } from 'react';
+import * as React from 'react';
+import Paper from '@material-ui/core/Paper';
 import {
-  VictoryChart, VictoryPolarAxis, VictoryStack, VictoryBar, VictoryTheme,
-} from 'victory';
-import * as _ from 'underscore';
-import CompassCenter from './CompassCenter';
-import CenterLabel from './CompassLabel';
+  Chart,
+  PieSeries,
+  Title,
+} from '@devexpress/dx-react-chart-material-ui';
 
-class Skills extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      wind: this.getWindData(),
-      directions: {
-        0: 'Javascript',
-        45: 'MongoDb',
-        90: 'MySql',
-        135: 'PostgresQl',
-        180: 'React',
-        225: 'Nextjs',
-        270: 'Frontend',
-        315: 'Backend',
-      },
-    };
-  }
+import { Animation } from '@devexpress/dx-react-chart';
 
-  componentDidMount() {
-    this.setStateInterval = window.setInterval(() => {
-      this.setState({ wind: this.getWindData() });
-    }, 4000);
-  }
+const chartData = [
+  [
+    { skill: 'JavaScript', val: 8 },
+    { skill: 'null', val: 2 },
+  ], [
+    { skill: 'Reactjs', val: 9 },
+    { skill: 'null', val: 2 },
+  ], [
+    { skill: 'CSS', val: 8 },
+    { skill: 'null', val: 2 },
+  ], [
+    { skill: 'MongoDb', val: 8 },
+    { skill: 'null', val: 1 },
+  ], [
+    { skill: 'NoSql', val: 8 },
+    { skill: 'null', val: 2 },
+  ], [
+    { skill: 'ExpressJs', val: 10 },
+    { skill: 'null', val: 0 },
+  ], [
+    { skill: 'AWS', val: 9 },
+    { skill: 'null', val: 1 },
+  ],
+  [
+    { skill: 'Azure', val: 9 },
+    { skill: 'null', val: 1 },
+  ],
+  [
+    { skill: 'Docker', val: 7 },
+    { skill: 'null', val: 3 },
+  ],
+];
+const skillsChart = chartData.map((skill, i) => (
+  <div className="skill-cards" key={i}>
+    <Chart
+      data={skill}
+      width={170}
+      height={200}
 
-  getWindData() {
-    
-    return _.keys({
-      100: 'Javascript',
-      45: 'MongoDb',
-      90: 'MySql',
-      135: 'PostgresQl',
-      180: 'React',
-      225: 'Nextjs',
-      270: 'Frontend',
-      315: 'Backend',
-    }).map((d) => {
-      const speed = 90;
-      return {
-        windSpeed: speed,
-        windGust: speed + _.random(1, 10),
-        techStack: d,
-      };
-    });
-  }
+    >
+      <PieSeries
+        valueField="val"
+        argumentField="skill"
+        innerRadius={0.6}
+      />
+      <Title
+        text={skill[0].skill}
+      />
+      <Animation />
+    </Chart>
+  </div>
+));
 
-  render() {
-    const { directions } = this.state;
-
-    const orange = { base: 'gold', highlight: 'darkOrange' };
-
-    const red = { base: 'tomato', highlight: 'orangeRed' };
-
-    const innerRadius = 0;
-
-    return (
-      <VictoryChart
-        polar
-        animate={{ duration: 9000, easing: 'bounce' }}
-        theme={VictoryTheme.material}
-        innerRadius={innerRadius}
-        domainPadding={{ y: 10 }}
-        events={[{
-          childName: 'all',
-          target: 'data',
-          eventHandlers: {
-            onMouseOver: () => [
-              { target: 'labels', mutation: () => ({ active: true }) },
-              { target: 'data', mutation: () => ({ active: true }) },
-            ],
-            onMouseOut: () => [
-              { target: 'labels', mutation: () => ({ active: false }) },
-              { target: 'data', mutation: () => ({ active: false }) },
-            ],
-          },
-        }]}
-      >
-        <VictoryPolarAxis
-          dependentAxis
-          labelPlacement="vertical"
-          style={{ axis: { stroke: 'none' } }}
-          tickFormat={() => ''}
-        />
-        <VictoryPolarAxis
-          labelPlacement="parallel"
-          tickValues={_.keys(directions).map((k) => +k)}
-          tickFormat={_.values(directions)}
-        />
-        <VictoryStack>
-          <VictoryBar
-            style={{
-              data: {
-                fill: ({ active }) => (active ? orange.highlight : orange.base),
-                width: 40,
-              },
-            }}
-            data={this.state.wind}
-            x="techStack"
-            y="windSpeed"
-            labels={() => ''}
-            labelComponent={<CenterLabel directions={this.state.directions} color={orange} />}
-          />
-          <VictoryBar
-            style={{
-              data: {
-                fill: (d, a) => (a ? red.highlight : red.base),
-                width: 40,
-              },
-            }}
-            data={this.state.wind}
-            x="techStack"
-            y={(d) => d.windGust - d.windSpeed}
-            labels={() => ''}
-            labelComponent={<CenterLabel directions={this.state.directions} color={red} />}
-          />
-        </VictoryStack>
-        <CompassCenter />
-      </VictoryChart>
-    );
-  }
-}
+const Skills = () => (
+  <>
+    {skillsChart}
+  </>
+);
 
 export default Skills;
