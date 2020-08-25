@@ -1,4 +1,6 @@
 import 'semantic-ui-css/semantic.min.css';
+import 'simple-react-donut-chart/src/style.css';
+
 import 'react-multi-carousel/lib/styles.css';
 import 'react-bnb-gallery/dist/style.css';
 import '../styles/index.scss';
