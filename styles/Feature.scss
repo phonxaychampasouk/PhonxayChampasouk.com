@@ -24,8 +24,7 @@
       height: 150%;
       width: 100%;
       padding-bottom: 30px;
-      text-align: left;
-      align-items: center; 
+
    }
  }
 
@@ -35,7 +34,7 @@
       vertical-align: middle;
       margin-top: 25%;
       height: 150%;
-      width: 85%;
+      width: 50%;
       padding-left: 1rem;
       padding-right: 1rem;
       padding-bottom: 30px;
@@ -45,6 +44,33 @@
  }
 /*======BANNER=====*/
 
+
+header .responsive-headline {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-evenly;
+   overflow: hidden; /* Ensures the content is not revealed until the animation */
+   border-right: .15em solid #d4d4dc; /* The typwriter cursor */
+   white-space: nowrap; /* Keeps the content on a single line */
+   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+   letter-spacing: .15em; /* Adjust as needed */
+   animation: 
+     typing 3.5s steps(40, end),
+     blink-caret .75s step-end infinite;
+ }
+ 
+ /* The typing effect */
+ @keyframes typing {
+   from { width: 0 }
+   to { width: 100% }
+ }
+ 
+ /* The typewriter cursor effect */
+ @keyframes blink-caret {
+   from, to { border-color: transparent }
+   50% { border-color: #d4d4dc; }
+ }
+
  @media (max-width: 767px) {
    header .banner-text .responsive-headline {
       font: 50px/1.1em 'opensans-bold', sans-serif;
@@ -52,6 +78,7 @@
       letter-spacing: -2px;
       margin: 0 auto 18px auto;
       text-shadow: 0px 1px 3px rgba(0, 0, 0, .8);
+      word-break: keep-all;
    }
 .about-me-row {
    padding-left: 1rem;
@@ -136,45 +163,108 @@
 
  /*============ABOUT ME====================*/
 
- #about {
+ @media (max-width: 767px) {
+   #about {
 
-   padding-top: 96px;
-   padding-bottom: 66px;
-   overflow: hidden;
-}
-#background-image {
-   background: #1d1e22;
-   border-radius: 25px;
+      padding-top: 96px;
+      padding-bottom: 66px;
+      overflow: hidden;
+      text-align: left;
+      align-items: center; 
+   }
 
-   opacity: 0.75;
+   #background-image {
+      background: rgba(38, 38, 38, .5);
+      border: solid #d4d4dc;
+
+    }
 
  }
+ @media (min-width: 768px) {
+   #about {
+      padding-top: 96px;
+      padding-bottom: 66px;
+      overflow: hidden;
+      text-align: center;
+      align-items: center; 
+   }
+}
+
+
+
+//smaller
+@media (max-width: 767px) {
+   #background-image {
+      background: rgba(38, 38, 38, .7);
+
+    }
+
+}
+//greater 
+@media (min-width: 768px) {
+   #background-image {
+      background: rgba(38, 38, 38, .7);
+      border-radius: 15px;
+      border: solid #d4d4dc;
+    }
+
+}
+
  #about:hover > #background-image {
-    opacity: .95;
+   background: rgba(38, 38, 38, .85);
  }
  
 
 
-#about a, #about a:visited  { color: #fff; }
+#about a, #about a:visited  { color: #d4d4dc; }
 #about a:hover, #about a:focus { color: #11ABB0; }
 
 #about h2 {
    font: 22px/30px 'opensans-bold', sans-serif;
-   color: #fff;
+   color: #d4d4dc;
+   margin-top: 12px;
    margin-bottom: 12px;
+
 }
 #about p {
    line-height: 30px;
-   color: #7A7A7A;
-}
-#about .profile-pic {
-   position: relative;
-   width: 120px;
-   height: 120px;
-   border-radius: 100%;
-   margin-top: 2rem;
+   color: #f5f5f5;
+   text-align: left;
+   padding-left:100px;
+   padding-right: 100px;
 }
 
+@media (max-width: 767px) {
+   #about p {
+      font: 16px/30px 'opensans-bold', sans-serif;
+      padding-left: 1rem;;
+      padding-right: 1rem;
+   }
+}
+
+.avatar {
+   padding-top: 60px;
+   padding-bottom: 40px;
+   display: flex;
+   justify-content: center;
+}
+/*****************SOCIAL BUTTONS*******************/
+
+#social-buttons {
+   display: flex;
+   justify-content: center;
+   padding-top: 2rem;
+   padding-bottom: 1rem;
+}
+
+/****************DOWNLOAD BUTTON******************/
+
+.download-button {
+   display: flex;
+   justify-content: center;
+   padding-top:20px;
+   padding-bottom: 60px;;
+}
 
 
 /*****************IMAGE GALLERY*******************/
