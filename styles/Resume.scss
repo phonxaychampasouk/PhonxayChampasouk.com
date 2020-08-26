@@ -110,3 +110,11 @@
     margin-top: 6px;
  }
  
+ /*************************SKILLS*********************/
+
+ .pies-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+ }

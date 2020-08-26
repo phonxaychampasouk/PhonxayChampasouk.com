@@ -4,7 +4,8 @@ import PieChart, {
   Series,
   Legend,
   Label,
-  Connector
+  Connector,
+  Size,
 } from 'devextreme-react/pie-chart';
 
 import { data } from './data.js';
@@ -24,10 +25,14 @@ class Skills extends Component {
         dataSource={[skill, {country: 'sample', total: (10-skill.total)}]}
         resolveLabelOverlapping="shift"
         sizeGroup="piesGroup"
-        innerRadius={0.65}
+        innerRadius={0.7}
         centerRender={CenterTemplate}
         type="doughnut"
       >
+        <Size 
+        width={172}
+        height={170}
+        />
         <Series
           argumentField="country"
           valueField="total"
@@ -38,7 +43,6 @@ class Skills extends Component {
 
     return (
       <div>
-        <div className="long-title"><h3>Energy Production (GWh, 2016)</h3></div>
         <div className="pies-container">
           {pies}
         </div>
