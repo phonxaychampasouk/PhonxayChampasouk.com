@@ -3,9 +3,6 @@
 import Head from 'next/head';
 
 import Feature from '../components/Feature';
-import Slider from '../components/Slider';
-import ImageGallery from '../components/featureComponents/ImageGallery';
-import ImageGaleryPreview from '../components/featureComponents/ImageGalleryPreview';
 
 const Index = () => (
 
