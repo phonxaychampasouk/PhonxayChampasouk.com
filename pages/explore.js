@@ -1,5 +1,9 @@
 import Layout from '../components/Layout';
 
-const ExploreView = () => <Layout>Explore View</Layout>;
+const ExploreView = () => (
+    <div>
+        hello
+    </div>
+)
 
 export default ExploreView;

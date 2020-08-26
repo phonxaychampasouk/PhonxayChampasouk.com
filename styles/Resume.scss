@@ -1,0 +1,112 @@
+#resume {
+    padding-top: 40px;
+    padding-bottom: 20px;
+    overflow: hidden;
+    text-align: left;
+
+ }
+ #resume-background-image {
+   background: rgba(228, 228, 228, .5);
+   border: solid #676767;
+   
+
+ }
+@media (max-width: 767px) {
+   #resume-background-image {
+      background: rgba(228, 228, 228, .87);
+    }
+
+
+}
+
+ @media (min-width: 768px) {
+   #resume-background-image {
+      border-radius: 15px;
+
+    }
+    #resume:hover > #resume-background-image {
+      background: rgba(228, 228, 228, .9);
+      
+   }
+
+}
+ 
+ #resume a, #resume a:visited  { color: #11ABB0; }
+ #resume a:hover, #resume a:focus { color: #262626; }
+ @media (max-width: 767px) {
+   #resume h1 {
+      font: 18px/24px 'opensans-bold', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-align: center;
+      padding-bottom: 40px;
+   }
+ }
+
+ #resume p {
+   font: 18px/24px 'opensans-bold', sans-serif;
+
+
+}
+//n > 768
+ @media (min-width: 768px) {
+ #resume h1 {
+   font: 18px/24px 'opensans-bold', sans-serif;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+   text-align: center;
+   margin-bottom: 15px;
+}
+#resume p {
+   font: 20px/32px 'opensans-bold', sans-serif;
+   padding-left: 50px;
+   padding-right:50px;
+}
+ }
+
+ #resume h1 span {
+    border-bottom: 3px solid #11ABB0;
+    padding-bottom: 6px;
+ }
+ #resume h3 {
+    font: 25px/30px 'opensans-bold', sans-serif;
+    text-align: center !important;
+    padding-top:1rem;
+ }
+
+
+ 
+ #resume .header-col { padding-top: 9px; }
+ #resume .main-col { 
+
+  }
+  #resume .skills-container { 
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-evenly;
+   padding-bottom: 100px;
+ }
+ 
+ .education, .work {
+    padding-top:24px;
+    padding-bottom: 24px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-bottom: 1px solid #E8E8E8;
+ }
+ #resume .info {
+    font: 16px/24px 'librebaskerville-italic', serif;
+    color: #6E7881;
+    margin-bottom: 18px;
+    margin-top: 9px;
+    text-align: center;
+ }
+ #resume .info span {
+    margin-right: 5px;
+    margin-left: 5px;
+ }
+ #resume .date {
+    font: 15px/24px 'opensans-regular', sans-serif;
+    margin-top: 6px;
+ }
+ 

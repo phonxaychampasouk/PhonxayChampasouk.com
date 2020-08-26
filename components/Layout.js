@@ -2,36 +2,23 @@ import Head from 'next/head';
 import Header from './Header';
 import NavBar from './NavBar';
 
-const layoutStyle = {
-  display: 'flex',
-  flexDirection: 'column',
-  height: '100%',
-  width: '100%',
-};
-
-const contentStyle = {
-  flex: 1,
-  display: 'flex',
-  flexDirection: 'column',
-};
-
-/* inorder to have a document title on every page,
- use the <head> block in the Layout component template
- be sure to import Head from 'next/head' to modify the title.
-*/
+import '../styles/Layout.scss';
+  return (
 const Layout = ({ children }) => (
   <div className="Layout" style={layoutStyle}>
 
-    <Head>
-      <title>PHONXAY</title>
-    </Head>
+      <Head>
+        <title>PHONXAY</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charSet="utf-8" />
+      </Head>
 
-    <Header />
-    <div className="Content" style={contentStyle}>
-      {children}
-    </div>
-    <NavBar />
-  </div>
-);
-
+      <Header appTitle={appTitle} />
+      <div className="main">
+        {children}
+      </div>
+      <NavBar />
+    </main>
+  );
+};
 export default Layout;
