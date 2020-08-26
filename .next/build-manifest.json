@@ -25,6 +25,7 @@
       "static/runtime/polyfills.js"
     ],
     "/index": [
+
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ]
