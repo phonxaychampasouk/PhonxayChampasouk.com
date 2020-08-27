@@ -34,7 +34,21 @@
       vertical-align: middle;
       margin-top: 25%;
       height: 150%;
-      width: 50%;
+      width: 85%;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      padding-bottom: 30px;
+      text-align: center;
+      align-items: center;
+   }
+ }
+ @media (min-width: 1260px) {
+   header .banner {
+      display: inline-block;
+      vertical-align: middle;
+      margin-top: 25%;
+      height: 150%;
+      width: 65%;
       padding-left: 1rem;
       padding-right: 1rem;
       padding-bottom: 30px;
@@ -239,6 +253,13 @@ header .responsive-headline {
       font: 16px/30px 'opensans-bold', sans-serif;
       padding-left: 1rem;;
       padding-right: 1rem;
+   }
+}
+
+@media (min-width: 1260px) {
+   #about p {
+      padding-left: 160px;;
+      padding-right: 160px;
    }
 }
 
