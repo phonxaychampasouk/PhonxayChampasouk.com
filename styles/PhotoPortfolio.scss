@@ -1,0 +1,38 @@
+#photo-display {
+
+}
+
+.portfolio-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+}
+
+.portfolio-background {
+    top: 0;
+    left: 0;
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: filter 1s; 
+    
+}
+
+@media (max-width: 767px) {
+
+}
+
+@media (max-width: 1259px) {
+
+
+}
+
+#photo-display {
+    width:98%;
+    margin: 0 auto;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}

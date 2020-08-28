@@ -1,8 +1,8 @@
-
 // import Layout from '../components/Layout';
 import Head from 'next/head';
 
 import Feature from '../components/Feature';
+import PhotoPortfolio from '../components/PhotoPortfolio';
 
 const Index = () => (
 
@@ -12,6 +12,7 @@ const Index = () => (
     </Head>
     <div className="main-container">
       <Feature />
+      <PhotoPortfolio />
     </div>
   </>
 
