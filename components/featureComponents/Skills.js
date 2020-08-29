@@ -25,7 +25,7 @@ class Skills extends Component {
         dataSource={[skill, {country: 'sample', total: (10-skill.total)}]}
         resolveLabelOverlapping="shift"
         sizeGroup="piesGroup"
-        innerRadius={0.7}
+        innerRadius={0.9}
         centerRender={CenterTemplate}
         type="doughnut"
       >
