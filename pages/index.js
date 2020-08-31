@@ -13,6 +13,7 @@ const Index = () => (
     <div className="main-container">
       <Feature />
       <PhotoPortfolio />
+      
     </div>
   </>
 

@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
+import { DirectLine } from 'botframework-directlinejs';
 
+import ReactWebChat from 'botframework-webchat';
 import {
   Grid, Segment, Label, Container, Button, Icon,
 } from 'semantic-ui-react';
+import KEYS from '../keys';
+
+import ChatBot from './botComponents/ChatBot';
 
 // eslint-disable-next-line react/prefer-stateless-function
 class PhotoPortfolio extends Component {
@@ -12,6 +17,7 @@ class PhotoPortfolio extends Component {
       displayMooseBot: false,
     };
     this.toggleMooseBot = this.toggleMooseBot.bind(this);
+    this.directLine = new DirectLine({ token: KEYS['my-chat-bot'] });
   }
 
   toggleMooseBot= () => {
@@ -23,7 +29,7 @@ class PhotoPortfolio extends Component {
   }
 
   render() {
-const { displayMooseBot } = this.state;
+    const { displayMooseBot } = this.state;
 
     return (
       <>
@@ -31,19 +37,29 @@ const { displayMooseBot } = this.state;
           <Segment>
             <Grid>
               <Grid.Column textAlign="center">
-                <Button>Talk to Moosebot</Button>
+                <Button onClick={() => this.toggleMooseBot()}>
+                  Talk to Moosebot
+                </Button>
               </Grid.Column>
             </Grid>
+            {
+              displayMooseBot
+                ? (
+                  <header id="bot-content">
+                    <ChatBot />
+                  </header>
+                )
+                : <header id="photo-display">failed test</header>
+                }
           </Segment>
           <div className="portfolio-banner" />
         </div>
-        <img src="/background3.png"
-        className="portfolio-background"
-        alt="moose head"
-        onClick={()=>this.toggleMooseBot()}
+        <img
+          src="/background3.png"
+          className="portfolio-background"
+          alt="moose head"
+          onClick={() => this.toggleMooseBot()}
         />
-        { displayMooseBot ?   <header id="photo-display">teste</header> : <header id="photo-display">failed test</header> }
-      
       </>
 
     );

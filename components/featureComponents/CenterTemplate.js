@@ -5,8 +5,7 @@ const formatNumber = new Intl.NumberFormat('en-US', {
 }).format;
 
 function calculateTotal(pieChart) {
-  return `${pieChart.getAllSeries()[0].getVisiblePoints()[0].data.total}/10`;
-  //Math.abs(formatNumber(pieChart.getAllSeries()[0].getVisiblePoints().reduce((s, p) => p.originalValue - s, 0)));
+  return `${pieChart.getAllSeries()[0].getVisiblePoints()[0].data.total}/15`;
 }
 
 export default function TooltipTemplate(pieChart) {
