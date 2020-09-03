@@ -5,6 +5,7 @@ import '../styles/Resume.scss';
 import '../styles/Slider.scss';
 import '../styles/Cards.scss';
 import '../styles/PhotoPortfolio.scss';
+import '../styles/SelectedImage.scss';
 
 function MyApp({ Component, pageProps }) {
   return (
