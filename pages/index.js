@@ -2,7 +2,7 @@
 import Head from 'next/head';
 
 import Feature from '../components/Feature';
-import PhotoPortfolio from '../components/PhotoPortfolio';
+import PhotoPortfolio from '../components/ChatBot';
 
 const Index = () => (
 
