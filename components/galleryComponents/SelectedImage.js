@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+
 const Checkmark = ({ selected }) => (
   <div
     style={
@@ -39,6 +40,7 @@ const cont = {
   overflow: 'hidden',
   position: 'relative',
 };
+const newArray = [];
 
 const SelectedImage = ({
   index,
@@ -48,6 +50,8 @@ const SelectedImage = ({
   top,
   left,
   selected,
+  photoCollection,
+  setPhotoCollection,
 }) => {
   const [isSelected, setIsSelected] = useState(selected);
   // calculate x,y scale
@@ -61,9 +65,32 @@ const SelectedImage = ({
     cont.top = top;
   }
 
-  const handleOnClick = (e) => {
-      console.log(e.target.getAttribute('index'));
-    setIsSelected(!isSelected);
+  // TODO: Create an handleSubmit tht uses Reacts hooks to update what photoCollections
+  const handleOnClick = ({ target }) => {
+    const selectedPhoto = target.getAttribute('index');
+    console.log('newArray.indexOf(selectedPhoto): ', newArray.indexOf(selectedPhoto));
+
+    if (newArray.length === 0) {
+      newArray.push(selectedPhoto); // pushes selected photos index to newArray
+      //  setPhotoCollection(newArray); // uses hook to updat photo selection
+      setIsSelected(!isSelected);
+      console.log('pushing index into newArray with 0 length: ', newArray);
+    } else if (newArray.indexOf(selectedPhoto) === -1) {
+      newArray.push(selectedPhoto);
+      console.log('add to newArray if array does not contain index ', newArray);
+      setIsSelected(!isSelected);
+    } else if (newArray.indexOf(selectedPhoto) === 0 || newArray.indexOf(selectedPhoto)) {
+      if (newArray.indexOf(selectedPhoto) === 0) {
+        newArray.splice(0, 1);
+        setIsSelected(!isSelected);
+        console.log('newArray after slicing the duplicate at 0', newArray);
+      } else {
+        newArray.splice(1, 1);
+        setIsSelected(!isSelected);
+        console.log('newArray after slicing the duplicate', newArray);
+      }
+    }
+    setPhotoCollection(newArray);
   };
 
   useEffect(() => {
@@ -76,7 +103,6 @@ const SelectedImage = ({
         margin, height: photo.height, width: photo.width, ...cont,
       }}
       className={!isSelected ? 'not-selected' : ''}
-   
     >
       <Checkmark selected={!!isSelected} />
       <img
