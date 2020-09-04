@@ -62,7 +62,7 @@ const SelectedImage = ({
   }
 
   const handleOnClick = (e) => {
-      console.log(e.target)
+      console.log(e.target.getAttribute('index'));
     setIsSelected(!isSelected);
   };
 
@@ -76,6 +76,7 @@ const SelectedImage = ({
         margin, height: photo.height, width: photo.width, ...cont,
       }}
       className={!isSelected ? 'not-selected' : ''}
+   
     >
       <Checkmark selected={!!isSelected} />
       <img
