@@ -1,7 +1,6 @@
 import { useState, useCallback } from 'react';
-
+import Slider from './Slider';
 import Gallery from 'react-photo-gallery';
-
 import photos from './galleryComponents/photos';
 import SelectedImage from './galleryComponents/SelectedImage';
 import SubmittedPhotos from './galleryComponents/SubmittedPhotos';
@@ -12,7 +11,6 @@ function BasicRows() {
   const [selectAll, setSelectAll] = useState(false);
   const [photoCollection, setPhotoCollection] = useState([null]);
   const [isPhotoDisplayed, setIsPhotoDisplayed] = useState(false);
-
 
   const toggleSelectAll = () => {
     setSelectAll(!selectAll);
@@ -53,6 +51,7 @@ function BasicRows() {
         photos={photos}
         renderImage={imageRenderer}
       />
+      
     </>
   );
 }
