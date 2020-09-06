@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
-//import { DirectLine } from 'botframework-directlinejs';
+import { DirectLine } from 'botframework-directlinejs';
 
-//import ReactWebChat from 'botframework-webchat';
+import ReactWebChat from 'botframework-webchat';
 import {
   Grid, Segment, Label, Container, Button, Icon,
 } from 'semantic-ui-react';
 import KEYS from '../keys';
 
-//import ChatBot from './botComponents/ChatBot';
+// import ChatBot from './botComponents/ChatBot';
 
 // eslint-disable-next-line react/prefer-stateless-function
+
 class PhotoPortfolio extends Component {
   constructor() {
     super();
@@ -17,7 +18,7 @@ class PhotoPortfolio extends Component {
       displayMooseBot: false,
     };
     this.toggleMooseBot = this.toggleMooseBot.bind(this);
-    //this.directLine = new DirectLine({ token: KEYS['my-chat-bot'] });
+    this.directLine = new DirectLine({ token: KEYS['my-chat-bot'] });
   }
 
   toggleMooseBot= () => {
@@ -46,7 +47,7 @@ class PhotoPortfolio extends Component {
               displayMooseBot
                 ? (
                   <header id="bot-content">
-                    test
+                    <ReactWebChat directLine={this.directLine} userID="https://my-chat-bot.cognitiveservices.azure.com/directline/token" />
                   </header>
                 )
                 : <header id="photo-display">failed test</header>
