@@ -1,4 +1,24 @@
 {
+  "./SwiperForSubmittedPhotos": [
+    {
+      "id": "./components/galleryComponents/SwiperForSubmittedPhotos.js",
+      "name": "./components/galleryComponents/SwiperForSubmittedPhotos.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/react-coverflow/dist/react-coverflow.js",
+      "name": "./node_modules/react-coverflow/dist/react-coverflow.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/react-coverflow/main.js",
+      "name": "./node_modules/react-coverflow/main.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    }
+  ],
   "./dev/noop": [
     {
       "id": "./node_modules/next/dist/client/dev/noop.js",
