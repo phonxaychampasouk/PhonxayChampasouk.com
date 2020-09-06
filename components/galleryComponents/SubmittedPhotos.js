@@ -1,6 +1,12 @@
+import dynamic from 'next/dynamic';
 import photos from './photos';
 
-import SwiperForSubmittedPhotos from './SwiperForSubmittedPhotos';
+// import SwiperForSubmittedPhotos from './SwiperForSubmittedPhotos';
+
+const SwiperForSubmittedPhotos = dynamic(
+  () => import('./SwiperForSubmittedPhotos'),
+  { ssr: false },
+);
 
 const SubmittedPhotos = ({
   photoCollection, handleOnSubmit, isPhotoDisplayed,
@@ -8,13 +14,17 @@ const SubmittedPhotos = ({
   if (!isPhotoDisplayed) {
     return (
       <form onSubmit={handleOnSubmit}>
-        <button type="submit">Submit Photos</button>
+        <button className="submit-buttom" type="submit">Submit Photos</button>
       </form>
     );
   }
   console.log('photos: ', photos);
+
+  const initialPhoto = () => (
+    photos[0].src
+  );
   const displaySubmittedPhotos = photoCollection.map((index) => (
-    <img src={photos[index].src} alt="test" />
+    <span><img src={photos[index].src} alt="test" /></span>
   ));
   console.log(displaySubmittedPhotos);
 
@@ -22,9 +32,9 @@ const SubmittedPhotos = ({
     <>
       <div>
         <SwiperForSubmittedPhotos
-        displaySubmittedPhotos={displaySubmittedPhotos}
+          displaySubmittedPhotos={displaySubmittedPhotos}
+          initialPhoto={initialPhoto}
         />
-        <button>test</button>
       </div>
     </>
   );
