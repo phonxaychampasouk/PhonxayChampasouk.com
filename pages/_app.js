@@ -6,6 +6,8 @@ import '../styles/Slider.scss';
 import '../styles/Cards.scss';
 import '../styles/PhotoPortfolio.scss';
 import '../styles/SelectedImage.scss';
+import 'swiper/swiper-bundle.min.css';
+
 
 function MyApp({ Component, pageProps }) {
   return (
