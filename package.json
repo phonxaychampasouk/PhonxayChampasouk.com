@@ -8,16 +8,27 @@
     "start": "next start"
   },
   "dependencies": {
+    "@devexpress/dx-react-chart": "^2.7.0",
+    "@devexpress/dx-react-chart-material-ui": "^2.7.0",
+    "@devexpress/dx-react-core": "^2.7.0",
     "@material-ui/core": "^4.11.0",
+    "@xstate/react": "^0.8.1",
+    "@zeit/next-css": "^1.0.1",
+    "@zeit/next-sass": "^1.0.1",
+    "devextreme": "20.1.6",
+    "devextreme-react": "^20.1.6",
     "next": "9.4.4",
     "postcss-flexbugs-fixes": "^4.2.1",
     "postcss-preset-env": "^6.7.0",
+    "prop-types": "^15.7.2",
     "react": "16.13.1",
     "react-coverflow": "^0.2.20",
     "react-dom": "16.13.1",
     "react-photo-gallery": "^8.0.0",
-    "sass": "^1.26.10"
-
+    "sass": "^1.26.10",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^1.2.1",
+    "swiper": "^6.2.0"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
