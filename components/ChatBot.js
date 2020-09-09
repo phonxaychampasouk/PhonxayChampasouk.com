@@ -11,7 +11,6 @@ class PhotoPortfolio extends Component {
       displayMooseBot: false,
     };
     this.toggleMooseBot = this.toggleMooseBot.bind(this);
-    this.directLine = new DirectLine({ token: KEYS['my-chat-bot'] });
   }
 
   toggleMooseBot= () => {
