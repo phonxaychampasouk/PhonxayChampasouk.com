@@ -1,0 +1,8 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/9e12add8-ad51-4ddd-8eb8-d59a796c6955/resourceGroups/PhonxayChampasouk/providers/Microsoft.Web/sites/PhonxayChampasouk",
+    "appService.deploySubpath": "."
+}
