@@ -1,11 +1,7 @@
-// import Layout from '../components/Layout';
 import Head from 'next/head';
 
 import dynamic from 'next/dynamic';
 import Feature from '../components/Feature';
-// import PhotoPortfolio from '';
-import KEYS from '../keys';
-import PhotoPortfolio from '../components/ChatBot';
 
 const ChatBot = dynamic(
   () => import('../components/ChatBot'),

@@ -1,15 +1,8 @@
 import React, { Component } from 'react';
-import { DirectLine } from 'botframework-directlinejs';
-
-import ReactWebChat from 'botframework-webchat';
 import {
-  Grid, Segment, Label, Container, Button, Icon,
+  Grid, Segment, Button,
 } from 'semantic-ui-react';
 import KEYS from '../keys';
-
-// import ChatBot from './botComponents/ChatBot';
-
-// eslint-disable-next-line react/prefer-stateless-function
 
 class PhotoPortfolio extends Component {
   constructor() {
@@ -23,7 +16,6 @@ class PhotoPortfolio extends Component {
 
   toggleMooseBot= () => {
     const { displayMooseBot } = this.state;
-
     this.setState({
       displayMooseBot: !displayMooseBot,
     });
@@ -47,10 +39,10 @@ class PhotoPortfolio extends Component {
               displayMooseBot
                 ? (
                   <header id="bot-content">
-        <iframe
-        src={`https://webchat.botframework.com/embed/chat-bot-resume?s=${KEYS.mychatbot}`}
-        style={{ minWidth: '400px', width: '100%', minHeight: '500px' }}
-      />
+                    <iframe
+                      src={`https://webchat.botframework.com/embed/chat-bot-resume?s=${KEYS.mychatbot}`}
+                      style={{ minWidth: '400px', width: '100%', minHeight: '500px' }}
+                    />
                   </header>
                 )
                 : <header id="photo-display">failed test</header>
