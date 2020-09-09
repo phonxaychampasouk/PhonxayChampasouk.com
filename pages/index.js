@@ -5,6 +5,7 @@ import dynamic from 'next/dynamic';
 import Feature from '../components/Feature';
 // import PhotoPortfolio from '';
 import KEYS from '../keys';
+import PhotoPortfolio from '../components/ChatBot';
 
 const ChatBot = dynamic(
   () => import('../components/ChatBot'),
@@ -19,10 +20,6 @@ const Index = () => (
     </Head>
     <div className="main-container">
       <Feature />
-      <iframe
-        src={`https://webchat.botframework.com/embed/chat-bot-resume?s=${KEYS}`}
-        style={{ minWidth: '400px', width: '100%', minHeight: '500px' }}
-      />
       <ChatBot />
     </div>
   </>
