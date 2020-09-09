@@ -1,12 +1,7 @@
 import Head from 'next/head';
-
-import dynamic from 'next/dynamic';
 import Feature from '../components/Feature';
-
-const ChatBot = dynamic(
-  () => import('../components/ChatBot'),
-  { ssr: false },
-);
+import ChatBot from '../components/ChatBot';
+import Gallery from '../components/Gallery';
 
 const Index = () => (
 
@@ -17,6 +12,7 @@ const Index = () => (
     <div className="main-container">
       <Feature />
       <ChatBot />
+      <Gallery />
     </div>
   </>
 

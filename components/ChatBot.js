@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {
   Grid, Segment, Button,
 } from 'semantic-ui-react';
-import KEYS from '../keys';
+//import KEYS from '../keys';
 
 class PhotoPortfolio extends Component {
   constructor() {

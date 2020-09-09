@@ -1,0 +1,27 @@
+ @media (max-width: 767px) {
+@keyframes grow {
+    from {width: 100%;
+        height: 100%;}
+    25% {width: 109%;
+        height: 109%;}
+    50% {width: 104%;
+        height: 104%;}
+    to {width: 100%;
+        height: 100%;}
+}
+.photo {
+   animation-name: grow;
+   animation-duration: 10s ;
+   animation-iteration-count: infinite;
+
+}
+ }
+
+
+.photo {
+    transition: all .2s ease-in-out !important; 
+}
+
+.photo:hover {
+    transform: scale(1.2) ;
+}
