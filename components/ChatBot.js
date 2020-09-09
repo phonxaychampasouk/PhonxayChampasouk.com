@@ -47,7 +47,10 @@ class PhotoPortfolio extends Component {
               displayMooseBot
                 ? (
                   <header id="bot-content">
-                    <ReactWebChat directLine={this.directLine} userID="https://my-chat-bot.cognitiveservices.azure.com/directline/token" />
+        <iframe
+        src={`https://webchat.botframework.com/embed/chat-bot-resume?s=${KEYS.mychatbot}`}
+        style={{ minWidth: '400px', width: '100%', minHeight: '500px' }}
+      />
                   </header>
                 )
                 : <header id="photo-display">failed test</header>
