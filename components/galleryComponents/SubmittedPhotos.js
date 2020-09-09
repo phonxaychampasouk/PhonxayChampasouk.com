@@ -1,6 +1,5 @@
 import dynamic from 'next/dynamic';
 import photos from './photos';
-
 // import SwiperForSubmittedPhotos from './SwiperForSubmittedPhotos';
 
 const SwiperForSubmittedPhotos = dynamic(
@@ -23,8 +22,10 @@ const SubmittedPhotos = ({
   const initialPhoto = () => (
     photos[0].src
   );
+  const handleOnDragStart = (e) => e.preventDefault();
+
   const displaySubmittedPhotos = photoCollection.map((index) => (
-    <span><img src={photos[index].src} alt="test" /></span>
+    <img src={photos[index].src} onDragStart={handleOnDragStart} alt="test" className="submitted-photos" />
   ));
   console.log(displaySubmittedPhotos);
 

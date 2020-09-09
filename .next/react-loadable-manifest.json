@@ -7,14 +7,626 @@
       "publicPath": "static/chunks/1.js"
     },
     {
-      "id": "./node_modules/react-coverflow/dist/react-coverflow.js",
-      "name": "./node_modules/react-coverflow/dist/react-coverflow.js",
+      "id": "./node_modules/dom7/dom7.esm.js",
+      "name": "./node_modules/dom7/dom7.esm.js",
       "file": "static/chunks/1.js",
       "publicPath": "static/chunks/1.js"
     },
     {
-      "id": "./node_modules/react-coverflow/main.js",
-      "name": "./node_modules/react-coverflow/main.js",
+      "id": "./node_modules/ssr-window/ssr-window.esm.js",
+      "name": "./node_modules/ssr-window/ssr-window.esm.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/components/a11y/a11y.js",
+      "name": "./node_modules/swiper/esm/components/a11y/a11y.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/components/autoplay/autoplay.js",
+      "name": "./node_modules/swiper/esm/components/autoplay/autoplay.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/components/controller/controller.js",
+      "name": "./node_modules/swiper/esm/components/controller/controller.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/components/core/breakpoints/getBreakpoint.js",
+      "name": "./node_modules/swiper/esm/components/core/breakpoints/getBreakpoint.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/components/core/breakpoints/index.js",
+      "name": "./node_modules/swiper/esm/components/core/breakpoints/index.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/components/core/breakpoints/setBreakpoint.js",
+      "name": "./node_modules/swiper/esm/components/core/breakpoints/setBreakpoint.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/components/core/check-overflow/index.js",
+      "name": "./node_modules/swiper/esm/components/core/check-overflow/index.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/components/core/classes/addClasses.js",
+      "name": "./node_modules/swiper/esm/components/core/classes/addClasses.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/components/core/classes/index.js",
+      "name": "./node_modules/swiper/esm/components/core/classes/index.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/components/core/classes/removeClasses.js",
+      "name": "./node_modules/swiper/esm/components/core/classes/removeClasses.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/components/core/core-class.js",
+      "name": "./node_modules/swiper/esm/components/core/core-class.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/components/core/defaults.js",
+      "name": "./node_modules/swiper/esm/components/core/defaults.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/components/core/events-emitter.js",
+      "name": "./node_modules/swiper/esm/components/core/events-emitter.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/components/core/events/index.js",
+      "name": "./node_modules/swiper/esm/components/core/events/index.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/components/core/events/onClick.js",
+      "name": "./node_modules/swiper/esm/components/core/events/onClick.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/components/core/events/onResize.js",
+      "name": "./node_modules/swiper/esm/components/core/events/onResize.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/components/core/events/onScroll.js",
+      "name": "./node_modules/swiper/esm/components/core/events/onScroll.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/components/core/events/onTouchEnd.js",
+      "name": "./node_modules/swiper/esm/components/core/events/onTouchEnd.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/components/core/events/onTouchMove.js",
+      "name": "./node_modules/swiper/esm/components/core/events/onTouchMove.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/components/core/events/onTouchStart.js",
+      "name": "./node_modules/swiper/esm/components/core/events/onTouchStart.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/components/core/grab-cursor/index.js",
+      "name": "./node_modules/swiper/esm/components/core/grab-cursor/index.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/components/core/grab-cursor/setGrabCursor.js",
+      "name": "./node_modules/swiper/esm/components/core/grab-cursor/setGrabCursor.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/components/core/grab-cursor/unsetGrabCursor.js",
+      "name": "./node_modules/swiper/esm/components/core/grab-cursor/unsetGrabCursor.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/components/core/images/index.js",
+      "name": "./node_modules/swiper/esm/components/core/images/index.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/components/core/images/loadImage.js",
+      "name": "./node_modules/swiper/esm/components/core/images/loadImage.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/components/core/images/preloadImages.js",
+      "name": "./node_modules/swiper/esm/components/core/images/preloadImages.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/components/core/loop/index.js",
+      "name": "./node_modules/swiper/esm/components/core/loop/index.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/components/core/loop/loopCreate.js",
+      "name": "./node_modules/swiper/esm/components/core/loop/loopCreate.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/components/core/loop/loopDestroy.js",
+      "name": "./node_modules/swiper/esm/components/core/loop/loopDestroy.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/components/core/loop/loopFix.js",
+      "name": "./node_modules/swiper/esm/components/core/loop/loopFix.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/components/core/manipulation/addSlide.js",
+      "name": "./node_modules/swiper/esm/components/core/manipulation/addSlide.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/components/core/manipulation/appendSlide.js",
+      "name": "./node_modules/swiper/esm/components/core/manipulation/appendSlide.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/components/core/manipulation/index.js",
+      "name": "./node_modules/swiper/esm/components/core/manipulation/index.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/components/core/manipulation/prependSlide.js",
+      "name": "./node_modules/swiper/esm/components/core/manipulation/prependSlide.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/components/core/manipulation/removeAllSlides.js",
+      "name": "./node_modules/swiper/esm/components/core/manipulation/removeAllSlides.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/components/core/manipulation/removeSlide.js",
+      "name": "./node_modules/swiper/esm/components/core/manipulation/removeSlide.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/components/core/modular.js",
+      "name": "./node_modules/swiper/esm/components/core/modular.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/components/core/slide/index.js",
+      "name": "./node_modules/swiper/esm/components/core/slide/index.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/components/core/slide/slideNext.js",
+      "name": "./node_modules/swiper/esm/components/core/slide/slideNext.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/components/core/slide/slidePrev.js",
+      "name": "./node_modules/swiper/esm/components/core/slide/slidePrev.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/components/core/slide/slideReset.js",
+      "name": "./node_modules/swiper/esm/components/core/slide/slideReset.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/components/core/slide/slideTo.js",
+      "name": "./node_modules/swiper/esm/components/core/slide/slideTo.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/components/core/slide/slideToClickedSlide.js",
+      "name": "./node_modules/swiper/esm/components/core/slide/slideToClickedSlide.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/components/core/slide/slideToClosest.js",
+      "name": "./node_modules/swiper/esm/components/core/slide/slideToClosest.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/components/core/slide/slideToLoop.js",
+      "name": "./node_modules/swiper/esm/components/core/slide/slideToLoop.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/components/core/transition/index.js",
+      "name": "./node_modules/swiper/esm/components/core/transition/index.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/components/core/transition/setTransition.js",
+      "name": "./node_modules/swiper/esm/components/core/transition/setTransition.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/components/core/transition/transitionEnd.js",
+      "name": "./node_modules/swiper/esm/components/core/transition/transitionEnd.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/components/core/transition/transitionStart.js",
+      "name": "./node_modules/swiper/esm/components/core/transition/transitionStart.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/components/core/translate/getTranslate.js",
+      "name": "./node_modules/swiper/esm/components/core/translate/getTranslate.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/components/core/translate/index.js",
+      "name": "./node_modules/swiper/esm/components/core/translate/index.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/components/core/translate/maxTranslate.js",
+      "name": "./node_modules/swiper/esm/components/core/translate/maxTranslate.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/components/core/translate/minTranslate.js",
+      "name": "./node_modules/swiper/esm/components/core/translate/minTranslate.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/components/core/translate/setTranslate.js",
+      "name": "./node_modules/swiper/esm/components/core/translate/setTranslate.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/components/core/translate/translateTo.js",
+      "name": "./node_modules/swiper/esm/components/core/translate/translateTo.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/components/core/update/index.js",
+      "name": "./node_modules/swiper/esm/components/core/update/index.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/components/core/update/updateActiveIndex.js",
+      "name": "./node_modules/swiper/esm/components/core/update/updateActiveIndex.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/components/core/update/updateAutoHeight.js",
+      "name": "./node_modules/swiper/esm/components/core/update/updateAutoHeight.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/components/core/update/updateClickedSlide.js",
+      "name": "./node_modules/swiper/esm/components/core/update/updateClickedSlide.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/components/core/update/updateProgress.js",
+      "name": "./node_modules/swiper/esm/components/core/update/updateProgress.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/components/core/update/updateSize.js",
+      "name": "./node_modules/swiper/esm/components/core/update/updateSize.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/components/core/update/updateSlides.js",
+      "name": "./node_modules/swiper/esm/components/core/update/updateSlides.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/components/core/update/updateSlidesClasses.js",
+      "name": "./node_modules/swiper/esm/components/core/update/updateSlidesClasses.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/components/core/update/updateSlidesOffset.js",
+      "name": "./node_modules/swiper/esm/components/core/update/updateSlidesOffset.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/components/core/update/updateSlidesProgress.js",
+      "name": "./node_modules/swiper/esm/components/core/update/updateSlidesProgress.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/components/effect-coverflow/effect-coverflow.js",
+      "name": "./node_modules/swiper/esm/components/effect-coverflow/effect-coverflow.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/components/effect-cube/effect-cube.js",
+      "name": "./node_modules/swiper/esm/components/effect-cube/effect-cube.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/components/effect-fade/effect-fade.js",
+      "name": "./node_modules/swiper/esm/components/effect-fade/effect-fade.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/components/effect-flip/effect-flip.js",
+      "name": "./node_modules/swiper/esm/components/effect-flip/effect-flip.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/components/hash-navigation/hash-navigation.js",
+      "name": "./node_modules/swiper/esm/components/hash-navigation/hash-navigation.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/components/history/history.js",
+      "name": "./node_modules/swiper/esm/components/history/history.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/components/keyboard/keyboard.js",
+      "name": "./node_modules/swiper/esm/components/keyboard/keyboard.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/components/lazy/lazy.js",
+      "name": "./node_modules/swiper/esm/components/lazy/lazy.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/components/mousewheel/mousewheel.js",
+      "name": "./node_modules/swiper/esm/components/mousewheel/mousewheel.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/components/navigation/navigation.js",
+      "name": "./node_modules/swiper/esm/components/navigation/navigation.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/components/pagination/pagination.js",
+      "name": "./node_modules/swiper/esm/components/pagination/pagination.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/components/parallax/parallax.js",
+      "name": "./node_modules/swiper/esm/components/parallax/parallax.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/components/scrollbar/scrollbar.js",
+      "name": "./node_modules/swiper/esm/components/scrollbar/scrollbar.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/components/thumbs/thumbs.js",
+      "name": "./node_modules/swiper/esm/components/thumbs/thumbs.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/components/virtual/virtual.js",
+      "name": "./node_modules/swiper/esm/components/virtual/virtual.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/components/zoom/zoom.js",
+      "name": "./node_modules/swiper/esm/components/zoom/zoom.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/modules/observer/observer.js",
+      "name": "./node_modules/swiper/esm/modules/observer/observer.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/modules/resize/resize.js",
+      "name": "./node_modules/swiper/esm/modules/resize/resize.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/react/get-changed-params.js",
+      "name": "./node_modules/swiper/esm/react/get-changed-params.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/react/get-children.js",
+      "name": "./node_modules/swiper/esm/react/get-children.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/react/get-params.js",
+      "name": "./node_modules/swiper/esm/react/get-params.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/react/init-swiper.js",
+      "name": "./node_modules/swiper/esm/react/init-swiper.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/react/loop.js",
+      "name": "./node_modules/swiper/esm/react/loop.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/react/params-list.js",
+      "name": "./node_modules/swiper/esm/react/params-list.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/react/swiper-slide.js",
+      "name": "./node_modules/swiper/esm/react/swiper-slide.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/react/swiper.js",
+      "name": "./node_modules/swiper/esm/react/swiper.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/react/update-swiper.js",
+      "name": "./node_modules/swiper/esm/react/update-swiper.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/react/use-isomorphic-layout-effect.js",
+      "name": "./node_modules/swiper/esm/react/use-isomorphic-layout-effect.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/react/utils.js",
+      "name": "./node_modules/swiper/esm/react/utils.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/react/virtual.js",
+      "name": "./node_modules/swiper/esm/react/virtual.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/utils/dom.js",
+      "name": "./node_modules/swiper/esm/utils/dom.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/utils/get-browser.js",
+      "name": "./node_modules/swiper/esm/utils/get-browser.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/utils/get-device.js",
+      "name": "./node_modules/swiper/esm/utils/get-device.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/utils/get-support.js",
+      "name": "./node_modules/swiper/esm/utils/get-support.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/esm/utils/utils.js",
+      "name": "./node_modules/swiper/esm/utils/utils.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/swiper-react.esm.js",
+      "name": "./node_modules/swiper/swiper-react.esm.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/swiper/swiper.esm.js",
+      "name": "./node_modules/swiper/swiper.esm.js",
       "file": "static/chunks/1.js",
       "publicPath": "static/chunks/1.js"
     }

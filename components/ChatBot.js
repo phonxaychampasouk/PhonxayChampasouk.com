@@ -5,7 +5,7 @@ import React, { Component } from 'react';
 import {
   Grid, Segment, Label, Container, Button, Icon,
 } from 'semantic-ui-react';
-import KEYS from '../keys';
+//import KEYS from '../keys';
 
 //import ChatBot from './botComponents/ChatBot';
 

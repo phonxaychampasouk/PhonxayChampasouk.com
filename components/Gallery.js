@@ -1,6 +1,6 @@
 import { useState, useCallback } from 'react';
-import Slider from './Slider';
 import Gallery from 'react-photo-gallery';
+import Slider from './Slider';
 import photos from './galleryComponents/photos';
 import SelectedImage from './galleryComponents/SelectedImage';
 import SubmittedPhotos from './galleryComponents/SubmittedPhotos';
@@ -51,7 +51,7 @@ function BasicRows() {
         photos={photos}
         renderImage={imageRenderer}
       />
-      
+
     </>
   );
 }

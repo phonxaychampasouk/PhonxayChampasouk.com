@@ -1,25 +1,28 @@
-import Coverflow from 'react-coverflow';
+import SwiperCore, {
+  Navigation, Pagination, Scrollbar, A11y, EffectCoverflow,
+} from 'swiper';
 
-const SwiperForSubmittedPhotos = ({ displaySubmittedPhotos, initialPhoto }) => (
-  <Coverflow
-    width="100%"
-    height={480}
-    displayQuantityOfSide={2}
-    navigation={false}
-    enableHeading={false}
-  >
-    <div
-      role="menuitem"
-      tabIndex="0"
+import { Swiper, SwiperSlide } from 'swiper/react';
+// Import Swiper styles
+
+// install Swiper components
+SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, EffectCoverflow]);
+
+const SwiperForSubmittedPhotos = ({ displaySubmittedPhotos }) => {
+  const slides = displaySubmittedPhotos.map((card, index) => (<SwiperSlide key={`slides${index}`} tag="li">{card}</SwiperSlide>));
+
+  return (
+    <Swiper
+      id="swiper-main"
+      tag="section"
+      wrapperTag="ul"
+      navigation
+      pagination
     >
-      <img
-        src="[image/path/please_change]"
-        alt="title or description"
-        style={{ display: 'block', width: '100%' }}
-      />
-    </div>
-    {displaySubmittedPhotos}
-  </Coverflow>
-);
+      {slides}
+
+    </Swiper>
+  );
+};
 
 export default SwiperForSubmittedPhotos;
