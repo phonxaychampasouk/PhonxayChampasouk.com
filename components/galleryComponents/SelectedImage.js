@@ -50,11 +50,9 @@ const SelectedImage = ({
   top,
   left,
   selected,
-  photoCollection,
   setPhotoCollection,
 }) => {
   const [isSelected, setIsSelected] = useState(selected);
-  // calculate x,y scale
   const sx = (100 - (30 / photo.width) * 100) / 100;
   const sy = (100 - (30 / photo.height) * 100) / 100;
   selectedImgStyle.transform = `translateZ(0px) scale3d(${sx}, ${sy}, 1)`;
@@ -64,30 +62,22 @@ const SelectedImage = ({
     cont.left = left;
     cont.top = top;
   }
-
-  // TODO: Create an handleSubmit tht uses Reacts hooks to update what photoCollections
+  // logic for selecting and deselecting photos
   const handleOnClick = ({ target }) => {
     const selectedPhoto = target.getAttribute('index');
-    console.log('newArray.indexOf(selectedPhoto): ', newArray.indexOf(selectedPhoto));
-
     if (newArray.length === 0) {
-      newArray.push(selectedPhoto); // pushes selected photos index to newArray
-      //  setPhotoCollection(newArray); // uses hook to updat photo selection
+      newArray.push(selectedPhoto);
       setIsSelected(!isSelected);
-      console.log('pushing index into newArray with 0 length: ', newArray);
     } else if (newArray.indexOf(selectedPhoto) === -1) {
       newArray.push(selectedPhoto);
-      console.log('add to newArray if array does not contain index ', newArray);
       setIsSelected(!isSelected);
     } else if (newArray.indexOf(selectedPhoto) === 0 || newArray.indexOf(selectedPhoto)) {
       if (newArray.indexOf(selectedPhoto) === 0) {
         newArray.splice(0, 1);
         setIsSelected(!isSelected);
-        console.log('newArray after slicing the duplicate at 0', newArray);
       } else {
         newArray.splice(1, 1);
         setIsSelected(!isSelected);
-        console.log('newArray after slicing the duplicate', newArray);
       }
     }
     setPhotoCollection(newArray);

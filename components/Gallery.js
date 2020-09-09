@@ -1,24 +1,17 @@
 import { useState, useCallback } from 'react';
 import Gallery from 'react-photo-gallery';
-import Slider from './Slider';
 import photos from './galleryComponents/photos';
 import SelectedImage from './galleryComponents/SelectedImage';
 import SubmittedPhotos from './galleryComponents/SubmittedPhotos';
-
-/* popout the browser and maximize to see more rows! -> */
 
 function BasicRows() {
   const [selectAll, setSelectAll] = useState(false);
   const [photoCollection, setPhotoCollection] = useState([null]);
   const [isPhotoDisplayed, setIsPhotoDisplayed] = useState(false);
 
-  const toggleSelectAll = () => {
-    setSelectAll(!selectAll);
-  };
   const handleOnSubmit = (e) => {
     setPhotoCollection(photoCollection.map((photo) => parseInt(photo, 10)));
     setIsPhotoDisplayed(true);
-    console.log('photoCollections should be all ints', photoCollection);
     e.preventDefault();
   };
 

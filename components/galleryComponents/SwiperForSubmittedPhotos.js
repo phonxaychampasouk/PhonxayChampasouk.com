@@ -3,9 +3,7 @@ import SwiperCore, {
 } from 'swiper';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-// Import Swiper styles
 
-// install Swiper components
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, EffectCoverflow]);
 
 const SwiperForSubmittedPhotos = ({ displaySubmittedPhotos }) => {

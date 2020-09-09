@@ -1,7 +1,7 @@
 import dynamic from 'next/dynamic';
 import photos from './photos';
-// import SwiperForSubmittedPhotos from './SwiperForSubmittedPhotos';
 
+// renders component in browser
 const SwiperForSubmittedPhotos = dynamic(
   () => import('./SwiperForSubmittedPhotos'),
   { ssr: false },
@@ -17,7 +17,6 @@ const SubmittedPhotos = ({
       </form>
     );
   }
-  console.log('photos: ', photos);
 
   const initialPhoto = () => (
     photos[0].src
@@ -27,7 +26,6 @@ const SubmittedPhotos = ({
   const displaySubmittedPhotos = photoCollection.map((index) => (
     <img src={photos[index].src} onDragStart={handleOnDragStart} alt="test" className="submitted-photos" />
   ));
-  console.log(displaySubmittedPhotos);
 
   return (
     <>
