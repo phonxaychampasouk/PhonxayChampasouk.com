@@ -1,8 +1,12 @@
-
-// import Layout from '../components/Layout';
 import Head from 'next/head';
 
+import dynamic from 'next/dynamic';
 import Feature from '../components/Feature';
+
+const ChatBot = dynamic(
+  () => import('../components/ChatBot'),
+  { ssr: false },
+);
 
 const Index = () => (
 
@@ -12,6 +16,7 @@ const Index = () => (
     </Head>
     <div className="main-container">
       <Feature />
+      <ChatBot />
     </div>
   </>
 

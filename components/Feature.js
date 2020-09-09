@@ -5,8 +5,8 @@ import Skills from './featureComponents/Skills';
 function Feature() {
   return (
     <>
-      <img src="/background.jpg" className="landing-page-image" alt="tetst" />
-      <header id="home">
+      <img src="/background.jpg" className="landing-page-image" alt="B/W Mountain" />
+      <header id="landing-page">
         <div className="row banner">
           <div className="banner-text">
             <h1 className="responsive-headline">

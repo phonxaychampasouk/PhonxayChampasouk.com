@@ -22,10 +22,10 @@ class Skills extends Component {
       <PieChart
         id="pie-chart"
         key={skill.country}
-        dataSource={[skill, {country: 'sample', total: (10-skill.total)}]}
+        dataSource={[skill, {country: 'sample', total: (15-skill.total)}]}
         resolveLabelOverlapping="shift"
         sizeGroup="piesGroup"
-        innerRadius={0.7}
+        innerRadius={0.9}
         centerRender={CenterTemplate}
         type="doughnut"
       >
