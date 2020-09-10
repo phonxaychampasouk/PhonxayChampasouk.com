@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Feature from '../components/Feature';
 import ChatBot from '../components/ChatBot';
 import Gallery from '../components/Gallery';
+import Values from '../components/Values';
 
 const Index = () => (
 
@@ -11,6 +12,7 @@ const Index = () => (
     </Head>
     <div className="main-container">
       <Feature />
+      <Values />
       <ChatBot />
       <Gallery />
     </div>
