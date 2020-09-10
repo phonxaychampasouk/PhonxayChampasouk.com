@@ -5,7 +5,7 @@ import Skills from './featureComponents/Skills';
 function Feature() {
   return (
     <>
-      <img src="/background.jpg" className="landing-page-image" alt="B/W Mountain" />
+      <img src="/me.jpg" className="landing-page-image" alt="B/W Mountain" />
       <header id="landing-page">
         <div className="row banner">
           <div className="banner-text">
@@ -14,7 +14,9 @@ function Feature() {
               Phonxay.
             </h1>
             <h3 id="banner-h3">
-              I'm a <span>Software Developer</span>
+              I'm a
+              {' '}
+              <span>Software Developer</span>
               based in Seattle, Washington .
               Let me help you build a beautiful
               and fast website that will keep your customers engaged.
@@ -44,23 +46,22 @@ function Feature() {
                         <span>Phonxay</span>
                         <br />
                         <span>
-                          3509 South Thistle Street
-
-                          <br />
                           Seattle, WA
                           {' '}
-                          FL,
-                          ,
-                          {' '}
-                          98118
                         </span>
                         <br />
-                        <span>7274833740</span>
                         <br />
                         <span>phonxay.champasouk@gmail.com</span>
                       </p>
                       <div id="social-buttons">
-                        <Button animated="vertical" color="linkedin">
+                        <Button
+                          animated="vertical"
+                          onClick={(e) => {
+                            e.preventDefault();
+                            window.location.href = 'https://www.github.com/phonxaychampasouk';
+                          }}
+                          color="github"
+                        >
                           <Button.Content visible>
                             {' '}
                             <Icon name="github" />
@@ -73,7 +74,14 @@ function Feature() {
                             Connect
                           </Button.Content>
                         </Button>
-                        <Button animated="vertical" color="linkedin">
+                        <Button
+                          animated="vertical"
+                          onClick={(e) => {
+                            e.preventDefault();
+                            window.location.href = 'https://www.linkedin.com/in/phonxaychampasouk1';
+                          }}
+                          color="linkedin"
+                        >
                           <Button.Content visible>
                             {' '}
                             <Icon name="linkedin" />
@@ -86,7 +94,14 @@ function Feature() {
                             Connect
                           </Button.Content>
                         </Button>
-                        <Button animated="vertical" color="instagram">
+                        <Button
+                          animated="vertical"
+                          onClick={(e) => {
+                            e.preventDefault();
+                            window.location.href = 'https://www.instagram.com/the.champa.gram/';
+                          }}
+                          color="instagram"
+                        >
                           <Button.Content visible>
                             {' '}
                             <Icon name="instagram" />
