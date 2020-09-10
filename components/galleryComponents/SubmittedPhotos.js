@@ -1,11 +1,18 @@
-import dynamic from 'next/dynamic';
+// react component for creating beautiful carousel
+import Carousel from 'react-slick';
+// @material-ui/core components
+import { makeStyles } from '@material-ui/core/styles';
+// @material-ui/icons
+import LocationOn from '@material-ui/icons/LocationOn';
 import photos from './photos';
+// core components
+import GridContainer from './GridContainer';
+import GridItem from './GridItem';
+import Card from './Card';
 
-// renders component in browser
-const SwiperForSubmittedPhotos = dynamic(
-  () => import('./SwiperForSubmittedPhotos'),
-  { ssr: false },
-);
+import styles from '../../styles/carouselStyle';
+
+const useStyles = makeStyles(styles);
 
 const SubmittedPhotos = ({
   photoCollection, handleOnSubmit, isPhotoDisplayed,
@@ -18,24 +25,41 @@ const SubmittedPhotos = ({
     );
   }
 
-  const initialPhoto = () => (
-    photos[0].src
-  );
   const handleOnDragStart = (e) => e.preventDefault();
 
   const displaySubmittedPhotos = photoCollection.map((index) => (
-    <img src={photos[index].src} onDragStart={handleOnDragStart} alt="test" className="submitted-photos" />
-  ));
-
-  return (
-    <>
-      <div>
-        <SwiperForSubmittedPhotos
-          displaySubmittedPhotos={displaySubmittedPhotos}
-          initialPhoto={initialPhoto}
-        />
+    <div>
+      <img src={photos[index].src} alt="First slide" className="slick-image" />
+      <div className="slick-caption">
+        <h4>
+          <LocationOn className="slick-icons" />
+          Yellowstone National Park, United States
+        </h4>
       </div>
-    </>
+    </div>
+  ));
+  const classes = useStyles();
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: false,
+  };
+  return (
+    <div className="parent-container">
+      <GridContainer>
+        <GridItem xs={12} sm={12} md={8} className={classes.marginAuto}>
+          <Card carousel>
+            <Carousel {...settings}>
+              {displaySubmittedPhotos}
+            </Carousel>
+          </Card>
+        </GridItem>
+      </GridContainer>
+    </div>
+
   );
 };
 
