@@ -25,8 +25,6 @@ const SubmittedPhotos = ({
     );
   }
 
-  const handleOnDragStart = (e) => e.preventDefault();
-
   const displaySubmittedPhotos = photoCollection.map((index) => (
     <div>
       <img src={photos[index].src} alt="First slide" className="slick-image" />
