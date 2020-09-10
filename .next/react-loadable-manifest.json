@@ -1,10 +1,10 @@
 {
-  "./dev/noop": [
+  "./SwiperForSubmittedPhotos": [
     {
-      "id": "./node_modules/next/dist/client/dev/noop.js",
-      "name": "./node_modules/next/dist/client/dev/noop.js",
-      "file": "static/chunks/0.js",
-      "publicPath": "static/chunks/0.js"
+      "id": "WdZs",
+      "name": "./components/galleryComponents/SwiperForSubmittedPhotos.js",
+      "file": "static/chunks/9.2f89ec77cc8284cf02ae.js",
+      "publicPath": "static/chunks/9.2f89ec77cc8284cf02ae.js"
     }
   ]
 }
