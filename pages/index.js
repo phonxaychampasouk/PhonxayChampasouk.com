@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
-import Feature from '../components/Feature';
+import FeatureScroll from '../components/FeatureScroll';
 import ChatBot from '../components/ChatBot';
 import Gallery from '../components/Gallery';
 import NavBar from '../components/NavBar';
@@ -17,7 +17,7 @@ const Index = () => (
     </Head>
     <div className="main-container">
       <NavBar />
-      <Feature />
+      <FeatureScroll />
       <DynamicValues />
       <ChatBot />
       <Gallery />
