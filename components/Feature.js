@@ -5,7 +5,7 @@ import Skills from './featureComponents/Skills';
 function Feature() {
   return (
     <>
-      <img src="/me.jpg" className="landing-page-image" alt="B/W Mountain" />
+      <img src="/stickme.jpg" className="landing-page-image" alt="B/W Mountain" />
       <header id="landing-page">
         <div className="row banner">
           <div className="banner-text">
@@ -28,7 +28,7 @@ function Feature() {
             <div id="background-image">
               <div className="about-me-row">
                 <div className="avatar">
-                  <Image src="avatar.jpg" size="small" circular bordered />
+                  <Image src="heromain.jpg" size="small" circular bordered />
                 </div>
                 <div className="nine columns main-col">
                   <h2>About Me</h2>
