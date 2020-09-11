@@ -13,30 +13,6 @@
       "publicPath": "static/chunks/1.js"
     },
     {
-      "id": "./node_modules/@material-ui/core/esm/Container/Container.js",
-      "name": "./node_modules/@material-ui/core/esm/Container/Container.js",
-      "file": "static/chunks/1.js",
-      "publicPath": "static/chunks/1.js"
-    },
-    {
-      "id": "./node_modules/@material-ui/core/esm/Container/index.js",
-      "name": "./node_modules/@material-ui/core/esm/Container/index.js",
-      "file": "static/chunks/1.js",
-      "publicPath": "static/chunks/1.js"
-    },
-    {
-      "id": "./node_modules/@material-ui/core/esm/Typography/Typography.js",
-      "name": "./node_modules/@material-ui/core/esm/Typography/Typography.js",
-      "file": "static/chunks/1.js",
-      "publicPath": "static/chunks/1.js"
-    },
-    {
-      "id": "./node_modules/@material-ui/core/esm/Typography/index.js",
-      "name": "./node_modules/@material-ui/core/esm/Typography/index.js",
-      "file": "static/chunks/1.js",
-      "publicPath": "static/chunks/1.js"
-    },
-    {
       "id": "./node_modules/@material-ui/core/esm/utils/createSvgIcon.js",
       "name": "./node_modules/@material-ui/core/esm/utils/createSvgIcon.js",
       "file": "static/chunks/1.js",
