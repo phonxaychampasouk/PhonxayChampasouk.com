@@ -58,11 +58,5 @@ function Typography(props) {
   );
 }
 
-Typography.propTypes = {
-  children: PropTypes.node,
-  classes: PropTypes.object.isRequired,
-  marked: PropTypes.oneOf([false, 'center', 'left']),
-  variant: PropTypes.string,
-};
 
 export default withStyles(styles)(Typography);
