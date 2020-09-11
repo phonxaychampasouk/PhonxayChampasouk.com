@@ -11,76 +11,51 @@ import styles from '../styles/navBarStyles';
 
 const useStyles = makeStyles(styles);
 
-export default function Navbar() {
+export default function Navbars() {
   const classes = useStyles();
   return (
     <div className={classes.section}>
       <div className={classes.container}>
-        <Header
-          brand="Transparent"
-          color="transparent"
-          rightLinks={(
-            <List className={classes.list}>
-              <ListItem className={classes.listItem}>
-                <Button
-                  color="transparent"
-                  className={
-                      `${classes.navLink} ${classes.socialIconsButton}`
-                    }
-                >
-                  <i
-                    className={
-                        `${classes.socialIcons
-                        } ${
-                          classes.marginRight5
-                        } fab fa-twitter`
-                      }
-                  />
-                  {' '}
-                  Twitter
-                </Button>
-              </ListItem>
-              <ListItem className={classes.listItem}>
-                <Button
-                  color="transparent"
-                  className={
-                      `${classes.navLink} ${classes.socialIconsButton}`
-                    }
-                >
-                  <i
-                    className={
-                        `${classes.socialIcons
-                        } ${
-                          classes.marginRight5
-                        } fab fa-facebook`
-                      }
-                  />
-                  {' '}
-                  Facebook
-                </Button>
-              </ListItem>
-              <ListItem className={classes.listItem}>
-                <Button
-                  color="transparent"
-                  className={
-                      `${classes.navLink} ${classes.socialIconsButton}`
-                    }
-                >
-                  <i
-                    className={
-                        `${classes.socialIcons
-                        } ${
-                          classes.marginRight5
-                        } fab fa-instagram`
-                      }
-                  />
-                  {' '}
-                  Instagram
-                </Button>
-              </ListItem>
-            </List>
+        <div id="navbar" className={classes.navbar}>
+          <Header
+            brand="Phonxay Champasouk"
+            rightLinks={(
+              <List className={classes.list}>
+                <ListItem className={classes.listItem}>
+                  <Button
+                    href="#pablo"
+                    className={classes.navLink}
+                    onClick={(e) => e.preventDefault()}
+                    color="transparent"
+                  >
+                    Discover
+                  </Button>
+                </ListItem>
+                <ListItem className={classes.listItem}>
+                  <Button
+                    href="#pablo"
+                    className={classes.navLink}
+                    onClick={(e) => e.preventDefault()}
+                    color="transparent"
+                  >
+                    Wishlist
+                  </Button>
+                </ListItem>
+                <ListItem className={classes.listItem}>
+                  <Button
+                    href="#pablo"
+                    className={classes.registerNavLink}
+                    onClick={(e) => e.preventDefault()}
+                    color="rose"
+                    round
+                  >
+                    Register
+                  </Button>
+                </ListItem>
+              </List>
             )}
-        />
+          />
+        </div>
       </div>
     </div>
   );
