@@ -1,11 +1,11 @@
 const photos = [
   {
-    src: 'https://phonxaydocuments.blob.core.windows.net/phonxayblob/bug.JPG',
+    src: 'https://phonxaydocuments.blob.core.windows.net/phonxayblob/moosesmiles.JPG',
     width: 6,
     height: 4,
   },
   {
-    src: 'https://phonxaydocuments.blob.core.windows.net/phonxayblob/gardenofgods.JPG',
+    src: 'https://phonxaydocuments.blob.core.windows.net/phonxayblob/stickme.jpg',
     width: 6,
     height: 4,
   },
@@ -15,8 +15,8 @@ const photos = [
     height: 4,
   },
   {
-    src: 'https://phonxaydocuments.blob.core.windows.net/phonxayblob/scenery.JPG',
-    width: 10,
+    src: 'https://phonxaydocuments.blob.core.windows.net/phonxayblob/yellow.jpg',
+    width: 5,
     height: 4,
   },
   {
@@ -25,7 +25,7 @@ const photos = [
     height: 4,
   },
   {
-    src: 'https://phonxaydocuments.blob.core.windows.net/phonxayblob/background2.JPG',
+    src: 'https://phonxaydocuments.blob.core.windows.net/phonxayblob/flower.JPG',
     width: 5,
     height: 4,
   },
