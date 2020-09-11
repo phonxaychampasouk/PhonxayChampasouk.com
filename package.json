@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 8080",
     "build": "next build && next export",
     "start": "next start"
   },
@@ -21,6 +21,7 @@
     "devextreme-react": "^20.1.6",
     "express": "^4.17.1",
     "next": "9.4.4",
+    "particles-bg": "^2.5.0",
     "postcss-flexbugs-fixes": "^4.2.1",
     "postcss-preset-env": "^6.7.0",
     "prop-types": "^15.7.2",
