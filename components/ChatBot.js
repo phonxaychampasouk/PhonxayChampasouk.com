@@ -50,7 +50,7 @@ class PhotoPortfolio extends Component {
           <div className="portfolio-banner" />
         </div>
         <img
-          src="/background3.png"
+          src="https://phonxaydocuments.blob.core.windows.net/phonxayblob/background3.png"
           className="portfolio-background"
           alt="moose head"
           onClick={() => this.toggleMooseBot()}
