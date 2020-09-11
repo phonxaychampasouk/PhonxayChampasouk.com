@@ -3,6 +3,7 @@ import Feature from '../components/Feature';
 import ChatBot from '../components/ChatBot';
 import Gallery from '../components/Gallery';
 import Values from '../components/Values';
+import NavBar from '../components/NavBar';
 
 const Index = () => (
 
@@ -11,6 +12,7 @@ const Index = () => (
       <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.11/semantic.min.css" />
     </Head>
     <div className="main-container">
+      <NavBar />
       <Feature />
       <Values />
       <ChatBot />
