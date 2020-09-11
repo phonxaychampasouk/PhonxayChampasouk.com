@@ -3,7 +3,7 @@ import headerLinksStyle from './headerLinksStyle';
 
 const navbarsStyle = (theme) => ({
   section: {
-    padding: '70px 0',
+    width: '100%',
     paddingTop: '0',
   },
   container,

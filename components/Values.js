@@ -6,13 +6,14 @@ import Container from '@material-ui/core/Container';
 import CameraAltIcon from '@material-ui/icons/CameraAlt';
 import FaceIcon from '@material-ui/icons/Face';
 import CloudCircleIcon from '@material-ui/icons/CloudCircle';
+import ParticlesBg from 'particles-bg';
 import Typography from './valuesComponents/Typography';
 
 const styles = (theme) => ({
   root: {
     display: 'flex',
     overflow: 'hidden',
-    backgroundColor: theme.palette.secondary.light,
+    backgroundColor: 'transparent',
   },
   container: {
     marginTop: theme.spacing(15),
@@ -46,46 +47,39 @@ function ProductValues(props) {
   return (
     <section className="values-container">
       <div className={classes.root}>
-        <Container className={classes.container}>
-          <img
-            src="/static/themes/onepirate/productCurvyLines.png"
-            className={classes.curvyLines}
-            alt="curvy lines"
-          />
+        <Container className={classes.container} style={{marginTop: '0', marginBottom: '0', paddingTop: '120px', paddingBottom: '240px'}}>
+          <ParticlesBg color="#555555" num={10} type="square" bg />
           <Grid container spacing={5}>
             <Grid item xs={12} md={4}>
               <div className={classes.item}>
-              <CameraAltIcon style={{ fontSize: 100 }}/>
+                <CameraAltIcon style={{ fontSize: 100 }} />
                 <Typography variant="h6" className={classes.title}>
                   Explore
                 </Typography>
                 <Typography variant="h5">
-                  {'From the latest trendy boutique hotel to the iconic palace with XXL pool'}
-                  {', go for a mini-vacation just a few subway stops away from your home.'}
+{`I lead with imagination and succeed with determination`}
                 </Typography>
               </div>
             </Grid>
             <Grid item xs={12} md={4}>
               <div className={classes.item}>
-              <CloudCircleIcon style={{ fontSize: 100 }}/>
+                <CloudCircleIcon style={{ fontSize: 100 }} />
                 <Typography variant="h6" className={classes.title}>
                   Create
                 </Typography>
                 <Typography variant="h5">
-                  {'Privatize a pool, take a Japanese bath or wake up in 900m2 of garden… '}
-                  {'your Sundays will not be alike.'}
+{`Inorder for me to be unique, I have to give you my all.`}
                 </Typography>
               </div>
             </Grid>
             <Grid item xs={12} md={4}>
               <div className={classes.item}>
-              <FaceIcon style={{ fontSize: 100 }}/>
+                <FaceIcon style={{ fontSize: 100 }} />
                 <Typography variant="h6" className={classes.title}>
                   Deliver
                 </Typography>
                 <Typography variant="h5">
-                  {'By registering, you will access specially negotiated rates '}
-                  {'that you will not find anywhere else.'}
+  {`Everything that you ever wanted, and then some more.`}}
                 </Typography>
               </div>
             </Grid>
