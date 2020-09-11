@@ -4,7 +4,7 @@ import Resume from './Resume';
 function Feature() {
   return (
     <>
-      <img src="https://phonxaydocuments.blob.core.windows.net/phonxayblob/stickme.jpg" className="landing-page-image" alt="B/W Mountain" />
+      <img src="https://phonxaydocuments.blob.core.windows.net/phonxayblob/memain.jpg" className="landing-page-image" alt="Landing-page" />
       <header id="landing-page">
         <div className="row banner">
           <div className="banner-text">
