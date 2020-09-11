@@ -1,6 +1,5 @@
 import { Button, Icon, Image } from 'semantic-ui-react';
 import Resume from './Resume';
-import Skills from './featureComponents/Skills';
 
 function Feature() {
   return (
@@ -32,7 +31,7 @@ function Feature() {
                 </div>
                 <div className="nine columns main-col">
                   <h2>About Me</h2>
-                  <p>
+                  <p className="about-me-p">
                     {' '}
                     Hi! My name is Phonxay! I like to tell people that Phonxay is pronounced like Banzai, but with a "P". Greetings,
                     I am so happy that you have viewed my site. You can be here for many reasons, such as for photography,
@@ -43,15 +42,15 @@ function Feature() {
                     <div className="columns contact-details">
                       <h2>Contact Details</h2>
                       <p className="address">
-                        <span>Phonxay</span>
+                        <span className="about-me-p">Phonxay Champasouk</span>
                         <br />
-                        <span>
+                        <span className="about-me-p">
                           Seattle, WA
                           {' '}
                         </span>
                         <br />
                         <br />
-                        <span>phonxay.champasouk@gmail.com</span>
+                        <span className="about-me-p">phonxay.champasouk@gmail.com</span>
                       </p>
                       <div id="social-buttons">
                         <Button

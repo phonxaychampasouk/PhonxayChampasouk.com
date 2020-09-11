@@ -7,6 +7,9 @@
     text-align: center;
     overflow: scroll;
  }
+ #landing-page::-webkit-scrollbar {
+   display: none;
+ }
  
  /* vertically center banner section */
  header:before {
@@ -24,7 +27,7 @@
       height: 150%;
       width: 100%;
       padding-bottom: 30px;
-      overflow: hidden;
+      overflow: scroll;
 
    }
  }
@@ -170,10 +173,10 @@ header .responsive-headline {
    top: 0;
    left: 0;
    display: block;
-   height: 100%;
+   height: 110%;
    width: 100%;
    object-fit: cover;
-   transition: filter 1s; 
+   
  }
 
  /*============ABOUT ME====================*/
@@ -247,6 +250,7 @@ header .responsive-headline {
    text-align: left;
    padding-left:100px;
    padding-right: 100px;
+
 }
 
 @media (max-width: 767px) {
@@ -307,4 +311,7 @@ opacity: .5;
 
 .VictoryContainer:hover {
    opacity: 1;
+}
+.about-me-p {
+   font: 20px/32px 'opensans-bold', sans-serif;
 }

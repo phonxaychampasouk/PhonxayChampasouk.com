@@ -18,6 +18,7 @@ const useStyles = makeStyles((theme) => ({
     position: 'fixed',
     bottom: theme.spacing(2),
     right: theme.spacing(2),
+    zIndex: '101',
   },
 }));
 
@@ -64,9 +65,7 @@ export default function BackToTop(props) {
     <>
       <CssBaseline />
       <Toolbar id="back-to-top-anchor" />
-
         <Feature />
- 
       <ScrollTop {...props}>
         <Fab color="secondary" size="large" aria-label="scroll back to top">
           <KeyboardArrowUpIcon />
