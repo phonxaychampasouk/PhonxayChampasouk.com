@@ -4,6 +4,8 @@ import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
 import CameraAltIcon from '@material-ui/icons/CameraAlt';
+import FaceIcon from '@material-ui/icons/Face';
+import CloudCircleIcon from '@material-ui/icons/CloudCircle';
 import Typography from './valuesComponents/Typography';
 
 const styles = (theme) => ({
@@ -53,9 +55,9 @@ function ProductValues(props) {
           <Grid container spacing={5}>
             <Grid item xs={12} md={4}>
               <div className={classes.item}>
-              <CameraAltIcon />
+              <CameraAltIcon style={{ fontSize: 100 }}/>
                 <Typography variant="h6" className={classes.title}>
-                  The best luxury hotels
+                  Explore
                 </Typography>
                 <Typography variant="h5">
                   {'From the latest trendy boutique hotel to the iconic palace with XXL pool'}
@@ -65,13 +67,9 @@ function ProductValues(props) {
             </Grid>
             <Grid item xs={12} md={4}>
               <div className={classes.item}>
-                <img
-                  className={classes.image}
-                  src="/static/themes/onepirate/productValues2.svg"
-                  alt="graph"
-                />
+              <CloudCircleIcon style={{ fontSize: 100 }}/>
                 <Typography variant="h6" className={classes.title}>
-                  New experiences
+                  Create
                 </Typography>
                 <Typography variant="h5">
                   {'Privatize a pool, take a Japanese bath or wake up in 900m2 of garden… '}
@@ -81,13 +79,9 @@ function ProductValues(props) {
             </Grid>
             <Grid item xs={12} md={4}>
               <div className={classes.item}>
-                <img
-                  className={classes.image}
-                  src="/static/themes/onepirate/productValues3.svg"
-                  alt="clock"
-                />
+              <FaceIcon style={{ fontSize: 100 }}/>
                 <Typography variant="h6" className={classes.title}>
-                  Exclusive rates
+                  Deliver
                 </Typography>
                 <Typography variant="h5">
                   {'By registering, you will access specially negotiated rates '}
