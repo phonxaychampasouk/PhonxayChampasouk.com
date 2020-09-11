@@ -1,4 +1,9 @@
 import { useState } from 'react';
+<<<<<<< HEAD
+=======
+import PropTypes from 'prop-types';
+import AppBar from '@material-ui/core/AppBar';
+>>>>>>> moosebot
 import Toolbar from '@material-ui/core/Toolbar';
 import { makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -6,10 +11,16 @@ import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import Fab from '@material-ui/core/Fab';
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 import Zoom from '@material-ui/core/Zoom';
+import { Chat } from '@material-ui/icons';
 import Feature from './Feature';
 
 import ChatBot from './ChatBot';
 
+<<<<<<< HEAD
+=======
+import KEYS from '../keys';
+
+>>>>>>> moosebot
 const useStyles = makeStyles((theme) => ({
   root: {
     position: 'fixed',
@@ -22,7 +33,11 @@ const useStyles = makeStyles((theme) => ({
 function ScrollTop(props) {
   const [mooseBotDisplay, setMooseBotDisplay] = useState(false);
 
+<<<<<<< HEAD
   const { window } = props;
+=======
+  const { children, window } = props;
+>>>>>>> moosebot
   const classes = useStyles();
   // Note that you normally won't need to set the window ref as useScrollTrigger
   // will default to window.
@@ -60,7 +75,20 @@ function ScrollTop(props) {
   );
 }
 
+<<<<<<< HEAD
 export default function FeatureScroll() {
+=======
+ScrollTop.propTypes = {
+  children: PropTypes.element.isRequired,
+  /**
+   * Injected by the documentation to work in an iframe.
+   * You won't need it on your project.
+   */
+  window: PropTypes.func,
+};
+
+export default function FeatureScroll(props) {
+>>>>>>> moosebot
   return (
     <>
       <CssBaseline />
