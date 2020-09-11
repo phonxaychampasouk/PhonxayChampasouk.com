@@ -19,7 +19,6 @@ const Index = () => (
       <NavBar />
       <FeatureScroll />
       <DynamicValues />
-      <ChatBot />
       <Gallery />
     </div>
   </>
