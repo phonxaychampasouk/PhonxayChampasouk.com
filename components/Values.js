@@ -64,21 +64,23 @@ function ProductValues(props) {
   ));
 
   return (
-    <section className="values-container">
-      <div className={classes.root}>
+    <div className="values-container">
+      <img src="open.jpg" className="values-bg-image" alt="Landing-page" />
+      <div className="values-banner">
         <Container
           className={classes.container}
           style={{
-            marginTop: '120px', marginBottom: '0', paddingTop: '120px', paddingBottom: '240px',
+            marginTop: '10px', marginBottom: '0', paddingTop: '100px', paddingBottom: '24px',
           }}
         >
-          <ParticlesBg color="blue" num={15} type="square" bg />
-          <Grid container spacing={5}>
+          <Grid container spacing={4}>
             {sectionCards}
           </Grid>
+          <ParticlesBg color="white" num={5} type="square" bg />
         </Container>
+
       </div>
-    </section>
+    </div>
   );
 }
 
