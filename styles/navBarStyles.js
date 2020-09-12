@@ -6,7 +6,11 @@ const navbarsStyle = (theme) => ({
     width: '100%',
     paddingTop: '0',
   },
-  container,
+  container:{
+    width: '100%',
+    position: 'absolute',
+
+  },
   title: {
     ...title,
     marginTop: '30px',
