@@ -47,7 +47,12 @@ function ProductValues(props) {
   return (
     <section className="values-container">
       <div className={classes.root}>
-        <Container className={classes.container} style={{marginTop: '0', marginBottom: '0', paddingTop: '120px', paddingBottom: '240px'}}>
+        <Container
+          className={classes.container}
+          style={{
+            marginTop: '0', marginBottom: '0', paddingTop: '120px', paddingBottom: '240px',
+          }}
+        >
           <ParticlesBg color="#555555" num={10} type="square" bg />
           <Grid container spacing={5}>
             <Grid item xs={12} md={4}>
@@ -57,7 +62,7 @@ function ProductValues(props) {
                   Explore
                 </Typography>
                 <Typography variant="h5">
-{`I lead with imagination and succeed with determination`}
+                  I lead with imagination and succeed through determination
                 </Typography>
               </div>
             </Grid>
@@ -68,7 +73,7 @@ function ProductValues(props) {
                   Create
                 </Typography>
                 <Typography variant="h5">
-{`Inorder for me to be unique, I have to give you my all.`}
+                  Inorder for me to be unique, I have to give you my all.
                 </Typography>
               </div>
             </Grid>
@@ -79,7 +84,7 @@ function ProductValues(props) {
                   Deliver
                 </Typography>
                 <Typography variant="h5">
-  {`Everything that you ever wanted, and then some more.`}}
+                  Everything that you ever wanted, and then some more.
                 </Typography>
               </div>
             </Grid>
