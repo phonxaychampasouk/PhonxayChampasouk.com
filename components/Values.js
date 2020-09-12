@@ -41,8 +41,27 @@ const styles = (theme) => ({
   },
 });
 
+const cardData = [
+  [(<CameraAltIcon style={{ fontSize: 100 }} />), 'Explore', 'I lead with imagination and succeed through determination'],
+  [(<CloudCircleIcon style={{ fontSize: 100 }} />), 'Create', 'Inorder for me to be unique, I have to give you my all'],
+  [(<FaceIcon style={{ fontSize: 100 }} />), 'Deliver', 'Everything that you ever wanted, and then some more'],
+];
+
 function ProductValues(props) {
   const { classes } = props;
+  const sectionCards = cardData.map((card) => (
+    <Grid item xs={12} md={4}>
+      <div className={classes.item}>
+        {card[0]}
+        <Typography variant="h6" className={classes.title}>
+          {card[1]}
+        </Typography>
+        <Typography variant="h5">
+          {card[2]}
+        </Typography>
+      </div>
+    </Grid>
+  ));
 
   return (
     <section className="values-container">
@@ -55,48 +74,12 @@ function ProductValues(props) {
         >
           <ParticlesBg color="blue" num={15} type="square" bg />
           <Grid container spacing={5}>
-            <Grid item xs={12} md={4}>
-              <div className={classes.item}>
-                <CameraAltIcon style={{ fontSize: 100 }} />
-                <Typography variant="h6" className={classes.title}>
-                  Explore
-                </Typography>
-                <Typography variant="h5">
-                  I lead with imagination and succeed through determination
-                </Typography>
-              </div>
-            </Grid>
-            <Grid item xs={12} md={4}>
-              <div className={classes.item}>
-                <CloudCircleIcon style={{ fontSize: 100 }} />
-                <Typography variant="h6" className={classes.title}>
-                  Create
-                </Typography>
-                <Typography variant="h5">
-                  Inorder for me to be unique, I have to give you my all.
-                </Typography>
-              </div>
-            </Grid>
-            <Grid item xs={12} md={4}>
-              <div className={classes.item}>
-                <FaceIcon style={{ fontSize: 100 }} />
-                <Typography variant="h6" className={classes.title}>
-                  Deliver
-                </Typography>
-                <Typography variant="h5">
-                  Everything that you ever wanted, and then some more.
-                </Typography>
-              </div>
-            </Grid>
+            {sectionCards}
           </Grid>
         </Container>
       </div>
     </section>
   );
 }
-
-ProductValues.propTypes = {
-  classes: PropTypes.object.isRequired,
-};
 
 export default withStyles(styles)(ProductValues);
