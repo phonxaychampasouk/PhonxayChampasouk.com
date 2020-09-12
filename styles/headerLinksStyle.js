@@ -1,6 +1,6 @@
 import { defaultFont } from './nextjs-material-kit';
 
-import tooltip from './tooltipsStyle.js';
+import tooltip from './tooltipsStyle';
 
 const headerLinksStyle = (theme) => ({
   list: {
@@ -39,7 +39,6 @@ const headerLinksStyle = (theme) => ({
   navLink: {
     color: 'inherit',
     position: 'relative',
-    padding: '0.9375rem',
     fontWeight: '400',
     fontSize: '12px',
     textTransform: 'uppercase',
@@ -69,7 +68,6 @@ const headerLinksStyle = (theme) => ({
       margin: '5px 15px',
     },
     color: '#FFF',
-    padding: '0.9375rem',
     fontWeight: '400',
     fontSize: '12px',
     textTransform: 'uppercase',

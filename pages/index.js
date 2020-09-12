@@ -4,7 +4,6 @@ import FeatureScroll from '../components/FeatureScroll';
 import Gallery from '../components/Gallery';
 import NavBar from '../components/NavBar';
 
-
 const DynamicValues = dynamic(
   () => import('../components/Values'),
   { ssr: false },
