@@ -12,9 +12,9 @@ export default function TooltipTemplate(pieChart) {
   const { country } = pieChart.getAllSeries()[0].getVisiblePoints()[0].data;
   return (
     <svg>
-      <text textAnchor="middle" x="160" y="130" style={{ fontSize: 20, fill: '#494949' }}>
+      <text textAnchor="middle" x="160" y="130" style={{ fontSize: 16, fill: '#494949' }}>
         <tspan x="125">{country}</tspan>
-        <tspan x="130" dy="25px" style={{ fontWeight: 500 }}>
+        <tspan x="130" dy="25px" style={{ fontWeight: 350 }}>
           {
           calculateTotal(pieChart)
         }

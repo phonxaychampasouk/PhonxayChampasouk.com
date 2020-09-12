@@ -50,10 +50,10 @@ function ProductValues(props) {
         <Container
           className={classes.container}
           style={{
-            marginTop: '0', marginBottom: '0', paddingTop: '120px', paddingBottom: '240px',
+            marginTop: '120px', marginBottom: '0', paddingTop: '120px', paddingBottom: '240px',
           }}
         >
-          <ParticlesBg color="#555555" num={10} type="square" bg />
+          <ParticlesBg color="blue" num={15} type="square" bg />
           <Grid container spacing={5}>
             <Grid item xs={12} md={4}>
               <div className={classes.item}>
