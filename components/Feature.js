@@ -1,6 +1,7 @@
 import { Button, Icon, Image } from 'semantic-ui-react';
 import Resume from './Resume';
 
+
 function Feature() {
   return (
     <>
