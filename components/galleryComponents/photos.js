@@ -5,7 +5,7 @@ const photos = [
     height: 4,
   },
   {
-    src: 'https://phonxaydocuments.blob.core.windows.net/phonxayblob/stickme.jpg',
+    src: 'https://phonxaydocuments.blob.core.windows.net/phonxayblob/gardenofgods.JPG',
     width: 6,
     height: 4,
   },
@@ -21,6 +21,21 @@ const photos = [
   },
   {
     src: 'https://phonxaydocuments.blob.core.windows.net/phonxayblob/wood.jpg',
+    width: 5,
+    height: 4,
+  },
+  {
+    src: 'https://phonxaydocuments.blob.core.windows.net/phonxayblob/landscape2.JPG',
+    width: 5,
+    height: 4,
+  },
+  {
+    src: 'https://phonxaydocuments.blob.core.windows.net/phonxayblob/stickme.jpg',
+    width: 6,
+    height: 4,
+  },
+  {
+    src: 'https://phonxaydocuments.blob.core.windows.net/phonxayblob/landscape.JPG',
     width: 5,
     height: 4,
   },
