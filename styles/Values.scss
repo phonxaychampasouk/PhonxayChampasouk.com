@@ -1,15 +1,18 @@
 .values-container{
 height: 100%;
 width: 100%;
-overflow: scroll;
+overflow: auto;
 position: relative;
 display: flex;
 }
 
 .values-banner{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: 100%;
     width: 100%;
+    overscroll-behavior: contain;
 }
 .ProductValues-curvyLines-143 {
     width: 100%;
@@ -19,9 +22,25 @@ display: flex;
     
 }
 
-.values-bg-image {
+
+.values-bg-container {
     position: absolute;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     width: 100%;
-    mix-blend-mode: screen;
+    height: 100%;
+   
+    mix-blend-mode: color-burn;
 
 }
+
+.values-bg-image {
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    mix-blend-mode: color-burn;
+    margin: auto 0;
+
+}
+
