@@ -27,9 +27,9 @@ function Feature() {
           <section id="about">
             <div id="background-image">
               <div className="about-me-row">
-                <div className="avatar">
-                  <Image src="https://phonxaydocuments.blob.core.windows.net/phonxayblob/meavatar.JPG" size="small" circular bordered />
-                </div>
+                <>
+                  <img src="avatar.JPG" className="avatar" alt="small"  />
+                </>
                 <div className="nine columns main-col">
                   <h2>About Me</h2>
                   <p className="about-me-p">
