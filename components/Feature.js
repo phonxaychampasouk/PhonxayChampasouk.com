@@ -28,7 +28,7 @@ function Feature() {
             <div id="background-image">
               <div className="about-me-row">
                 <>
-                  <img src="https://phonxaydocuments.blob.core.windows.net/phonxayblob/meavatar.JPG" className="avatar" alt="small"  />
+                  <img src="https://phonxaydocuments.blob.core.windows.net/phonxayblob/avatar.JPG" className="avatar" alt="small"  />
                 </>
                 <div className="nine columns main-col">
                   <h2>About Me</h2>
