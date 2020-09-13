@@ -13,6 +13,18 @@
       "publicPath": "static/chunks/1.js"
     },
     {
+      "id": "./node_modules/@emotion/is-prop-valid/dist/is-prop-valid.browser.esm.js",
+      "name": "./node_modules/@emotion/is-prop-valid/dist/is-prop-valid.browser.esm.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/@emotion/memoize/dist/memoize.browser.esm.js",
+      "name": "./node_modules/@emotion/memoize/dist/memoize.browser.esm.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
       "id": "./node_modules/@material-ui/core/esm/Container/Container.js",
       "name": "./node_modules/@material-ui/core/esm/Container/Container.js",
       "file": "static/chunks/1.js",
@@ -91,8 +103,38 @@
       "publicPath": "static/chunks/1.js"
     },
     {
+      "id": "./node_modules/framer-motion/dist/framer-motion.es.js",
+      "name": "./node_modules/framer-motion/dist/framer-motion.es.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/framer/build/framer.js",
+      "name": "./node_modules/framer/build/framer.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/framesync/dist/framesync.es.js",
+      "name": "./node_modules/framesync/dist/framesync.es.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/hey-listen/dist/hey-listen.es.js",
+      "name": "./node_modules/hey-listen/dist/hey-listen.es.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
       "id": "./node_modules/particles-bg/dist/index.es.js",
       "name": "./node_modules/particles-bg/dist/index.es.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/popmotion/dist/popmotion.es.js",
+      "name": "./node_modules/popmotion/dist/popmotion.es.js",
       "file": "static/chunks/1.js",
       "publicPath": "static/chunks/1.js"
     },
@@ -105,6 +147,18 @@
     {
       "id": "./node_modules/raf-manager/build/RAFManager.min.js",
       "name": "./node_modules/raf-manager/build/RAFManager.min.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/style-value-types/dist/style-value-types.es.js",
+      "name": "./node_modules/style-value-types/dist/style-value-types.es.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/tslib/tslib.es6.js",
+      "name": "./node_modules/tslib/tslib.es6.js",
       "file": "static/chunks/1.js",
       "publicPath": "static/chunks/1.js"
     }

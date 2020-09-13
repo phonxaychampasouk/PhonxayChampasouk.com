@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
-import { useEffect, useState } from 'react';
 import FeatureScroll from '../components/FeatureScroll';
 import Gallery from '../components/Gallery';
 import NavBar from '../components/NavBar';
