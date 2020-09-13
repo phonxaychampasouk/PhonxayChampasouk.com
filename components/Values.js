@@ -1,4 +1,4 @@
-import React from 'react';
+import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
@@ -7,7 +7,10 @@ import CameraAltIcon from '@material-ui/icons/CameraAlt';
 import FaceIcon from '@material-ui/icons/Face';
 import CloudCircleIcon from '@material-ui/icons/CloudCircle';
 import ParticlesBg from 'particles-bg';
+import { motion } from 'framer-motion';
+import { Frame, Scroll, useCycle } from 'framer';
 import Typography from './valuesComponents/Typography';
+
 
 const styles = (theme) => ({
   root: {
@@ -16,8 +19,6 @@ const styles = (theme) => ({
     backgroundColor: 'transparent',
   },
   container: {
-    marginTop: theme.spacing(15),
-    marginBottom: theme.spacing(30),
     display: 'flex',
     position: 'relative',
   },
@@ -25,38 +26,56 @@ const styles = (theme) => ({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    padding: theme.spacing(0, 5),
+    marginLeft: theme.spacing(0, 5),
+    marginRight: theme.spacing(0, 5),
+    paddingTop: 25,
   },
   image: {
-    height: 55,
+    height: 40,
   },
   title: {
-    marginTop: theme.spacing(5),
-    marginBottom: theme.spacing(5),
+    fontSize: 30,
   },
-  curvyLines: {
-    pointerEvents: 'none',
-    position: 'absolute',
-    top: -180,
+  title2: {
+    fontSize: 22,
+
   },
 });
 
-const cardData = [
-  [(<CameraAltIcon style={{ fontSize: 100 }} />), 'Explore', 'I lead with imagination and succeed through determination'],
-  [(<CloudCircleIcon style={{ fontSize: 100 }} />), 'Create', 'Inorder for me to be unique, I have to give you my all'],
-  [(<FaceIcon style={{ fontSize: 100 }} />), 'Deliver', 'Everything that you ever wanted, and then some more'],
-];
+
 
 function ProductValues(props) {
+  const [sizeChart, setSizeChart] = useState({xs: 12, iconSize: 50});
+
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  const [iconSize, setIconSize] = useState(80);
+
+  const updateDimensions = () => (
+    setScreenWidth(window.innerWidth)
+  );
+  useEffect(() => {
+    window.addEventListener('resize', updateDimensions);
+  });
+
+  const cardData = [
+    [(<CameraAltIcon style={{ fontSize: iconSize }} />), 'Explore', 'I lead with imagination and succeed through determination'],
+    [(<CloudCircleIcon style={{ fontSize: iconSize }} />), 'Create', 'Inorder for me to be unique, I have to give you my all'],
+    [(<FaceIcon style={{ fontSize: iconSize }} />), 'Deliver', 'Everything that you ever wanted, and then some more'],
+  ];
+
+
+
+  // screenWidth > 767 ? setSizeChart({xs: , iconSize: 50})
+
   const { classes } = props;
   const sectionCards = cardData.map((card) => (
-    <Grid item xs={12} md={4}>
+    <Grid item xs={sizeChart.xs}>
       <div className={classes.item}>
         {card[0]}
         <Typography variant="h6" className={classes.title}>
           {card[1]}
         </Typography>
-        <Typography variant="h5">
+        <Typography variant="h5" className={classes.title2}>
           {card[2]}
         </Typography>
       </div>
@@ -64,23 +83,32 @@ function ProductValues(props) {
   ));
 
   return (
+
     <div className="values-container">
-      <img src="open.jpg" className="values-bg-image" alt="Landing-page" />
+
+      <div className="values-bg-container">
+      <ParticlesBg color="white" num={15} type="square" bg />
+        <img src="open.jpg" className="values-bg-image" alt="Landing-page" />
+      </div>
       <div className="values-banner">
         <Container
           className={classes.container}
           style={{
-            marginTop: '10px', marginBottom: '0', paddingTop: '100px', paddingBottom: '24px',
+            marginTop: '0px', marginBottom: '0', paddingTop: '25px', paddingBottom: '24px',
           }}
         >
+
           <Grid container spacing={4}>
             {sectionCards}
           </Grid>
-          <ParticlesBg color="white" num={5} type="square" bg />
         </Container>
+        <Frame position="relative" width="100%" center="x" bottom={0}>
+          Hello
+        </Frame>
 
       </div>
     </div>
+
   );
 }
 
