@@ -46,6 +46,7 @@ function ProductValues(props) {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
   const [isScreenSet, setIsScreenSet] = useState(false);
   const [flexDir, setFlexDir] = useState('column');
+  const [alignItemVal, setAlignItemVal ] = useState('flex-end')
 
   function updateDimensions() {
     setScreenWidth(window.innerWidth);
@@ -61,10 +62,12 @@ function ProductValues(props) {
 
   if (isScreenSet === false) {
     if (screenWidth > 767) {
+      setAlignItemVal('flex-end')
       setFlexDir('row')
       setSizeChart({ xs: 4, iconSize: 50 });
       setIsScreenSet(true);
     } else if (screenWidth < 767) {
+      setAlignItemVal('center')
       setFlexDir('column')
       setIsScreenSet(true);
       setSizeChart({ xs: 12, iconSize: 100 });
@@ -78,11 +81,16 @@ function ProductValues(props) {
     [['0', '0'], (<FaceIcon style={cardMetaData} />), 'Deliver', 'Everything that you ever wanted, and then some more', ['0', '0']],
   ];
 
+const parallaxData = {
+  x: [],
+  y: [],
+};
+
   const { classes } = props;
   const sectionCards = cardData.map((card, ind) => (
-    <Parallax className="parallax-child" y={card[0]} x={card[4]} key={ind} styleInner={{display: 'flex', justifyContent: 'center'}} >
-      <Grid item xs={sizeChart.xs} spacing={3} style={{flexDirection: `${flexDir}`}}>
-      <Container style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+    <Parallax className="parallax-child" y={card[0]} x={card[4]} key={ind} styleOuter={{flexGrow: '1'}} styleInner={{display: 'flex', justifyContent: 'center'}}>
+      <Grid  lg={sizeChart.xs} spacing={1} style={{flexDirection: `${flexDir}`}}>
+      <Container  style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
           {card[1]}
           <Typography variant="h5" className={classes.title}>
             {card[2]}
@@ -97,22 +105,24 @@ function ProductValues(props) {
 
   return (
     <div className="values-parent">
-      <ParallaxProvider>
+     
         <img src="open.jpg" className="values-bg-image" alt="Landing-page" />
         <div className="values-banner">
+        <ParallaxProvider>
           <Container
             className={classes.container}
             style={{
-              marginTop: '0px', marginBottom: '0', paddingTop: '25px', paddingBottom: '50px', flexDirection: `${flexDir}`,
+              marginTop: '0px', marginBottom: '0', paddingTop: '40px', paddingBottom: '50px', flexDirection: `${flexDir}`,
             }}
           >
-            <div className="parallax" style={{display: 'flex', flexDirection: `${flexDir}`}}>
+            <div className="parallax" style={{display: 'flex', flexDirection: `${flexDir}`, alignItems: `${alignItemVal}`, flexGrow: '1'}}>
               {sectionCards}
             </div>
             <ParticlesBg color="#454545" num={10} type="square" />
           </Container>
+          </ParallaxProvider>
         </div>
-      </ParallaxProvider>
+     
     </div>
 
   );
