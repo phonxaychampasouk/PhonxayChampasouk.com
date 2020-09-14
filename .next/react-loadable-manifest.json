@@ -1,14 +1,32 @@
 {
   "../components/Values": [
     {
+      "id": "./components/Portal.js",
+      "name": "./components/Portal.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
       "id": "./components/Values.js",
       "name": "./components/Values.js",
       "file": "static/chunks/1.js",
       "publicPath": "static/chunks/1.js"
     },
     {
+      "id": "./components/valuesComponents/PortalGallery.js",
+      "name": "./components/valuesComponents/PortalGallery.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
       "id": "./components/valuesComponents/Typography.js",
       "name": "./components/valuesComponents/Typography.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./components/valuesComponents/imagedata.js",
+      "name": "./components/valuesComponents/imagedata.js",
       "file": "static/chunks/1.js",
       "publicPath": "static/chunks/1.js"
     },
@@ -99,6 +117,18 @@
     {
       "id": "./node_modules/@material-ui/icons/Face.js",
       "name": "./node_modules/@material-ui/icons/Face.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/@popmotion/easing/dist/easing.es.js",
+      "name": "./node_modules/@popmotion/easing/dist/easing.es.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/@popmotion/popcorn/dist/popcorn.es.js",
+      "name": "./node_modules/@popmotion/popcorn/dist/popcorn.es.js",
       "file": "static/chunks/1.js",
       "publicPath": "static/chunks/1.js"
     },

@@ -10,6 +10,8 @@ import '../styles/_plugin-react-slick.scss';
 import '../styles/SubmittedPhotos.scss';
 import '../styles/Values.scss';
 import '../styles/featureScroll.scss';
+import '../styles/Portal.scss';
+import '../styles/PortalGallery.scss';
 
 function MyApp({ Component, pageProps }) {
   return (
