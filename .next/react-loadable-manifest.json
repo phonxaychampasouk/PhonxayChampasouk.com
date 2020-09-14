@@ -151,6 +151,162 @@
       "publicPath": "static/chunks/1.js"
     },
     {
+      "id": "./node_modules/react-scroll-parallax/cjs/classes/Bounds.js",
+      "name": "./node_modules/react-scroll-parallax/cjs/classes/Bounds.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/react-scroll-parallax/cjs/classes/Element.js",
+      "name": "./node_modules/react-scroll-parallax/cjs/classes/Element.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/react-scroll-parallax/cjs/classes/ParallaxController.js",
+      "name": "./node_modules/react-scroll-parallax/cjs/classes/ParallaxController.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/react-scroll-parallax/cjs/classes/Rect.js",
+      "name": "./node_modules/react-scroll-parallax/cjs/classes/Rect.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/react-scroll-parallax/cjs/classes/Scroll.js",
+      "name": "./node_modules/react-scroll-parallax/cjs/classes/Scroll.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/react-scroll-parallax/cjs/classes/View.js",
+      "name": "./node_modules/react-scroll-parallax/cjs/classes/View.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/react-scroll-parallax/cjs/components/Parallax.js",
+      "name": "./node_modules/react-scroll-parallax/cjs/components/Parallax.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/react-scroll-parallax/cjs/components/ParallaxBanner.js",
+      "name": "./node_modules/react-scroll-parallax/cjs/components/ParallaxBanner.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/react-scroll-parallax/cjs/components/ParallaxProvider.js",
+      "name": "./node_modules/react-scroll-parallax/cjs/components/ParallaxProvider.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/react-scroll-parallax/cjs/components/useController.js",
+      "name": "./node_modules/react-scroll-parallax/cjs/components/useController.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/react-scroll-parallax/cjs/components/withController.js",
+      "name": "./node_modules/react-scroll-parallax/cjs/components/withController.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/react-scroll-parallax/cjs/constants.js",
+      "name": "./node_modules/react-scroll-parallax/cjs/constants.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/react-scroll-parallax/cjs/helpers/ParallaxContext.js",
+      "name": "./node_modules/react-scroll-parallax/cjs/helpers/ParallaxContext.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/react-scroll-parallax/cjs/helpers/elementStyles.js",
+      "name": "./node_modules/react-scroll-parallax/cjs/helpers/elementStyles.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/react-scroll-parallax/cjs/helpers/getOffsets.js",
+      "name": "./node_modules/react-scroll-parallax/cjs/helpers/getOffsets.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/react-scroll-parallax/cjs/helpers/getParallaxOffsets.js",
+      "name": "./node_modules/react-scroll-parallax/cjs/helpers/getParallaxOffsets.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/react-scroll-parallax/cjs/helpers/index.js",
+      "name": "./node_modules/react-scroll-parallax/cjs/helpers/index.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/react-scroll-parallax/cjs/helpers/isElementInView.js",
+      "name": "./node_modules/react-scroll-parallax/cjs/helpers/isElementInView.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/react-scroll-parallax/cjs/helpers/percentMoved.js",
+      "name": "./node_modules/react-scroll-parallax/cjs/helpers/percentMoved.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/react-scroll-parallax/cjs/index.js",
+      "name": "./node_modules/react-scroll-parallax/cjs/index.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/react-scroll-parallax/cjs/utils/createId.js",
+      "name": "./node_modules/react-scroll-parallax/cjs/utils/createId.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/react-scroll-parallax/cjs/utils/index.js",
+      "name": "./node_modules/react-scroll-parallax/cjs/utils/index.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/react-scroll-parallax/cjs/utils/parseValueAndUnit.js",
+      "name": "./node_modules/react-scroll-parallax/cjs/utils/parseValueAndUnit.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/react-scroll-parallax/cjs/utils/scaleBetween.js",
+      "name": "./node_modules/react-scroll-parallax/cjs/utils/scaleBetween.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/react-scroll-parallax/cjs/utils/testForPassiveScroll.js",
+      "name": "./node_modules/react-scroll-parallax/cjs/utils/testForPassiveScroll.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/react-scroll-parallax/cjs/utils/validHTMLElement.js",
+      "name": "./node_modules/react-scroll-parallax/cjs/utils/validHTMLElement.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
       "id": "./node_modules/style-value-types/dist/style-value-types.es.js",
       "name": "./node_modules/style-value-types/dist/style-value-types.es.js",
       "file": "static/chunks/1.js",
