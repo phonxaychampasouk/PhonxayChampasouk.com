@@ -9,7 +9,9 @@ import CloudCircleIcon from '@material-ui/icons/CloudCircle';
 import ParticlesBg from 'particles-bg';
 import { motion } from 'framer-motion';
 import { Frame, Scroll, useCycle } from 'framer';
+import { Parallax, ParallaxProvider } from 'react-scroll-parallax';
 import Typography from './valuesComponents/Typography';
+import { Directions } from '@material-ui/icons';
 
 const styles = (theme) => ({
   root: {
@@ -37,14 +39,15 @@ const styles = (theme) => ({
   },
   title2: {
     fontSize: 22,
-
   },
+
 });
 
 function ProductValues(props) {
   const [sizeChart, setSizeChart] = useState({ xs: 4, iconSize: 50 });
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
   const [isScreenSet, setIsScreenSet] = useState(false);
+  const [flexDir, setFlexDir] = useState('row');
 
   function updateDimensions() {
     setScreenWidth(window.innerWidth);
@@ -60,51 +63,57 @@ function ProductValues(props) {
 
   if (isScreenSet === false) {
     if (screenWidth > 767) {
+      setFlexDir('row')
       setSizeChart({ xs: 4, iconSize: 50 });
       setIsScreenSet(true);
     } else if (screenWidth < 767) {
+      setFlexDir('column')
       setIsScreenSet(true);
       setSizeChart({ xs: 12, iconSize: 100 });
     }
   }
 
   const cardData = [
-    [(<CameraAltIcon style={{ fontSize: sizeChart.iconSize }} />), 'Explore', 'I lead with imagination and succeed through determination'],
-    [(<CloudCircleIcon style={{ fontSize: sizeChart.iconSize }} />), 'Create', 'Inorder for me to be unique, I have to give you my all'],
-    [(<FaceIcon style={{ fontSize: sizeChart.iconSize }} />), 'Deliver', 'Everything that you ever wanted, and then some more'],
+    [['0', '0'], (<CameraAltIcon style={{ fontSize: sizeChart.iconSize }} />), 'Explore', 'I lead with imagination and succeed through determination', ['0', '0']],
+    [['0', '0'], (<CloudCircleIcon style={{ fontSize: sizeChart.iconSize }} />), 'Create', 'Inorder for me to be unique, I have to give you my all', ['0', '0']],
+    [['0', '0'], (<FaceIcon style={{ fontSize: sizeChart.iconSize }} />), 'Deliver', 'Everything that you ever wanted, and then some more', ['0', '0']],
   ];
 
   const { classes } = props;
-  const sectionCards = cardData.map((card) => (
-    <Grid item xs={sizeChart.xs}>
-      <div className={classes.item}>
-        {card[0]}
-        <Typography variant="h6" className={classes.title}>
+  const sectionCards = cardData.map((card, ind) => (
+    <Parallax y={card[0]} x={card[4]} key={ind}>
+      <Grid item xs={sizeChart.xs} style={{flexDirection: `${flexDir}`}}>
+        <div className={classes.item}>
           {card[1]}
-        </Typography>
-        <Typography variant="h5" className={classes.title2}>
-          {card[2]}
-        </Typography>
-      </div>
-    </Grid>
+          <Typography variant="h6" className={classes.title}>
+            {card[2]}
+          </Typography>
+          <Typography variant="h5" className={classes.title2}>
+            {card[3]}
+          </Typography>
+        </div>
+      </Grid>
+    </Parallax>
   ));
 
   return (
     <div className="values-parent">
-      <img src="open.jpg" className="values-bg-image" alt="Landing-page" />
-      <div className="values-banner">
-        <Container
-          className={classes.container}
-          style={{
-            marginTop: '0px', marginBottom: '0', paddingTop: '25px', paddingBottom: '50px', flexDirection: 'column-reverse',
-          }}
-        >
-          <Grid container spacing={4}>
-            {sectionCards}
-          </Grid>
-          <ParticlesBg color="#454545" num={10} type="square" />
-        </Container>
-      </div>
+      <ParallaxProvider>
+        <img src="open.jpg" className="values-bg-image" alt="Landing-page" />
+        <div className="values-banner">
+          <Container
+            className={classes.container}
+            style={{
+              marginTop: '0px', marginBottom: '0', paddingTop: '25px', paddingBottom: '50px', flexDirection: `${flexDir}`,
+            }}
+          >
+            <div className="parallax" style={{display: 'flex', flexDirection: `${flexDir}`}}>
+              {sectionCards}
+            </div>
+            <ParticlesBg color="#454545" num={10} type="square" />
+          </Container>
+        </div>
+      </ParallaxProvider>
     </div>
 
   );
