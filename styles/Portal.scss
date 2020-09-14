@@ -1,0 +1,23 @@
+.portal-outer-container{
+height: 100%;
+width: 100%;
+display: grid;
+grid-template-columns: repeat(12, 1fr [col-start]);
+grid-template-rows: repeat(12, 1fr [row-start]);
+}
+
+.portal-grid-display{
+    grid-column: 2 / 10;
+    grid-row: 2 / 10;
+    width: 100%;
+    height: 100%;
+
+
+}
+
+.portal-navigation{
+    grid-column: 10 / 12;
+    grid-row: 2 / 10;
+    background-color: purple;
+
+}
