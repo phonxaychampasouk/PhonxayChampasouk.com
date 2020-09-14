@@ -18,7 +18,6 @@ const Index = () => (
       <NavBar />
       <FeatureScroll />
       <DynamicValues />
-      <Gallery />
     </div>
   </>
 

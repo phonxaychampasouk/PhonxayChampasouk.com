@@ -8,11 +8,13 @@
     width: 100%;
     justify-content: center;
     overflow: hidden;
+    background-color: black;
   }
   
   .next,
   .prev {
     justify-self: center;
+    align-self: flex-end;
     background: white;
     border-radius: 30px;
     width: 40px;
@@ -28,14 +30,15 @@
   }
   
   .next {
-    grid-column: 8;
-    grid-row: 9;
+    grid-column: 11;
+    grid-row: 2;
   
 }
   
   .prev {
-    grid-column: 2;
-    grid-row: 9;
+    grid-column: 10;
+    grid-row: 2;
+    transform: rotate(180deg);
   }
   
   .portal-imgs {

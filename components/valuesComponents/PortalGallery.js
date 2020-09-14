@@ -5,7 +5,7 @@ import { images } from './imagedata';
 
 const variants = {
   enter: (direction) => ({
-    x: direction > 0 ? 1000 : -1000,
+    x: direction > 0 ? 800 : -800,
     opacity: 0,
   }),
   center: {
@@ -15,7 +15,7 @@ const variants = {
   },
   exit: (direction) => ({
     zIndex: 0,
-    x: direction < 0 ? 1000 : -1000,
+    x: direction < 0 ? 800 : -800,
     opacity: 0,
   }),
 };
@@ -52,7 +52,7 @@ const PortalGallery = ({
             animate="center"
             exit="exit"
             transition={{
-              opacity: { duration: 0.2 },
+              opacity: { duration: 0.1 },
             }}
             drag="x"
             dragConstraints={{ left: 0, right: 0 }}
