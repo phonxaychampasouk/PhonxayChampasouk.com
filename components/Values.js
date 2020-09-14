@@ -27,8 +27,6 @@ const styles = (theme) => ({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    marginLeft: theme.spacing(0, 5),
-    marginRight: theme.spacing(0, 5),
     paddingTop: 25,
   },
   image: {
@@ -38,7 +36,7 @@ const styles = (theme) => ({
     fontSize: 30,
   },
   title2: {
-    fontSize: 22,
+    fontSize: 16,
   },
 
 });
@@ -47,7 +45,7 @@ function ProductValues(props) {
   const [sizeChart, setSizeChart] = useState({ xs: 4, iconSize: 50 });
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
   const [isScreenSet, setIsScreenSet] = useState(false);
-  const [flexDir, setFlexDir] = useState('row');
+  const [flexDir, setFlexDir] = useState('column');
 
   function updateDimensions() {
     setScreenWidth(window.innerWidth);
@@ -73,25 +71,26 @@ function ProductValues(props) {
     }
   }
 
+  const cardMetaData = { fontSize: sizeChart.iconSize , justifyContent: 'center'};
   const cardData = [
-    [['0', '0'], (<CameraAltIcon style={{ fontSize: sizeChart.iconSize }} />), 'Explore', 'I lead with imagination and succeed through determination', ['0', '0']],
-    [['0', '0'], (<CloudCircleIcon style={{ fontSize: sizeChart.iconSize }} />), 'Create', 'Inorder for me to be unique, I have to give you my all', ['0', '0']],
-    [['0', '0'], (<FaceIcon style={{ fontSize: sizeChart.iconSize }} />), 'Deliver', 'Everything that you ever wanted, and then some more', ['0', '0']],
+    [['0', '0'], (<CameraAltIcon style={cardMetaData} />), 'Explore', 'I lead with imagination and succeed through determination', ['0', '0']],
+    [['0', '0'], (<CloudCircleIcon style={cardMetaData} />), 'Create', 'Inorder for me to be unique, I have to give you my all', ['0', '0']],
+    [['0', '0'], (<FaceIcon style={cardMetaData} />), 'Deliver', 'Everything that you ever wanted, and then some more', ['0', '0']],
   ];
 
   const { classes } = props;
   const sectionCards = cardData.map((card, ind) => (
-    <Parallax y={card[0]} x={card[4]} key={ind}>
-      <Grid item xs={sizeChart.xs} style={{flexDirection: `${flexDir}`}}>
-        <div className={classes.item}>
+    <Parallax className="parallax-child" y={card[0]} x={card[4]} key={ind} styleInner={{display: 'flex', justifyContent: 'center'}} >
+      <Grid item xs={sizeChart.xs} spacing={3} style={{flexDirection: `${flexDir}`}}>
+      <Container style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
           {card[1]}
-          <Typography variant="h6" className={classes.title}>
+          <Typography variant="h5" className={classes.title}>
             {card[2]}
           </Typography>
-          <Typography variant="h5" className={classes.title2}>
+          <Typography variant="h3" className={classes.title2}>
             {card[3]}
           </Typography>
-        </div>
+         </Container>
       </Grid>
     </Parallax>
   ));
