@@ -23,7 +23,9 @@ const styles = (theme) => ({
   container: {
     display: 'flex',
     position: 'relative',
-    height: '100%'
+    height: '100%',
+    paddingLeft: '0px !important',
+    paddingRight: '0px !important',
   },
   item: {
     display: 'flex',
@@ -130,7 +132,7 @@ const parallaxData = {
           <Container
             className={classes.container}
             style={{
-              marginTop: '0px', marginBottom: '0', paddingTop: '40px', paddingBottom: '20px', paddingLeft: '0px', paddingRight: '0px', flexDirection: `${flexDir}`,
+              flexDirection: `${flexDir}`,
             }}
           >
             <div className="parallax" style={{display: 'flex', alignItems: `${alignItemVal}`, justifyContent: `${justifyContentVal}`, flexGrow: '1'}}>
@@ -142,7 +144,6 @@ const parallaxData = {
           height={"70%"} 
           width={"100%"} 
           shadow="0px 10px 10px black" 
-          background="null"
           >
             <Portal />
           </Frame>
