@@ -1,9 +1,7 @@
 import React from 'react';
-// @material-ui/core components
 import { makeStyles } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
-
 import Header from './navBarComponents/Header';
 import Button from './navBarComponents/Button';
 

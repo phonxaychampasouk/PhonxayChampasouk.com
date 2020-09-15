@@ -6,7 +6,6 @@ import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import Fab from '@material-ui/core/Fab';
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 import Zoom from '@material-ui/core/Zoom';
-import { Chat } from '@material-ui/icons';
 import Feature from './Feature';
 
 import ChatBot from './ChatBot';

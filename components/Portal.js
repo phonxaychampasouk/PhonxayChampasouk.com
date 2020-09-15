@@ -30,7 +30,6 @@ const Portal = () => {
       <div className="prev" role="button" tabIndex={-1} onKeyDown={() => paginate(-1)} onClick={() => paginate(-1)}>
         ‣
       </div>
-
     </section>
   );
 };
