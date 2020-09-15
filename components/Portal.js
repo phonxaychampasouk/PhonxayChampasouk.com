@@ -27,6 +27,7 @@ const Portal = () => {
       <div className="prev" onClick={() => paginate(-1)}>
         ‣
       </div>
+      
     </section>
   );
 };
