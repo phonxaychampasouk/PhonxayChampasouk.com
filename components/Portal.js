@@ -13,11 +13,6 @@ const Portal = () => {
 
   const imageIndex = wrap(0, images.length, page);
 
-  const navButtons = (dir, val) => (
-    <div className={dir} onClick={() => paginate(val)}>
-      ‣
-    </div>
-  );
 
   return (
     <section className="portal-outer-container">
@@ -26,8 +21,12 @@ const Portal = () => {
         <PortalGallery paginate={paginate} imageIndex={imageIndex} direction={direction} page={page} />
       </div>
       <div className="portal-navigation" />
-      {navButtons('next', 1)}
-      {navButtons('prev', -1)}
+      <div className="next" onClick={() => paginate(1)}>
+        ‣
+      </div>
+      <div className="prev" onClick={() => paginate(-1)}>
+        ‣
+      </div>
     </section>
   );
 };
