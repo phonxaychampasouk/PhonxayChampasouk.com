@@ -123,7 +123,7 @@ const parallaxData = {
 
   return (
     <div className="values-parent">
-             <img src="open.jpg" className="values-bg-image" alt="Landing-page" />
+             <img src="https://phonxaydocuments.blob.core.windows.net/phonxayblob/open.jpg" className="values-bg-image" alt="Landing-page" />
 
         <div className="values-banner">
         <ParallaxProvider>
