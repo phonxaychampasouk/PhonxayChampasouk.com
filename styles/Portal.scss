@@ -8,22 +8,68 @@ grid-template-rows: repeat(12, 1fr [row-start]);
 
 .portal-grid-display{
     grid-column: 2 / 12;
-    grid-row: 2 / 12;
+    grid-row: 2 / 13;
     width: 100%;
     height: 100%;
+    z-index: -1;
 
 
 }
 
-.portal-navigation{
-    grid-column: 9 / 12;
-    grid-row: 2 / 12;
-    z-index: 1;
-    opacity: 70%;
-
-}
-
-.info {
+.info-panel{
 
 
 }
+
+//**************
+
+// body {
+//     width: 100vw;
+//     height: 100vh;
+//     background: linear-gradient(180deg, #0055ff 0%, rgb(0, 153, 255) 100%);
+//     overflow: hidden;
+//     padding: 0;
+//     margin: 0;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//   }
+  
+  .info-button-container {
+
+display: flex;
+flex-direction: column-reverse;
+flex: 1;
+
+}
+  
+  .background {
+      position: absolute;
+    grid-column: 2;
+    grid-row: 2;
+    height: 90%;
+    width: 300px;
+    background: #787654;
+    opacity: 40%;
+  }
+  
+  .info-child {
+    justify-self: center;
+    background: white;
+    border-radius: 30px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+    z-index: 100;
+  }
+  
+
+  
+
+  

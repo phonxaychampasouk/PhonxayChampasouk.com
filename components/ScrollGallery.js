@@ -41,10 +41,11 @@ const images = [
     src:
     'https://phonxaydocuments.blob.core.windows.net/phonxayblob/gardenofgods.JPG',
     background: '#765647',
-    width: 500,
-    height: 400,
+    width: 600,
+    height: 200,
     left: 70,
     top: '-30%',
+    zIndex: '-1',
   },
   {
     src:
@@ -98,11 +99,15 @@ const ParallaxImage = ({ src, ...style }) => {
 };
 
 const ScrollGallery = () => (
-  <div className="scroll-container">
-    {images.map((image) => (
-      <ParallaxImage key={image.src} {...image} />
-    ))}
-  </div>
+  <>
+    <section className="scroll-gallery">
+      <div className="scroll-gallery-container">
+        {images.map((image) => (
+          <ParallaxImage key={image.src} {...image} />
+        ))}
+      </div>
+    </section>
+  </>
 );
 
 export default ScrollGallery;
