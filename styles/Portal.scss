@@ -47,10 +47,12 @@ flex: 1;
       position: absolute;
     grid-column: 2;
     grid-row: 2;
-    height: 90%;
+    height: 30%;
     width: 300px;
-    background: #787654;
-    opacity: 40%;
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+    flex-direction: column;
   }
   
   .info-child {

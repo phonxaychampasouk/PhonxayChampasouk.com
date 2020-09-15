@@ -6,6 +6,9 @@ import { motion, useCycle } from "framer-motion";
 import PortalGallery from './valuesComponents/PortalGallery';
 import { useDimensions } from "./valuesComponents/useDimensions";
 
+import { Paper } from '@material-ui/core';
+import ThumbsUpDownIcon from '@material-ui/icons/ThumbsUpDown';
+
 const imageData = [
   '/tree.jpg',
   '/bug.JPG',
@@ -24,8 +27,8 @@ const imageData = [
 ];
 
 const sidebar = {
-  open: (height = 100) => ({
-    clipPath: `circle(${height * 2 + 200}px at 40px 40px)`,
+  open: (height = 200) => ({
+    clipPath: `circle(${height * 2 + 200}px at 10% 100%)`,
     transition: {
       type: "spring",
       stiffness: 20,
@@ -71,7 +74,24 @@ const Portal = () => {
                animate={isOpen ? 'open' : 'closed'}
                custom={{height: '100%'}}
                ref={containerRef}>
-                 <motion.div className="background" variants={sidebar} onClick={() => toggleOpen()} />
+                 <motion.div className="background" variants={sidebar} >
+                 <Paper elevation={3}>
+                  <ul>
+                    Title : 7 Mile Tree
+                  </ul>
+                  <ul>
+                    Location: Yellowstone National Park, WY
+                  </ul>
+                  <ul>
+                    Captured: July 2020
+                  </ul>
+                  <ul>
+                    Data: ueiwbfiuew rewlbreqw rehjw rejhwnfrejw ghr ewjhrbehw wrejhbrh.
+                  </ul>
+                  <ThumbsUpDownIcon />
+                </Paper>
+                 
+                   </motion.div>
                  <button 
                    className="info-child" 
                    role="button" 
