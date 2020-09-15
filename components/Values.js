@@ -72,7 +72,7 @@ function ProductValues(props) {
       setFlexGrowVal('1')
       setAlignItemVal('flex-end')
       setFlexDir('row')
-      setSizeChart({ xs: 4, iconSize: 50 });
+      setSizeChart({ xs: 4, iconSize: 100 });
       setIsScreenSet(true);
     } else if (screenWidth < 767) {
       setJustifyContentVal('space-between')
@@ -80,7 +80,7 @@ function ProductValues(props) {
       setAlignItemVal('flex-end')
       setFlexDir('row')
       setIsScreenSet(true);
-      setSizeChart({ xs: 12, iconSize: 100 });
+      setSizeChart({ xs: 12, iconSize: 75 });
     }
   }
 

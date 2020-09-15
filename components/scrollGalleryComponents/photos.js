@@ -1,11 +1,9 @@
-import photoData from '../../public/photosData';
-
-const { display } = photoData;
+import imageData from '../valuesComponents/imageData';
 
 const images = [
   {
     src:
-        display[0],
+        imageData[0],
     background: '#C24B47',
     width: 200,
     left: 300,
@@ -13,7 +11,7 @@ const images = [
   },
   {
     src:
-        display[1],
+        imageData[1],
     background: '#A46F4C',
     width: '',
     height: '100%',
@@ -22,7 +20,7 @@ const images = [
   },
   {
     src:
-        display[2],
+        imageData[2],
     background: '#F2CFA6',
     width: 300,
     height: 200,
@@ -31,7 +29,7 @@ const images = [
   },
   {
     src:
-        display[3],
+        imageData[3],
     background: '#58742A',
     width: 500,
     height: 400,
@@ -40,7 +38,7 @@ const images = [
   },
   {
     src:
-        display[4],
+        imageData[4],
     background: '#765647',
     width: 500,
     height: 400,
@@ -49,7 +47,7 @@ const images = [
   },
   {
     src:
-        display[5],
+        imageData[5],
     background: '#F40046',
     width: '120%',
     height: 200,
@@ -58,7 +56,7 @@ const images = [
   },
   {
     src:
-        display[6],
+        imageData[6],
     background: '#14555C',
     width: 500,
     height: 400,
@@ -67,7 +65,7 @@ const images = [
   },
   {
     src:
-        display[7],
+        imageData[7],
     background: '#F0D2B7',
     width: 500,
     height: 400,

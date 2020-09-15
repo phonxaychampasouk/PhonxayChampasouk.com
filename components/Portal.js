@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { wrap } from '@popmotion/popcorn';
-import { images } from './valuesComponents/imagedata';
+import imageData from './valuesComponents/imageData';
 
 import PortalGallery from './valuesComponents/PortalGallery';
 
@@ -11,7 +11,7 @@ const Portal = () => {
     setPage([page + newDirection, newDirection]);
   };
 
-  const imageIndex = wrap(0, images.length, page);
+  const imageIndex = wrap(0, imageData.length, page);
 
 
   return (

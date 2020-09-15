@@ -1,7 +1,5 @@
-import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { wrap } from '@popmotion/popcorn';
-import { images } from './imagedata';
+import imageData from './imageData';
 
 const variants = {
   enter: (direction) => ({
@@ -45,7 +43,7 @@ const PortalGallery = ({
           <motion.img
             className="portal-imgs"
             key={page}
-            src={images[imageIndex]}
+            src={imageData[imageIndex]}
             custom={direction}
             variants={variants}
             initial="enter"

@@ -1,5 +1,5 @@
-export const images = [
-  'https://phonxaydocuments.blob.core.windows.net/phonxayblob/background.jpg',
+const imageData = [
+  'https://phonxaydocuments.blob.core.windows.net/phonxayblob/tree.jpg',
   'https://phonxaydocuments.blob.core.windows.net/phonxayblob/bug.JPG',
   'https://phonxaydocuments.blob.core.windows.net/phonxayblob/flow.jpg',
   'https://phonxaydocuments.blob.core.windows.net/phonxayblob/flower.JPG',
@@ -13,4 +13,6 @@ export const images = [
   'https://phonxaydocuments.blob.core.windows.net/phonxayblob/tree.jpg',
   'https://phonxaydocuments.blob.core.windows.net/phonxayblob/wood.jpg',
   'https://phonxaydocuments.blob.core.windows.net/phonxayblob/yellow.jpg',
-]
+];
+
+export default imageData;
