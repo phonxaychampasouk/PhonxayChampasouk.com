@@ -14,7 +14,6 @@
   .next,
   .prev {
     justify-self: center;
-    align-self: flex-end;
     background: white;
     border-radius: 30px;
     width: 40px;
@@ -30,14 +29,14 @@
   }
   
   .next {
-    grid-column: 11;
-    grid-row: 2;
+    grid-column: 3;
+    grid-row: 12;
   
 }
   
   .prev {
-    grid-column: 10;
-    grid-row: 2;
+    grid-column: 2;
+    grid-row: 12;
     transform: rotate(180deg);
   }
   
