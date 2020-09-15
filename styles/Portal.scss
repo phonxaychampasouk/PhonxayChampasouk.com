@@ -7,7 +7,7 @@ grid-template-rows: repeat(12, 1fr [row-start]);
 }
 
 .portal-grid-display{
-    grid-column: 2 / 10;
+    grid-column: 2 / 12;
     grid-row: 2 / 12;
     width: 100%;
     height: 100%;
@@ -16,7 +16,7 @@ grid-template-rows: repeat(12, 1fr [row-start]);
 }
 
 .portal-navigation{
-    grid-column: 10 / 12;
+    grid-column: 9 / 12;
     grid-row: 2 / 12;
     background-color: purple;
     z-index: 1;

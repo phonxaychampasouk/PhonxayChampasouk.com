@@ -23,7 +23,7 @@ const styles = (theme) => ({
   container: {
     display: 'flex',
     position: 'relative',
-    height: '150%'
+    height: '100%'
   },
   item: {
     display: 'flex',
@@ -75,10 +75,10 @@ function ProductValues(props) {
       setSizeChart({ xs: 4, iconSize: 50 });
       setIsScreenSet(true);
     } else if (screenWidth < 767) {
-      setJustifyContentVal('flex-end')
+      setJustifyContentVal('space-between')
       setFlexGrowVal('0')
-      setAlignItemVal('center')
-      setFlexDir('column')
+      setAlignItemVal('flex-end')
+      setFlexDir('row')
       setIsScreenSet(true);
       setSizeChart({ xs: 12, iconSize: 100 });
     }
@@ -86,9 +86,9 @@ function ProductValues(props) {
 
   const cardMetaData = { fontSize: sizeChart.iconSize , justifyContent: 'center'};
   const cardData = [
-    [['0', '0'], (<CameraAltIcon style={cardMetaData} />), 'Explore', 'I lead with imagination and succeed through determination', ['0', '0']],
-    [['0', '0'], (<CloudCircleIcon style={cardMetaData} />), 'Create', 'Inorder for me to be unique, I have to give you my all', ['0', '0']],
-    [['0', '0'], (<FaceIcon style={cardMetaData} />), 'Deliver', 'Everything that you ever wanted, and then some more', ['0', '0']],
+    [['0', '0'], (<CameraAltIcon style={cardMetaData} />), 'Explore', screenWidth > 767 ? 'I lead with imagination and succeed through determination' : '', ['0', '0']],
+    [['0', '0'], (<CloudCircleIcon style={cardMetaData} />), 'Create', screenWidth > 767 ? 'Inorder for me to be unique, I have to give you my all' : '', ['0', '0']],
+    [['0', '0'], (<FaceIcon style={cardMetaData} />), 'Deliver', screenWidth > 767 ? 'Everything that you ever wanted, and then some more' : '', ['0', '0']],
   ];
 
 const parallaxData = {
@@ -98,7 +98,7 @@ const parallaxData = {
 
   const { classes } = props;
   const sectionCards = cardData.map((card, ind) => (
-    <Parallax className="parallax-child" y={card[0]} x={card[4]} key={ind} styleOuter={{flexGrow: `${flexGrowVal}`}} styleInner={{display: 'flex', justifyContent: 'center'}}>
+    <Parallax className="parallax-child" y={card[0]} x={card[4]} key={ind}  styleInner={{display: 'flex', justifyContent: 'center'}}>
       <Grid  lg={sizeChart.xs} spacing={1} style={{flexDirection: `${flexDir}`}}>
       <motion.div
     animate={{
@@ -130,18 +130,18 @@ const parallaxData = {
           <Container
             className={classes.container}
             style={{
-              marginTop: '0px', marginBottom: '0', paddingTop: '40px', paddingBottom: '50px', flexDirection: `${flexDir}`,
+              marginTop: '0px', marginBottom: '0', paddingTop: '40px', paddingBottom: '20px', paddingLeft: '0px', paddingRight: '0px', flexDirection: `${flexDir}`,
             }}
           >
-            <div className="parallax" style={{display: 'flex', flexDirection: `${flexDir}`, alignItems: `${alignItemVal}`, justifyContent: `${justifyContentVal}`, flexGrow: '1'}}>
+            <div className="parallax" style={{display: 'flex', alignItems: `${alignItemVal}`, justifyContent: `${justifyContentVal}`, flexGrow: '1'}}>
               {sectionCards}
             </div>
             <ParticlesBg color="#454545" num={10} type="square" />
           </Container>
           <Frame  
-          height={"80%"} 
+          height={"70%"} 
           width={"100%"} 
-          shadow="30px 20px 20px black" 
+          shadow="0px 10px 10px black" 
           background="null"
           >
             <Portal />

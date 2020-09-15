@@ -1,6 +1,6 @@
 import Button from '@material-ui/core/Button';
 
-import KEYS from '../keys';
+//import KEYS from '../keys';
 
 const ChatBot = ({ handleClick, mooseBotDisplay }) => (
   <>
