@@ -23,19 +23,6 @@ const swipePower = (offset, velocity) => Math.abs(offset) * velocity;
 const PortalGallery = ({
   paginate, imageIndex, direction, page,
 }) =>
-// const [[page, direction], setPage] = useState([0, 0]);
-
-// We only have 3 images, but we paginate them absolutely (ie 1, 2, 3, 4, 5...) and
-// then wrap that within 0-2 to find our image ID in the array below. By passing an
-// absolute page index as the `motion` component's `key` prop, `AnimatePresence` will
-// detect it as an entirely new image. So you can infinitely paginate as few as 1 images.
-
-// const imageIndex = wrap(0, images.length, page);
-
-// const paginate = (newDirection) => {
-//   setPage([page + newDirection, newDirection]);
-// };
-
   (
     <>
       <div className="portal-inner-container">
@@ -71,9 +58,3 @@ const PortalGallery = ({
 
   );
 export default PortalGallery;
-/**
- * Experimenting with distilling swipe offset and velocity into a single variable, so the
- * less distance a user has swiped, the more velocity they need to register as a swipe.
- * Should accomodate longer swipes and short flicks without having binary checks on
- * just distance thresholds and velocity > 0.
- */

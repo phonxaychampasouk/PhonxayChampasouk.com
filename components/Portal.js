@@ -13,21 +13,24 @@ const Portal = () => {
 
   const imageIndex = wrap(0, imageData.length, page);
 
-
   return (
     <section className="portal-outer-container">
       <div className="portal-grid-display">
-
-        <PortalGallery paginate={paginate} imageIndex={imageIndex} direction={direction} page={page} />
+        <PortalGallery
+          paginate={paginate}
+          imageIndex={imageIndex}
+          direction={direction}
+          page={page}
+        />
       </div>
       <div className="portal-navigation" />
-      <div className="next" onClick={() => paginate(1)}>
+      <div className="next" role="button" tabIndex={0} onKeyUp={() => paginate(1)} onClick={() => paginate(1)}>
         ‣
       </div>
-      <div className="prev" onClick={() => paginate(-1)}>
+      <div className="prev" role="button" tabIndex={-1} onKeyDown={() => paginate(-1)} onClick={() => paginate(-1)}>
         ‣
       </div>
-      
+
     </section>
   );
 };
