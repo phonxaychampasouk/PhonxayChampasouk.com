@@ -1,8 +1,10 @@
+.scroll-gallery {
+height: 100%;
+width:100%;
 
-
-
-
-  .scroll-container {
+}
+  .scroll-gallery-container {
+    position: absolute;
     overflow: hidden;
     width: 100%;
     margin: 0 auto;
