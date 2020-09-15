@@ -1,6 +1,16 @@
 export const images = [
-  'https://d33wubrfki0l68.cloudfront.net/dd23708ebc4053551bb33e18b7174e73b6e1710b/dea24/static/images/wallpapers/shared-colors@2x.png',
-  '/moosesmiles.JPG',
-  'https://d33wubrfki0l68.cloudfront.net/49de349d12db851952c5556f3c637ca772745316/cfc56/static/images/wallpapers/bridge-02@2x.png','/background.jpg',
-  'https://d33wubrfki0l68.cloudfront.net/594de66469079c21fc54c14db0591305a1198dd6/3f4b1/static/images/wallpapers/bridge-01@2x.png','/background2.jpg',
-];
+  'https://phonxaydocuments.blob.core.windows.net/phonxayblob/background.jpg',
+  'https://phonxaydocuments.blob.core.windows.net/phonxayblob/bug.JPG',
+  'https://phonxaydocuments.blob.core.windows.net/phonxayblob/flow.jpg',
+  'https://phonxaydocuments.blob.core.windows.net/phonxayblob/flower.JPG',
+  'https://phonxaydocuments.blob.core.windows.net/phonxayblob/gardenofgods.JPG',
+  'https://phonxaydocuments.blob.core.windows.net/phonxayblob/lake.JPG',
+  'https://phonxaydocuments.blob.core.windows.net/phonxayblob/landscape.JPG',
+  'https://phonxaydocuments.blob.core.windows.net/phonxayblob/landscape2.JPG',
+  'https://phonxaydocuments.blob.core.windows.net/phonxayblob/moosesmiles.JPG',
+  'https://phonxaydocuments.blob.core.windows.net/phonxayblob/open.jpg',
+  'https://phonxaydocuments.blob.core.windows.net/phonxayblob/stickme.jpg',
+  'https://phonxaydocuments.blob.core.windows.net/phonxayblob/tree.jpg',
+  'https://phonxaydocuments.blob.core.windows.net/phonxayblob/wood.jpg',
+  'https://phonxaydocuments.blob.core.windows.net/phonxayblob/yellow.jpg',
+]
