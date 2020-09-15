@@ -1,14 +1,16 @@
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
 import FeatureScroll from '../components/FeatureScroll';
-import Gallery from '../components/Gallery';
 import NavBar from '../components/NavBar';
 
 const DynamicValues = dynamic(
   () => import('../components/Values'),
   { ssr: false },
 );
-
+const DynamicScrollGallery = dynamic(
+  () => import('../components/ScrollGallery'),
+  { ssr: false },
+);
 
 const Index = () => (
   <>
@@ -19,7 +21,7 @@ const Index = () => (
       <NavBar />
       <FeatureScroll />
       <DynamicValues />
-  
+      <DynamicScrollGallery />
     </div>
   </>
 
