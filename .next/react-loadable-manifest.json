@@ -81,6 +81,12 @@
       "publicPath": "static/chunks/1.js"
     },
     {
+      "id": "./components/valuesComponents/useDimensions.js",
+      "name": "./components/valuesComponents/useDimensions.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
       "id": "./node_modules/@emotion/is-prop-valid/dist/is-prop-valid.browser.esm.js",
       "name": "./node_modules/@emotion/is-prop-valid/dist/is-prop-valid.browser.esm.js",
       "file": "static/chunks/1.js",
