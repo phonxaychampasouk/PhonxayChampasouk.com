@@ -1,7 +1,6 @@
 import { Button, Icon, Image } from 'semantic-ui-react';
 import Resume from './Resume';
 
-
 function Feature() {
   return (
     <>
@@ -16,7 +15,10 @@ function Feature() {
             <h3 id="banner-h3">
               I'm a
               {' '}
-              <span>Software Developer</span>
+              <span>
+                Software Developer
+                {' '}
+              </span>
               based in Seattle, Washington .
               Let me help you build a beautiful
               and fast website that will keep your customers engaged.
