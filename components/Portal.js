@@ -6,8 +6,8 @@ import { motion, useCycle } from "framer-motion";
 import PortalGallery from './valuesComponents/PortalGallery';
 import { useDimensions } from "./valuesComponents/useDimensions";
 
-import { Paper } from '@material-ui/core';
-import ThumbsUpDownIcon from '@material-ui/icons/ThumbsUpDown';
+
+import InfoCard from './valuesComponents/InfoCard';
 
 const imageData = [
   '/tree.jpg',
@@ -28,7 +28,7 @@ const imageData = [
 
 const sidebar = {
   open: (height = 200) => ({
-    clipPath: `circle(${height * 2 + 200}px at 10% 100%)`,
+    clipPath: `circle(${height * 2 + 200}px at 100% 0%)`,
     transition: {
       type: "spring",
       stiffness: 20,
@@ -36,9 +36,9 @@ const sidebar = {
     }
   }),
   closed: {
-    clipPath: "circle(0px at 10% 100%)",
+    clipPath: "circle(0px at 35% 50%)",
     transition: {
-      delay: 0.3,
+      delay: 0.1,
       type: "spring",
       stiffness: 200,
       damping: 60
@@ -46,7 +46,7 @@ const sidebar = {
   }
 };
 
-const Portal = () => {
+const Portal = ({screenWidth}) => {
   const [[page, direction], setPage] = useState([0, 0]);
   const [infoDisplay, setInfoDisplay] = useState('false');
   const [isOpen, toggleOpen] = useCycle(false, true);
@@ -68,29 +68,21 @@ const Portal = () => {
 
       <section className="portal-outer-container">
         <div className="portal-navigation-container">
+         
+             <div className="prev" role="button" tabIndex={-1} onKeyDown={() => paginate(-1)} onClick={() => paginate(1)}>
+            ‣
+          </div>
+          <div className="next" role="button" tabIndex={0} onKeyUp={() => paginate(1)} onClick={() => paginate(-1)}>
+            ‣
+          </div>
           <motion.div
                className="info-button-container"
                initial={false}
                animate={isOpen ? 'open' : 'closed'}
-               custom={{height: '100%'}}
+               custom={{height}}
                ref={containerRef}>
                  <motion.div className="background" variants={sidebar} >
-                 <Paper elevation={3}>
-                  <ul>
-                    Title : 7 Mile Tree
-                  </ul>
-                  <ul>
-                    Location: Yellowstone National Park, WY
-                  </ul>
-                  <ul>
-                    Captured: July 2020
-                  </ul>
-                  <ul>
-                    Data: ueiwbfiuew rewlbreqw rehjw rejhwnfrejw ghr ewjhrbehw wrejhbrh.
-                  </ul>
-                  <ThumbsUpDownIcon />
-                </Paper>
-                 
+                <InfoCard screenWidth={screenWidth}/>
                    </motion.div>
                  <button 
                    className="info-child" 
@@ -101,12 +93,6 @@ const Portal = () => {
                   {`i`}
                  </button>
              </motion.div>
-             <div className="prev" role="button" tabIndex={-1} onKeyDown={() => paginate(-1)} onClick={() => paginate(1)}>
-            ‣
-          </div>
-          <div className="next" role="button" tabIndex={0} onKeyUp={() => paginate(1)} onClick={() => paginate(-1)}>
-            ‣
-          </div>
         </div>         
             
         <div className="portal-grid-display">
@@ -116,6 +102,7 @@ const Portal = () => {
             direction={direction}
             page={page}
           />
+          
         </div>
 
       
