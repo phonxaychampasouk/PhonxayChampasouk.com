@@ -13,6 +13,7 @@ import '../styles/featureScroll.scss';
 import '../styles/Portal.scss';
 import '../styles/PortalGallery.scss';
 import '../styles/ScrollGallery.scss';
+import '../styles/InfoCard.scss';
 
 function MyApp({ Component, pageProps }) {
   return (
