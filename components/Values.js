@@ -135,7 +135,7 @@ const parallaxData = {
           shadow="0px 10px 10px black" 
           background="null"
           >
-            <Portal />
+            <Portal screenWidth={screenWidth}/>
           </Frame>
           </ParallaxProvider>
         </div>
