@@ -32,3 +32,10 @@ width:100%;
         width: 100%;
         transform: translateZ(0);
   }
+
+  .content-container {
+    height: 500px;
+    width: 500px;
+    position: absolute;
+    background-color: lightcoral;
+  }
