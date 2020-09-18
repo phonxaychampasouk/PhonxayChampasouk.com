@@ -131,7 +131,7 @@ function Feature() {
               </div>
             </div>
           </section>
-          <Resume />
+          <Projects /> 
         </div>
       </header>
     </>
