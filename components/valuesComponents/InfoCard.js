@@ -6,29 +6,55 @@ import ThumbsUpDownIcon from '@material-ui/icons/ThumbsUpDown';
 
 import VoteSlider from './VoteSlider';
 
-const InfoCard = ({ screenWidth }) => {
+
+const projectsData = [
+  { title: 'Find and Dine',
+    description: 'A full stack open-source web app featuring reviews, photo galleries, and menus',
+    src: 'https://github.com/find-and-dine/Find-and-Dine'
+  },
+  { title: 'Vapor Games',
+  description: 'An open-source game reviews application displaying gameplay and customer reviews.',
+  src: 'https://github.com/nightmareteam/Gameplay-Finder'
+},
+{ title: 'Smooth Photo Viewer',
+description: '',
+src: ''
+},
+{ title: 'Webchat Editor',
+description: '',
+src: ''
+},
+];
+//TODO: make function that displays project data
+const InfoCard = ({ screenWidth, page }) => {
   const constraintsRef = useRef(null);
 const rightLimit = screenWidth < 767 ? 0 : 100; 
+const projectCardMinWidth = screenWidth < 767 ? 350 : 500; 
+const projectCard =[];
+projectsData.forEach(data=>projectCard.push(
+  <>
+          <ul>
+Title : {data.title}
+          </ul>
+          <ul>
+description: {data.description}
+          </ul>
+          <ul>
+            Src: {data.src}
+          </ul>
+          <ul>
+Check out my progress!          </ul>
+</>
+))
   return (
-    <div className="example-container">
-
+    <div className="info-card-container">
       <motion.div className="drag-area" ref={constraintsRef} />
       <motion.div drag dragConstraints={{ left:-170, right:`${rightLimit}`, top:-350, bottom:0}}>
-        <Paper square={true} elevation={3} style={{ maxWidth: '350px', position: 'relative' }}>
-          <ul>
-            Title : 7 Mile Tree
-          </ul>
-          <ul>
-            Location: Yellowstone National Park, WY
-          </ul>
-          <ul>
-            Captured: July 2020
-          </ul>
-          <ul>
-            Data: All those photos were shot using a Sony A3200! Get out there and find your shot!
-          </ul>
-          <VoteSlider />
-        </Paper>
+      <Paper elevation={3} style={{ minWidth: `${projectCardMinWidth}`, position: 'relative', textAlign: 'left'}}>
+     <div className="image-card">{projectCard[page]}</div>
+     <div>test</div>
+      </Paper>
+
       </motion.div>
 
     </div>

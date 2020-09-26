@@ -6,7 +6,6 @@ import Container from '@material-ui/core/Container';
 import CameraAltIcon from '@material-ui/icons/CameraAlt';
 import FaceIcon from '@material-ui/icons/Face';
 import CloudCircleIcon from '@material-ui/icons/CloudCircle';
-import ParticlesBg from 'particles-bg';
 import { Frame, Scroll, useCycle } from 'framer';
 import { Parallax, ParallaxProvider } from 'react-scroll-parallax';
 import Typography from './valuesComponents/Typography';
@@ -159,7 +158,6 @@ const variants = {
             <div className="parallax" style={{display: 'flex', alignItems: `${alignItemVal}`, justifyContent: `${justifyContentVal}`, flexGrow: '1'}}>
               {sectionCards}
             </div>
-            <ParticlesBg color="blue" num={10} type="square" />
           </Container>
           <Frame  
           height={"70%"} 

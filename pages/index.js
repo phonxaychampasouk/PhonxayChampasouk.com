@@ -12,6 +12,11 @@ const DynamicScrollGallery = dynamic(
   { ssr: false },
 );
 
+const DynamicProjects = dynamic(
+  () => import('../components/featureComponents/Projects'),
+  { ssr: false },
+);
+
 const Index = () => (
   <>
     <Head>
@@ -20,6 +25,7 @@ const Index = () => (
     <div className="main-container">
       <NavBar />
       <FeatureScroll />
+      <DynamicProjects />
     </div>
   </>
 

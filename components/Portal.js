@@ -67,7 +67,6 @@ const Portal = ({screenWidth}) => {
   return (
 
       <section className="portal-outer-container">
-                
           <PortalGallery
           className="portal-grid-display"
             paginate={paginate}
@@ -92,7 +91,7 @@ const Portal = ({screenWidth}) => {
                custom={{height}}
                ref={containerRef}>
                  <motion.div className="background" variants={sidebar} >
-                <InfoCard screenWidth={screenWidth}/>
+                <InfoCard page={page} screenWidth={screenWidth}/>
                    </motion.div>
                  <button 
                    className="info-child" 
