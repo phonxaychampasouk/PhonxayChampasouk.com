@@ -1,5 +1,7 @@
 import { Button, Icon, Image } from 'semantic-ui-react';
 import Resume from './Resume';
+import Projects from '../components/featureComponents/Projects';
+
 
 function Feature() {
   return (
@@ -131,7 +133,8 @@ function Feature() {
               </div>
             </div>
           </section>
-          <Projects /> 
+          <Resume />
+          <Projects />
         </div>
       </header>
     </>
