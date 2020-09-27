@@ -59,9 +59,9 @@ const swipeConfidenceThreshold = 10000;
 const swipePower = (offset, velocity) => Math.abs(offset) * velocity;
 
 const PortalGallery = ({
-  paginate, imageIndex, direction, page, imageData,
+  paginate, imageIndex, direction, page, imageData, onLeftClick, onRightClick,
 }) => {
-  console.log('imageData:',imageData[imageIndex].images);
+  console.log('imageData:',imageData[imageIndex].images[0]);
   return (
   <>
     <div className="portal-inner-container">
@@ -70,7 +70,7 @@ const PortalGallery = ({
           className="portal-imgs"
           zIndex={0}
           key={page}
-          src={imageData[imageIndex].images}
+          src={imageData[imageIndex].images[0]}
           custom={direction}
           variants={variants}
           initial="enter"
@@ -87,8 +87,10 @@ const PortalGallery = ({
 
             if (swipe < -swipeConfidenceThreshold) {
               paginate(1);
+              onLeftClick(page);
             } else if (swipe > swipeConfidenceThreshold) {
               paginate(-1);
+              onRightClick(page);
             }
           }}
         />

@@ -73,9 +73,6 @@ const ProjectCard = ({ data, index, onArrowClick }) => {
   const tech = [];
   const techKeys = Object.keys(data.techStack);
   for (let i = 0; i < techKeys.length; i += 1) {
-    console.log('data:', data.techStack);
-    console.log('techKeys:', techKeys[i]);
-
     tech.push(
       <div 
       className={classes.techBox} 
@@ -91,7 +88,8 @@ const ProjectCard = ({ data, index, onArrowClick }) => {
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
-console.log('data.techStack.techName', data.techStack)
+
+  
   return (
     <Card className={classes.root}>
       <h1 className={classes.title}>
@@ -113,13 +111,12 @@ console.log('data.techStack.techName', data.techStack)
         </ul>
       </h1>
       <CardActions disableSpacing>
-        
         <IconButton
           className={clsx(classes.expand, {
             [classes.expandOpen]: expanded,
           })}
-          onClick={() => {
-            onArrowClick(index);
+          onClick={(e) => {
+            onArrowClick(e);
             handleExpandClick();
           }}
           aria-expanded={expanded}

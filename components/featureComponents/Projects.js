@@ -123,34 +123,50 @@ class Projects extends Component {
     super(props);
     this.state = {
       displayProject: false,
-      cardIndex: 0,
+      cardPage: 0,
     };
     this.onArrowClick = this.onArrowClick.bind(this);
+    this.onLeftClick = this.onLeftClick.bind(this);
+    this.onRightClick = this.onRightClick.bind(this);
   }
 
   onArrowClick(event) {
+    console.log('Expected: keys',event.target)
     this.setState({
       displayProject: true,
-      cardIndex: event,
+      cardPage: event,
+    });
+  }
+  // TODO: Create function that that paginates slider with gallery arrow
+
+  onLeftClick(event) {
+    this.setState({
+      cardPage: event,
+    });
+  }
+
+  onRightClick(event) {
+    this.setState({
+      cardPage: event,
     });
   }
 
   render() {
-    const { displayProject, cardIndex } = this.state;
+    const { displayProject, cardPage } = this.state;
     const projectCard = [];
     projectsData.forEach((data, index) => projectCard.push(
-      <ProjectCard index={index} cardIndex={cardIndex} onArrowClick={this.onArrowClick} data={data} />,
+      <ProjectCard index={index} cardPage={cardPage} onArrowClick={this.onArrowClick} data={data} />,
     ));
     return (
 
       <section className="projects-container">
         <div className="project-cards-container">
-        <div className="card-container">
-        <h1 style={{ fontSize: '3rem', marginBottom: '10px' , }}>
-          Projects
-        </h1>
-        <div className="project-card">
-            {projectCard}
+          <div className="card-container">
+            <h1 style={{ fontSize: '3rem', marginBottom: '10px' }}>
+              Projects
+            </h1>
+            <div className="project-card">
+              {projectCard}
             </div>
           </div>
         </div>
@@ -158,7 +174,9 @@ class Projects extends Component {
           {displayProject ? (
             <SelectedProject
               data={projectsData}
-              cardIndex={cardIndex}
+              cardName={cardPage}
+              onLeftClick={this.onLeftClick}
+              onRightClick={this.onRightClick}
             />
           ) : <> </>}
         </div>

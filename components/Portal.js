@@ -46,7 +46,7 @@ const sidebar = {
   }
 };
 
-const Portal = ({screenWidth,imageData, cardIndex}) => {
+const Portal = ({screenWidth,imageData, cardIndex, onLeftClick, onRightClick}) => {
   const [[page, direction], setPage] = useState([0, 0]);
   const [infoDisplay, setInfoDisplay] = useState('false');
   const [isOpen, toggleOpen] = useCycle(false, true);
@@ -57,12 +57,12 @@ const Portal = ({screenWidth,imageData, cardIndex}) => {
     setPage([page + newDirection, newDirection]);
   };
   console.log('imageData[cardIndex]:', imageData[cardIndex].images)
-  const imageIndex = wrap(0, imageData[cardIndex].images.length, page);
+  const imageIndex = wrap(0, imageData.length, page);
 
   const openInfo = () => {
     setInfoDisplay(!infoDisplay);
   };
-  console.log('imageIndex:', imageIndex)
+  console.log('page:', page)
 
   return (
 
@@ -74,15 +74,17 @@ const Portal = ({screenWidth,imageData, cardIndex}) => {
             direction={direction}
             page={page}
             imageData={imageData}
+            onLeftClick={onLeftClick}
+            onRightClick={onRightClick}
           />
           
         
         <div className="portal-navigation-container">
          
-             <div className="prev" role="button" tabIndex={-1} onKeyDown={() => paginate(-1)} onClick={() => paginate(-1)}>
+             <div className="prev" role="button" tabIndex={-1} onKeyDown={() => paginate(-1)} onClick={() => {paginate(-1); onLeftClick(page)}}>
             ‣
           </div>
-          <div className="next" role="button" tabIndex={0} onKeyUp={() => paginate(1)} onClick={() => paginate(1)}>
+          <div className="next" role="button" tabIndex={0} onKeyUp={() => paginate(1)} onClick={() => {paginate(1); onRightClick(page)}}>
             ‣
           </div>
          
