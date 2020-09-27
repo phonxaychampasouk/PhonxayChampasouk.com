@@ -43,15 +43,15 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     fontSize: '3rem',
+    paddingTop: '10px',
+    marginBottom: '10px',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
   },
   tech: {
-
     width: '50px',
   },
-
   techBox: {
     height: '75px',
     width: '75px',
@@ -59,7 +59,15 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     justifyContent: 'center',
   },
-
+  endType: {
+    fontSize: '1rem',
+    padding: '1px',
+  },
+  techOverlay : {
+    width: '100%',
+    height: '100%',
+    zIndex: '1000',
+  }
 }));
 
 const ProjectCard = ({ data, index, onArrowClick }) => {
@@ -74,28 +82,29 @@ const ProjectCard = ({ data, index, onArrowClick }) => {
   const techKeys = Object.keys(data.techStack);
   for (let i = 0; i < techKeys.length; i += 1) {
     tech.push(
-      <div 
-      className={classes.techBox} 
-      style={{backgroundColor: `${data.techStack[techKeys[i]].color}`}} 
-      onMouseOver={()=>{setTechName(data.techStack[techKeys[i]].name); setTechName(techKeys[i])}} 
-      onMouseOut={()=>{setTechName(''); setTechName('')}}>
-        <img className={classes.tech} src={data.techStack[techKeys[i]].src} alt="Project Image" />
+      <div className={classes.techOverlay}
+        onMouseOver={()=>{setTechName(data.techStack[techKeys[i]].name); setTechName(techKeys[i])}} 
+        onMouseOut={()=>{setTechName(''); setTechName('')}}>
+        <div className={classes.techBox} 
+          style={{backgroundColor: `${data.techStack[techKeys[i]].color}`}}>
+            <img className={classes.tech} src={data.techStack[techKeys[i]].src} alt="Project Image" />
+        </div>
       </div>,
 
     );
   }
-
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
-
-  
   return (
-    <Card className={classes.root}>
+    <Card className={classes.root} elevation="24">
       <h1 className={classes.title}>
         {data.title}
+        <h2 className={classes.endType}>
+          {data.end} Application
+        </h2>
         <CardContent>
-        <Typography variant="body1" color="textSecondary" component="h1">
+        <Typography variant="body1" color="textSecondary" component="h1" style={{height: '128px', display: 'flex', alignItems: 'center', paddingLeft: '50px', paddingRight: '50px', marginBottom: '10px',}}>
           {data.description}
         </Typography>
       </CardContent>
@@ -115,13 +124,12 @@ const ProjectCard = ({ data, index, onArrowClick }) => {
           className={clsx(classes.expand, {
             [classes.expandOpen]: expanded,
           })}
-          onClick={(e) => {
-            onArrowClick(e);
+          onClick={() => {
+            onArrowClick(index);
             handleExpandClick();
           }}
           aria-expanded={expanded}
           aria-label="show more"
-          index={index}
         >
          Click to expand <ExpandMoreIcon />
         </IconButton>

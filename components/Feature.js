@@ -3,8 +3,6 @@ import { Button, Icon, Image } from 'semantic-ui-react';
 import Projects from './featureComponents/Projects';
 import Resume from './Resume';
 
-
-
 function Feature() {
   return (
     <>
@@ -62,10 +60,8 @@ function Feature() {
                       <div id="social-buttons">
                         <Button
                           animated="vertical"
-                          onClick={(e) => {
-                            e.preventDefault();
-                            window.location.href = 'https://www.github.com/phonxaychampasouk';
-                          }}
+                          href="https://www.github.com/phonxaychampasouk"
+                          target="_blank"
                           color="github"
                         >
                           <Button.Content visible>
@@ -82,10 +78,8 @@ function Feature() {
                         </Button>
                         <Button
                           animated="vertical"
-                          onClick={(e) => {
-                            e.preventDefault();
-                            window.location.href = 'https://www.linkedin.com/in/phonxaychampasouk1';
-                          }}
+                          href="https://www.linkedin.com/in/phonxaychampasouk1"
+                          target="_blank"
                           color="linkedin"
                         >
                           <Button.Content visible>
@@ -102,10 +96,8 @@ function Feature() {
                         </Button>
                         <Button
                           animated="vertical"
-                          onClick={(e) => {
-                            e.preventDefault();
-                            window.location.href = 'https://www.instagram.com/the.champa.gram/';
-                          }}
+                          href="https://www.instagram.com/the.champa.gram/"
+                          target="_blank"
                           color="instagram"
                         >
                           <Button.Content visible>

@@ -14,7 +14,9 @@ const projectsData = [
   {
     title: 'Find and Dine',
     description: 'A full stack open-source web app featuring reviews, photo galleries, and menus',
-    src: 'https://github.com/find-and-dine/Find-and-Dine',
+    end: 'Full Stack',
+    src:
+     'https://github.com/find-and-dine/Find-and-Dine',
     techStack:
     {
       Javacript: {
@@ -43,6 +45,7 @@ const projectsData = [
   {
     title: 'Webchat Editor',
     description: '',
+    end: 'Front-End',
     src: '',
     techStack:
     {
@@ -63,8 +66,10 @@ const projectsData = [
     images: ['https://media.giphy.com/media/jPM6MCEVEDPwT5KVYr/giphy.gif'],
   }, {
     title: 'Vapor Games',
-    description: 'An open-source game reviews application displaying gameplay and customer reviews.',
-    src: 'https://github.com/nightmareteam/Gameplay-Finder',
+    description: 'Overhauled back-end service of original code to increase through-put success rates by 300%. Gameplay finder has the ability to display reviews, gameplay images and developer information while filtering through 10 million entries.',
+    end: 'Back-End',
+    src:
+     'https://github.com/nightmareteam/Gameplay-Finder',
     techStack:
     {
       Javacript: {
@@ -92,7 +97,8 @@ const projectsData = [
     images: ['https://media.giphy.com/media/jPM6MCEVEDPwT5KVYr/giphy.gif'],
   }, {
     title: 'phonxay.com',
-    description: '',
+    description: 'A mobile web application I am building for myself. The primary focus for this website is to have the ability to display my portfolio. [Development]',
+    end: 'Front-End',
     src: '',
     techStack:
     {
@@ -131,7 +137,6 @@ class Projects extends Component {
   }
 
   onArrowClick(event) {
-    console.log('Expected: keys',event.target)
     this.setState({
       displayProject: true,
       cardPage: event,
@@ -174,7 +179,7 @@ class Projects extends Component {
           {displayProject ? (
             <SelectedProject
               data={projectsData}
-              cardName={cardPage}
+              cardPage={cardPage}
               onLeftClick={this.onLeftClick}
               onRightClick={this.onRightClick}
             />

@@ -87,10 +87,10 @@ const PortalGallery = ({
 
             if (swipe < -swipeConfidenceThreshold) {
               paginate(1);
-              onLeftClick(page);
+              onLeftClick(imageIndex);
             } else if (swipe > swipeConfidenceThreshold) {
               paginate(-1);
-              onRightClick(page);
+              onRightClick(imageIndex);
             }
           }}
         />

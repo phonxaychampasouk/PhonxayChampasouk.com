@@ -1,9 +1,9 @@
 .projects-container {
 display: flex;
 flex-direction: column;
-background: rgba(38, 38, 38, 0.4);
+background:#dfe4e8;
+border: solid #676767;
 border-radius: 15px;
-border: solid #d4d4dc;
 height: auto;
 width: auto;
 padding-top: 20px;
@@ -12,8 +12,7 @@ cursor: pointer;
 
 }
 .projects-container:hover {
-    background: rgba(38, 38, 38, 0.85);
-  }
+}
 
   
 
@@ -29,13 +28,16 @@ cursor: pointer;
     flex-wrap: nowrap;
     overflow: scroll ;
     padding-bottom: 25px;
-    background-color: rgba(177, 177, 177, 1);
+    background-color: #f7f7f7;
+    
 }
 .card-container {
 display: flex;
 flex-direction: column;
-background-color: rgba(177, 177, 177, 1);
-margin: 15px 30px,
+background-color: #f7f7f7;
+border-radius: 15px;
+border: solid #676767;
+margin: 15px 30px;
 
 }
 

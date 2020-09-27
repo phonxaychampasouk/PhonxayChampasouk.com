@@ -1,30 +1,40 @@
+import GitHubIcon from '@material-ui/icons/GitHub';
+import Button from '@material-ui/core/Button';
 import { card } from '../../styles/nextjs-material-kit';
+
 import Portal from '../Portal';
 
 const SelectedProject = ({
-  data, cardName, onLeftClick, onRightClick,
-}) =>{ 
-    console.log(data);
-    return(
+  data, cardPage, onLeftClick, onRightClick,
+}) => (
   <>
     <h1 style={{ fontSize: '2rem' }}>
       Title:
       {' '}
-      {data[cardName].title}
+      {data[cardPage].title}
     </h1>
 
     <Portal
       imageData={data}
-      cardName={cardName}
+      cardPage={cardPage}
       onLeftClick={onLeftClick}
       onRightClick={onRightClick}
     />
+    <Button
+      variant="contained"
+      color="primary"
+      className="github-button"
+      endIcon={<GitHubIcon />}
+      href={data[cardPage].src}
+      target="_blank"
+    >
+      View Repo
+    </Button>
     <ul>
       src:
       {' '}
-      {data[cardName].src}
+      {data[cardPage].src}
     </ul>
   </>
 );
-}
 export default SelectedProject;

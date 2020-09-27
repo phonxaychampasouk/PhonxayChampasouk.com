@@ -56,13 +56,13 @@ const Portal = ({screenWidth,imageData, cardIndex, onLeftClick, onRightClick}) =
   const paginate = (newDirection) => {
     setPage([page + newDirection, newDirection]);
   };
-  console.log('imageData[cardIndex]:', imageData[cardIndex].images)
+  console.log('imageData[cardIndex]:', imageData[cardIndex])
   const imageIndex = wrap(0, imageData.length, page);
 
   const openInfo = () => {
     setInfoDisplay(!infoDisplay);
   };
-  console.log('page:', page)
+  console.log('page:', imageIndex)
 
   return (
 
@@ -81,10 +81,10 @@ const Portal = ({screenWidth,imageData, cardIndex, onLeftClick, onRightClick}) =
         
         <div className="portal-navigation-container">
          
-             <div className="prev" role="button" tabIndex={-1} onKeyDown={() => paginate(-1)} onClick={() => {paginate(-1); onLeftClick(page)}}>
+             <div className="prev" role="button" tabIndex={-1} onKeyDown={() => paginate(-1)} onClick={() => {paginate(-1); onLeftClick(imageIndex)}}>
             ‣
           </div>
-          <div className="next" role="button" tabIndex={0} onKeyUp={() => paginate(1)} onClick={() => {paginate(1); onRightClick(page)}}>
+          <div className="next" role="button" tabIndex={0} onKeyUp={() => paginate(1)} onClick={() => {paginate(1); onRightClick(imageIndex)}}>
             ‣
           </div>
          
