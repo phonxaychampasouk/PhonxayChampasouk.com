@@ -16,6 +16,8 @@ import ShareIcon from '@material-ui/icons/Share';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import { object } from 'prop-types';
+import { scroller } from 'react-scroll';
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -124,9 +126,8 @@ const ProjectCard = ({ data, index, onArrowClick }) => {
           className={clsx(classes.expand, {
             [classes.expandOpen]: expanded,
           })}
-          onClick={() => {
-            onArrowClick(index);
-            handleExpandClick();
+          onClick={(e) => {
+            onArrowClick(e, index);
           }}
           aria-expanded={expanded}
           aria-label="show more"

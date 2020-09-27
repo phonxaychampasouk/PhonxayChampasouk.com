@@ -1,7 +1,7 @@
 import { Component, setState } from 'react';
 import { Paper } from '@material-ui/core';
-import ProjectCard from './ProjectCard';
 import SelectedProject from './SelectedProject';
+import ProjectCard from './ProjectCard';
 
 /*
 ![Searching](https://media.giphy.com/media/jPM6MCEVEDPwT5KVYr/giphy.gif)
@@ -136,23 +136,23 @@ class Projects extends Component {
     this.onRightClick = this.onRightClick.bind(this);
   }
 
-  onArrowClick(event) {
+  onArrowClick(e, index) {
     this.setState({
       displayProject: true,
-      cardPage: event,
+      cardPage: index,
     });
   }
   // TODO: Create function that that paginates slider with gallery arrow
 
-  onLeftClick(event) {
+  onLeftClick(index) {
     this.setState({
-      cardPage: event,
+      cardPage: index,
     });
   }
 
-  onRightClick(event) {
+  onRightClick(index) {
     this.setState({
-      cardPage: event,
+      cardPage: index,
     });
   }
 
@@ -163,7 +163,6 @@ class Projects extends Component {
       <ProjectCard index={index} cardPage={cardPage} onArrowClick={this.onArrowClick} data={data} />,
     ));
     return (
-
       <section className="projects-container">
         <div className="project-cards-container">
           <div className="card-container">
@@ -175,7 +174,7 @@ class Projects extends Component {
             </div>
           </div>
         </div>
-        <div className="selected-project">
+        <div id="selected-project">
           {displayProject ? (
             <SelectedProject
               data={projectsData}
