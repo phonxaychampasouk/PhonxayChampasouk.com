@@ -1,5 +1,6 @@
 import dynamic from 'next/dynamic';
 import { Button, Icon, Image } from 'semantic-ui-react';
+import Projects from './featureComponents/Projects';
 import Resume from './Resume';
 
 
@@ -135,6 +136,7 @@ function Feature() {
             </div>
           </section>
           <Resume />
+          <Projects />
         </div>
       </header>
     </>

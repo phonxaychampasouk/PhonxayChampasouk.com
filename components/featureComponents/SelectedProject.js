@@ -1,10 +1,15 @@
+import { card } from '../../styles/nextjs-material-kit';
+import Portal from '../Portal';
+
 const SelectedProject = ({ data, cardIndex }) => (
   <>
-    <ul>
+    <h1 style={{fontSize:'2rem',}}>
       Title:
       {' '}
       {data[cardIndex].title}
-    </ul>
+    </h1>
+
+    <Portal imageData={data} cardIndex={cardIndex}/>
     <ul>
       src:
       {' '}

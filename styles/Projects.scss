@@ -1,19 +1,42 @@
 .projects-container {
 display: flex;
 flex-direction: column;
-justify-content: center;
-background: rgba(38, 38, 38, .7);
-height: 200%;
-width: 100%;
-padding-top: 50px;
+background: rgba(38, 38, 38, 0.4);
+border-radius: 15px;
+border: solid #d4d4dc;
+height: auto;
+width: auto;
+padding-top: 20px;
+overflow-x: hidden;
+cursor: pointer;
+
+}
+.projects-container:hover {
+    background: rgba(38, 38, 38, 0.85);
+  }
+
+  
+
+.project-cards-container {
+    width: auto;
+    height: 100%;
 
 }
 
 .project-card{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 10px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow: scroll ;
+    padding-bottom: 25px;
+    background-color: rgba(177, 177, 177, 1);
+}
+.card-container {
+display: flex;
+flex-direction: column;
+background-color: rgba(177, 177, 177, 1);
+margin: 15px 30px,
+
 }
 
 .projects-button{
@@ -24,5 +47,5 @@ padding-top: 50px;
 .selected-project {
     height: 100%;
     width: 100%;
-    background-color: indigo;
+
 }

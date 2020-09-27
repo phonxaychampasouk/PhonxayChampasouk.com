@@ -4,27 +4,27 @@ import { useRef } from "react";
 import { motion, useCycle } from "framer-motion";
 
 import PortalGallery from './valuesComponents/PortalGallery';
-import { useDimensions } from "./valuesComponents/useDimensions";
+// import { useDimensions } from "./valuesComponents/useDimensions";
 
 
 import InfoCard from './valuesComponents/InfoCard';
 
-const imageData = [
-  '/tree.jpg',
-  '/bug.JPG',
-  '/flow.jpg',
-  '/flower.JPG',
-  '/gardenofgods.JPG',
-  '/lake.JPG',
-  '/yellow.jpg',
-  '/flow.jpg',
-  '/moosesmiles.JPG',
-  '/open.jpg',
-  '/stickme.jpg',
-  '/tree.jpg',
-  '/wood.jpg',
-  '/yellow.jpg',
-];
+// const imageData = [
+//   '/tree.jpg',
+//   '/bug.JPG',
+//   '/flow.jpg',
+//   '/flower.JPG',
+//   '/gardenofgods.JPG',
+//   '/lake.JPG',
+//   '/yellow.jpg',
+//   '/flow.jpg',
+//   '/moosesmiles.JPG',
+//   '/open.jpg',
+//   '/stickme.jpg',
+//   '/tree.jpg',
+//   '/wood.jpg',
+//   '/yellow.jpg',
+// ];
 
 const sidebar = {
   open: (height = 200) => ({
@@ -46,33 +46,34 @@ const sidebar = {
   }
 };
 
-const Portal = ({screenWidth}) => {
+const Portal = ({screenWidth,imageData, cardIndex}) => {
   const [[page, direction], setPage] = useState([0, 0]);
   const [infoDisplay, setInfoDisplay] = useState('false');
   const [isOpen, toggleOpen] = useCycle(false, true);
   const containerRef = useRef(null);
-  const { height } = useDimensions(containerRef);
+  // const { height } = useDimensions(containerRef);
 
   const paginate = (newDirection) => {
     setPage([page + newDirection, newDirection]);
   };
-
-  const imageIndex = wrap(0, imageData.length, page);
+  console.log('imageData[cardIndex]:', imageData[cardIndex].images)
+  const imageIndex = wrap(0, imageData[cardIndex].images.length, page);
 
   const openInfo = () => {
     setInfoDisplay(!infoDisplay);
   };
+  console.log('imageIndex:', imageIndex)
 
-  // TODO: Info button
   return (
 
       <section className="portal-outer-container">
           <PortalGallery
-          className="portal-grid-display"
+            className="portal-grid-display"
             paginate={paginate}
             imageIndex={imageIndex}
             direction={direction}
             page={page}
+            imageData={imageData}
           />
           
         
@@ -84,7 +85,19 @@ const Portal = ({screenWidth}) => {
           <div className="next" role="button" tabIndex={0} onKeyUp={() => paginate(1)} onClick={() => paginate(1)}>
             ‣
           </div>
-          <motion.div
+         
+        </div>         
+            
+        
+
+      
+      </section>
+  );
+};
+
+export default Portal;
+
+/* <motion.div
                className="info-button-container"
                initial={false}
                animate={isOpen ? 'open' : 'closed'}
@@ -101,14 +114,4 @@ const Portal = ({screenWidth}) => {
                    onClick={() => toggleOpen()}>
                   {`i`}
                  </button>
-             </motion.div>
-        </div>         
-            
-        
-
-      
-      </section>
-  );
-};
-
-export default Portal;
+             </motion.div> */

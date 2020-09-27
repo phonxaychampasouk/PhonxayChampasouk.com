@@ -6,20 +6,15 @@
     flex-direction: row;
     flex-wrap: nowrap;
     width: auto;
-    height: 100%;
+    height: 500px;
     width: 100%;
     justify-content: center;
     overflow: hidden;
-    background-color: black; 
-     position: absolute;  }
+   }
 
   .portal-navigation-container {
-    grid-column: 10;
-    align-self: end;
-    grid-row: 12;
     display: flex;
-    flex-direction: row;
-    align-items: flex-end ;
+    justify-content: flex-end ;
 
   }
 
@@ -47,8 +42,7 @@
   }
   
   .portal-imgs {
-    height: 100%;
-  }
+object-fit: cover;  }
 
   
   /**************************INFO PANEL*********************************/

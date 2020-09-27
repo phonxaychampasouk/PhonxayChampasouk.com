@@ -13,7 +13,7 @@ module.exports = {
       config.node = {
         fs: 'empty',
       };
-    }, async = 
+    }
 
     return config;
   },

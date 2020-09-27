@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import clsx from 'clsx';
 import Card from '@material-ui/core/Card';
@@ -15,14 +15,18 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShareIcon from '@material-ui/icons/Share';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
+import { object } from 'prop-types';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    maxWidth: '350px',
-    minWidth: '270px',
+    minWidth: '500px',
+    maxHeight: '700px',
+    margin: '25px',
   },
   media: {
-    height: 0,
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'flex-end',
   },
   expand: {
     transform: 'rotate(0deg)',
@@ -32,54 +36,84 @@ const useStyles = makeStyles((theme) => ({
     }),
   },
   expandOpen: {
-    transform: 'rotate(180deg)',
+    transform: 'rotate(360deg)',
   },
   avatar: {
     backgroundColor: red[500],
   },
+  title: {
+    fontSize: '3rem',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+  },
+  tech: {
+
+    width: '50px',
+  },
+
+  techBox: {
+    height: '75px',
+    width: '75px',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+
 }));
 
 const ProjectCard = ({ data, index, onArrowClick }) => {
+  const [techColor, setTechColor] = useState('grey')
   const classes = useStyles();
-  const [expanded, setExpanded] = React.useState(false);
+  const [expanded, setExpanded] = useState(false);
+  const [techName, setTechName] = useState('');
+  const [techIcon, setTechIcon] = useState('');
+
+
+  const tech = [];
+  const techKeys = Object.keys(data.techStack);
+  for (let i = 0; i < techKeys.length; i += 1) {
+    console.log('data:', data.techStack);
+    console.log('techKeys:', techKeys[i]);
+
+    tech.push(
+      <div 
+      className={classes.techBox} 
+      style={{backgroundColor: `${data.techStack[techKeys[i]].color}`}} 
+      onMouseOver={()=>{setTechName(data.techStack[techKeys[i]].name); setTechName(techKeys[i])}} 
+      onMouseOut={()=>{setTechName(''); setTechName('')}}>
+        <img className={classes.tech} src={data.techStack[techKeys[i]].src} alt="Project Image" />
+      </div>,
+
+    );
+  }
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
-
+console.log('data.techStack.techName', data.techStack)
   return (
     <Card className={classes.root}>
-      <CardHeader
-        avatar={(
-          <Avatar aria-label="recipe" className={classes.avatar}>
-            R
-          </Avatar>
-        )}
-        action={(
-          <IconButton aria-label="settings">
-            <MoreVertIcon />
-          </IconButton>
-        )}
-        title={data.title}
-        subheader="September 14, 2016"
-      />
-      <CardMedia
-        className={classes.media}
-        image="/static/images/cards/paella.jpg"
-        title="Paella dish"
-      />
-      <CardContent>
-        <Typography variant="body2" color="textSecondary" component="p">
+      <h1 className={classes.title}>
+        {data.title}
+        <CardContent>
+        <Typography variant="body1" color="textSecondary" component="h1">
           {data.description}
         </Typography>
       </CardContent>
+        <div className={classes.media}>
+          {tech}
+        </div>
+        <ul style={{height: '50px'}}>
+        {techName !== '' ?
+        <img src={data.techStack[techName].src} style={{width: '30px', marginRight: '30px'}} alt="Check out the Tech!" /> :
+        ''
+}
+          {techName}
+        </ul>
+      </h1>
       <CardActions disableSpacing>
-        <IconButton aria-label="add to favorites">
-          <FavoriteIcon />
-        </IconButton>
-        <IconButton aria-label="share">
-          <ShareIcon />
-        </IconButton>
+        
         <IconButton
           className={clsx(classes.expand, {
             [classes.expandOpen]: expanded,
@@ -92,26 +126,9 @@ const ProjectCard = ({ data, index, onArrowClick }) => {
           aria-label="show more"
           index={index}
         >
-          <ExpandMoreIcon />
+         Click to expand <ExpandMoreIcon />
         </IconButton>
       </CardActions>
-      <div className="display-project-window">
-        <Collapse in={expanded} timeout="auto" unmountOnExit>
-          <CardContent>
-            <Typography paragraph>{data.title}</Typography>
-            <Typography paragraph>
-              {data.description}
-            </Typography>
-            <Typography paragraph>
-              {data.src}
-
-            </Typography>
-            <Typography>
-              Set aside off of the heat to let rest for 10 minutes, and then serve.
-            </Typography>
-          </CardContent>
-        </Collapse>
-      </div>
 
     </Card>
   );

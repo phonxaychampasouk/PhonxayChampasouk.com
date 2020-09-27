@@ -17,7 +17,6 @@ const Index = () => (
     <div className="main-container">
       <NavBar />
       <FeatureScroll />
-      <Projects />
     </div>
   </>
 

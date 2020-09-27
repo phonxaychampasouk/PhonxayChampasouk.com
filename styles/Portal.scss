@@ -1,9 +1,7 @@
 .portal-outer-container{
 height: 100%;
 width: 100%;
-display: grid;
-grid-template-columns: repeat(12, 1fr [col-start]);
-grid-template-rows: repeat(12, 1fr [row-start]);
+
 }
 
 .portal-grid-display{
@@ -25,8 +23,7 @@ grid-template-rows: repeat(12, 1fr [row-start]);
 
   .info-button-container {
 display: flex;
-flex-direction: column;
-align-items: flex-end;
+
 }
 .background {
     width: 150px;
