@@ -1,9 +1,20 @@
 module.exports = {
-  exportPathMap: async function (
+  async exportPathMap(
     defaultPathMap,
-    { dev, dir, outDir, distDir, buildId }
+    {
+      dev, dir, outDir, distDir, buildId,
+    },
   ) {
-    return {
-      '/': { page: '/' }}
+    return { '/': { page: '/' } };
   },
-}
+  webpack: (config, { isServer }) => {
+    // Fixes npm packages that depend on `fs` module
+    if (!isServer) {
+      config.node = {
+        fs: 'empty',
+      };
+    }, async = 
+
+    return config;
+  },
+};
