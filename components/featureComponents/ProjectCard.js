@@ -66,11 +66,9 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const ProjectCard = ({ data, index, onArrowClick }) => {
-  const [techColor, setTechColor] = useState('grey')
   const classes = useStyles();
   const [expanded, setExpanded] = useState(false);
   const [techName, setTechName] = useState('');
-  const [techIcon, setTechIcon] = useState('');
 
 
   const tech = [];
@@ -99,7 +97,7 @@ const ProjectCard = ({ data, index, onArrowClick }) => {
           {data.end} Application
         </h2>
         <CardContent>
-        <Typography variant="body1" color="textSecondary" component="h1" style={{height: '128px', display: 'flex', alignItems: 'center', paddingLeft: '50px', paddingRight: '50px', marginBottom: '10px',}}>
+        <Typography variant="body1" color="textSecondary" component="h1" style={{height: '128px', display: 'flex', alignItems: 'center', paddingLeft: '100px', paddingRight: '100px', marginBottom: '10px',}}>
           {data.description}
         </Typography>
       </CardContent>

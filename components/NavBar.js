@@ -20,35 +20,6 @@ export default function Navbars() {
             rightLinks={(
               <List className={classes.list}>
                 <ListItem className={classes.listItem}>
-                  <Button
-                    href="#pablo"
-                    className={classes.navLink}
-                    onClick={(e) => e.preventDefault()}
-                    color="transparent"
-                  >
-                    Discover
-                  </Button>
-                </ListItem>
-                <ListItem className={classes.listItem}>
-                  <Button
-                    href="#pablo"
-                    className={classes.navLink}
-                    onClick={(e) => e.preventDefault()}
-                    color="transparent"
-                  >
-                    Wishlist
-                  </Button>
-                </ListItem>
-                <ListItem className={classes.listItem}>
-                  <Button
-                    href="#pablo"
-                    className={classes.registerNavLink}
-                    onClick={(e) => e.preventDefault()}
-                    color="rose"
-                    round
-                  >
-                    Register
-                  </Button>
                 </ListItem>
               </List>
             )}

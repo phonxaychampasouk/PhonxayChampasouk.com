@@ -121,7 +121,7 @@ function Feature() {
                       </div>
                     </div>
                     <div className="download-button">
-                      <Button animated>
+                      <Button animated  href="phonxay.pdf">
                         <Button.Content visible>Resume</Button.Content>
                         <Button.Content hidden>
                           Download
