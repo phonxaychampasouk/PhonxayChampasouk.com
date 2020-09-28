@@ -15,6 +15,7 @@ import '../styles/PortalGallery.scss';
 import '../styles/ScrollGallery.scss';
 import '../styles/InfoCard.scss';
 import '../styles/Projects.scss';
+import '../styles/Contact.scss';
 
 function MyApp({ Component, pageProps }) {
   return (

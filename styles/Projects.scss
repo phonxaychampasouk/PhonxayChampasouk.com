@@ -31,15 +31,33 @@ cursor: pointer;
     background-color: #f7f7f7;
     
 }
+
 .card-container {
 display: flex;
 flex-direction: column;
 background-color: #f7f7f7;
 border-radius: 15px;
 border: solid #676767;
-margin: 15px 30px;
+margin: 15px 0;
 
 }
+@media (max-width: 767px) {
+    .card-container {
+
+        margin: 15px 0;
+        
+        }
+ 
+ }
+ //greater 
+ @media (min-width: 768px) {
+    .card-container {
+
+        margin: 15px 30px;
+        
+        }
+ 
+ }
 
 .projects-button{
     width: 25px;

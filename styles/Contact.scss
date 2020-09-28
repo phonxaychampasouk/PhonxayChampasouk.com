@@ -1,8 +1,16 @@
 #contact {
-    background: #191919;
-    padding-top: 96px;
-    padding-bottom: 102px;
-    color: #999999;
+   background: rgba(223,228,232, .87);
+   padding-top: 40px;
+padding-bottom: 20px;
+border: solid #676767;
+border-radius: 15px;
+margin-top: 20px;
+font: 20px/24px 'opensans-bold', sans-serif;
+ }
+ 
+ #contact:hover{
+   background: rgb(110, 164, 209);
+
  }
  #contact .section-head { margin-bottom: 42px; }
  
@@ -10,10 +18,10 @@
  #contact a:hover, #contact a:focus { color: #fff; }
  
  #contact h1 {
-    font: 18px/24px 'opensans-bold', sans-serif;
+    font: 36px/24px 'opensans-bold', sans-serif;
     text-transform: uppercase;
     letter-spacing: 3px;
-    color: #EBEEEE;
+    color: black;
     margin-bottom: 6px;
  }
  #contact h1 span { display: none; }
@@ -25,16 +33,16 @@
     line-height: 72px;
     text-align: left;
     float: left;
-    color: #ebeeee;
+    color: black;
  }
  
  #contact h4 {
-    font: 16px/24px 'opensans-bold', sans-serif;
-    color: #EBEEEE;
+    font: 34px/24px 'opensans-bold', sans-serif;
+    color: black;
     margin-bottom: 6px;
  }
  #contact p.lead {
-    font: 18px/36px 'opensans-light', sans-serif;
+    font: 30px/36px 'opensans-light', sans-serif;
     padding-right: 3%;
  }
  #contact .header-col { padding-top: 6px; }
@@ -43,9 +51,9 @@
  /* contact form */
  #contact form { margin-bottom: 30px; }
  #contact label {
-    font: 15px/24px 'opensans-bold', sans-serif;
+    font: 24px/24px 'opensans-bold', sans-serif;
     margin: 12px 0;
-    color: #EBEEEE;
+    color: black;
      display: inline-block;
      float: left;
     width: 26%;
@@ -54,9 +62,8 @@
  #contact textarea,
  #contact select {
     padding: 10px 20px;
-     color: #eee;
-     background: #373233;
-     margin-bottom: 42px;
+    background-color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 42px;
      border: 0;
      outline: none;
     font-size: 15px;
@@ -79,7 +86,6 @@
     height: auto;
     display: inline-block;
      border-radius: 0px;
-    margin-left: 26%;
  }
  #contact button.submit:hover {
      color: #0D0D0D;
@@ -89,7 +95,7 @@
      color: #0762f9;
      font-size: 13px;
  }
- #contact .banner-text {
+ #contact .rowbanner-text {
     width: 70%;
     text-align: center;
  }

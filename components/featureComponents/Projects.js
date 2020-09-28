@@ -2,6 +2,7 @@ import { Component, setState } from 'react';
 import { Paper } from '@material-ui/core';
 import SelectedProject from './SelectedProject';
 import ProjectCard from './ProjectCard';
+// import { useDimensions } from "./valuesComponents/useDimensions";
 
 /*
 ![Searching](https://media.giphy.com/media/jPM6MCEVEDPwT5KVYr/giphy.gif)
@@ -141,6 +142,7 @@ class Projects extends Component {
       displayProject: true,
       cardPage: index,
     });
+    e.target.scrollIntoView();
   }
   // TODO: Create function that that paginates slider with gallery arrow
 

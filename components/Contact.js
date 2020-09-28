@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import emailjs from "emailjs-com";
+import { flexbox } from '@material-ui/system';
+import { Center } from 'devextreme-react/map';
 
 class Contact extends Component {
    constructor(props) {
@@ -66,27 +68,18 @@ class Contact extends Component {
     const { formSubmitted } = this.state;
 
     const renderFormSubmitted = () => (
-       <section>
-         <div className="row banner banner-text">
-            <h3>Thank you for reaching out! I do my best to read and respond to email submissions as quickly as possible.</h3>
-         </div>
+       <section style={{width: '100%', height: '400px', backgroundColor:'rgb(110, 164, 209)', marginTop: '30px', borderRadius: '15px'}}>
+            <h1 style={{fontSize:'2rem', paddingTop:'45px' }}>Thank you for reaching out! I will do my best to read and respond to email submissions as quickly as possible.</h1>
        </section>
     );
-
     const renderForm = () => (
       <section id="contact">
-
          <div className="row section-head">
-
-            <div className="two columns header-col">
-
-               <h1><span>Get In Touch.</span></h1>
-
-            </div>
+<img src='https://simpleicons.org/icons/gmail.svg' style={{height: "50px"}} />
 
             <div className="ten columns">
 
-                  <p className="lead">{message}</p>
+                  <p className="lead">Hi! If you have any questions or you would like to reach out to me, please fill out this form and lets connect!</p>
 
             </div>
 
@@ -94,17 +87,15 @@ class Contact extends Component {
 
          <div className="row">
             <div className="eight columns">
-
                <form action="" method="post" id="contactForm" name="contactForm" onSubmit={this.handleSubmit}>
 					<fieldset>
-
                   <div>
-						   <label htmlFor="contactName">Name <span className="required">*</span></label>
+						   <label htmlFor="contactName">Name <span className="required"></span></label>
 						   <input type="text" defaultValue="" size="35" id="contactName" name="contactName" onChange={this.handleChange}/>
                   </div>
 
                   <div>
-						   <label htmlFor="contactEmail">Email <span className="required">*</span></label>
+						   <label htmlFor="contactEmail">Email <span className="required"></span></label>
 						   <input type="text" defaultValue="" size="35" id="contactEmail" name="contactEmail" onChange={this.handleChange}/>
                   </div>
 
@@ -114,18 +105,19 @@ class Contact extends Component {
                   </div>
 
                   <div>
-                     <label htmlFor="contactMessage">Message <span className="required">*</span></label>
+                     <label htmlFor="contactMessage">Message <span className="required"></span></label>
                      <textarea cols="50" rows="15" id="contactMessage" name="contactMessage" onChange={this.handleChange}></textarea>
                   </div>
 
-                  <div>
-                     <button className="submit">Submit</button>
-                     <span id="image-loader">
-                        <img alt="" src="images/loader.gif" />
-                     </span>
-                  </div>
+
 					</fieldset>
 				   </form>
+               <div style={{display: 'flex', flexDirection:'column', alignContent:'Center'}}>
+                     <button className="submit">Submit</button>
+                     <span id="image-loader">
+                        <img alt="" src="https://simpleicons.org/icons/gmail.svg" />
+                     </span>
+                  </div>
 
            <div id="message-warning"> Error boy</div>
 				   <div id="message-success">
@@ -133,27 +125,14 @@ class Contact extends Component {
 				   </div>
            </div>
 
-
-            <aside className="four columns footer-widgets">
-               <div className="widget widget_contact">
-
-					   <h4>Address and Phone</h4>
-					   <p className="address">
-						   {name}<br />
-						   {street} <br />
-						   {city}, {state} {zip}<br />
-						   <span>{phone}</span>
-					   </p>
-				   </div>
-            </aside>
       </div>
    </section>
     );
     
    return (
-     <section id="contact">
+     <>
        {formSubmitted ?  renderFormSubmitted() : renderForm()}
-      </section>
+      </>
    );
   }
 }

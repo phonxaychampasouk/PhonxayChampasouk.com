@@ -50,7 +50,7 @@ const Portal = ({screenWidth,imageData, cardIndex, onLeftClick, onRightClick}) =
   const [[page, direction], setPage] = useState([0, 0]);
   const [infoDisplay, setInfoDisplay] = useState('false');
   const [isOpen, toggleOpen] = useCycle(false, true);
-  const containerRef = useRef(null);
+  // const containerRef = useRef(null);
   // const { height } = useDimensions(containerRef);
 
   const paginate = (newDirection) => {

@@ -21,6 +21,7 @@
     "clsx": "^1.1.1",
     "devextreme": "20.1.6",
     "devextreme-react": "^20.1.6",
+    "emailjs-com": "^2.6.3",
     "express": "^4.17.1",
     "framer": "^1.2.6",
     "framer-motion": "^2.6.13",

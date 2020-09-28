@@ -1,7 +1,13 @@
 import dynamic from 'next/dynamic';
 import { Button, Icon, Image } from 'semantic-ui-react';
+import Contact from './Contact';
 import Projects from './featureComponents/Projects';
 import Resume from './Resume';
+
+const DynamicProjects = dynamic(
+  () => import('./featureComponents/Projects'),
+  { ssr: false },
+);
 
 function Feature() {
   return (
@@ -128,7 +134,8 @@ function Feature() {
             </div>
           </section>
           <Resume />
-          <Projects />
+          <DynamicProjects />
+          <Contact />
         </div>
       </header>
     </>
