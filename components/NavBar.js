@@ -16,10 +16,10 @@ export default function Navbars() {
       <div className={classes.container}>
         <div id="navbar" className={classes.navbar}>
           <Header
-            brand="Phonxay Champasouk"
             rightLinks={(
               <List className={classes.list}>
                 <ListItem className={classes.listItem}>
+                Phonxay Champasouk || Seattle WA || Explorer
                 </ListItem>
               </List>
             )}
