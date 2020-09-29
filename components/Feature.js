@@ -27,7 +27,7 @@ function Feature() {
                 Software Developer
                 {' '}
               </span>
-              based in Seattle, Washington .
+              based in Seattle, Washington.
               Let me help you build a beautiful
               and fast website that will keep your customers engaged.
             </h3>
@@ -121,7 +121,11 @@ function Feature() {
                       </div>
                     </div>
                     <div className="download-button">
-                      <Button animated  href="phonxay.pdf">
+                      <Button
+                        animated
+                        href="https://phonxaydocuments.blob.core.windows.net/phonxayblob/phonxay.pdf"
+                        target="_blank"
+                      >
                         <Button.Content visible>Resume</Button.Content>
                         <Button.Content hidden>
                           Download

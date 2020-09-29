@@ -138,6 +138,7 @@ class Projects extends Component {
   }
 
   onArrowClick(e, index) {
+    console.log(e.target)
     this.setState({
       displayProject: true,
       cardPage: index,
@@ -165,7 +166,7 @@ class Projects extends Component {
       <ProjectCard index={index} cardPage={cardPage} onArrowClick={this.onArrowClick} data={data} />,
     ));
     return (
-      <section className="projects-container">
+      <section id="projects-container">
         <div className="project-cards-container">
           <div className="card-container">
             <h1 style={{ fontSize: '3rem', marginBottom: '10px' }}>
