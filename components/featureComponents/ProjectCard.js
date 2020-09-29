@@ -14,8 +14,8 @@ import { scroller } from 'react-scroll';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    minWidth: '500px',
-    maxHeight: '700px',
+    minWidth: '300px',
+    maxHeight: '500px',
     margin: '25px',
   },
   media: {
@@ -33,23 +33,20 @@ const useStyles = makeStyles((theme) => ({
   expandOpen: {
     transform: 'rotate(360deg)',
   },
-  avatar: {
-    backgroundColor: red[500],
-  },
   title: {
-    fontSize: '3rem',
+    fontSize: '2rem',
     paddingTop: '10px',
-    marginBottom: '10px',
+    marginBottom: '5px',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
   },
   tech: {
-    width: '50px',
+    width: '45px',
   },
   techBox: {
-    height: '75px',
-    width: '75px',
+    height: '50px',
+    width: '50px',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
@@ -90,20 +87,12 @@ const ProjectCard = ({ data, index, onArrowClick }) => {
     setExpanded(!expanded);
   };
   return (
-    <Card className={classes.root} elevation="24">
+    <Card id={`project-id${index}`} className={classes.root} elevation="24">
       <h1 className={classes.title}>
         {data.title}
         <h2 className={classes.endType}>
           {data.end} Application
         </h2>
-        <CardContent>
-        <Typography variant="body1" color="textSecondary" component="h1" style={{height: '128px', display: 'flex', alignItems: 'center', paddingLeft: '100px', paddingRight: '100px', marginBottom: '10px',}}>
-          {data.description}
-        </Typography>
-      </CardContent>
-        <div className={classes.media}>
-          {tech}
-        </div>
         <ul style={{height: '50px'}}>
         {techName !== '' ?
         <img src={data.techStack[techName].src} style={{width: '30px', marginRight: '30px'}} alt="Check out the Tech!" /> :
@@ -111,6 +100,9 @@ const ProjectCard = ({ data, index, onArrowClick }) => {
 }
           {techName}
         </ul>
+        <div className={classes.media}>
+          {tech}
+        </div>
       </h1>
       <CardActions disableSpacing>
         <IconButton

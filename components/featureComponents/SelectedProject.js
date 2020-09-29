@@ -20,6 +20,12 @@ const SelectedProject = ({
       onLeftClick={onLeftClick}
       onRightClick={onRightClick}
     />
+    <p style={{
+      fontSize: '1rem', maxWidth: '500px', display: 'flex', justifyContent: 'center',
+    }}
+    >
+      {data[cardPage].description}
+    </p>
     <Button
       variant="contained"
       color="primary"

@@ -13,12 +13,9 @@ export default function Navbars() {
   const classes = useStyles();
 
   const scrollTo = (e) => {
-    e.preventDefault();
-    console.log('e.target:', e.curretTarget);
     const element = document.getElementById(e.currentTarget.value);
-    console.log('element:', element);
     element.scrollIntoView();
- 
+    e.preventDefault();
   };
 
   return (

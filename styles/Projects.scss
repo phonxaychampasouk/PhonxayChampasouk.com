@@ -65,8 +65,12 @@ margin: 15px 0;
     height: 25px;
 }
 
-.selected-project {
+#selected-project {
     height: 100%;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
 }
+
