@@ -1,6 +1,8 @@
 import GitHubIcon from '@material-ui/icons/GitHub';
-import Button from '@material-ui/core/Button';
+import GitHubButton from '@material-ui/core/Button';
+import { Button, Icon, Image } from 'semantic-ui-react';
 import Portal from '../Portal';
+
 // import ChatBotEditor from '../ChatBotEditor';
 
 const imageData = [
@@ -35,6 +37,26 @@ const SelectedProject = ({
         {' '}
         {data[cardPage].title}
       </h1>
+      {!data[cardPage].url
+        ? <> </> : (
+          <Button
+            animated="horizontal"
+            href={data[cardPage].url}
+            target="_blank"
+            color="github"
+          >
+            <Button.Content visible>
+              {' '}
+              <Icon name="phonxay-dot-com" />
+              {' '}
+              Click here to redirect to link!
+            </Button.Content>
+            <Button.Content hidden>
+              {' '}
+              {data[cardPage].url}
+            </Button.Content>
+          </Button>
+        )}
       {
         photoGallery || (
         <Portal
@@ -48,7 +70,7 @@ const SelectedProject = ({
       <p id="data-description">
         {data[cardPage].description}
       </p>
-      <Button
+      <GitHubButton
         variant="contained"
         color="primary"
         className="github-button"
@@ -57,7 +79,7 @@ const SelectedProject = ({
         target="_blank"
       >
         View Repo
-      </Button>
+      </GitHubButton>
     </div>
   );
 };

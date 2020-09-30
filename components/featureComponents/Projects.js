@@ -9,8 +9,7 @@ const projectsData = [
     title: 'Find and Dine',
     description: 'A full stack open-source web app featuring reviews, photo galleries, and menus. For this Project I was tasked to create the entire photo gallery from scratch! This project was a front end focused web application that I had deployed using Docker containers.',
     end: 'Full Stack',
-    src:
-     'https://github.com/find-and-dine/Find-and-Dine',
+    src: 'https://github.com/find-and-dine/Find-and-Dine',
     techStack:
     {
       Javacript: {
@@ -84,8 +83,7 @@ const projectsData = [
     title: 'Vapor Games',
     description: 'Overhauled back-end service of original code to increase through-put success rates by 300%. Gameplay finder has the ability to display reviews, gameplay image and developer information while filtering through 10 million entries.',
     end: 'Back-End',
-    src:
-     'https://github.com/nightmareteam/Gameplay-Finder',
+    src: 'https://github.com/find-and-dine/Find-and-Dine',
     techStack:
     {
       Javacript: {
@@ -115,7 +113,8 @@ const projectsData = [
     title: 'phonxay.com',
     description: 'A mobile web application I am building for myself. The primary focus for this website is to have the ability to display my portfolio. [Development]',
     end: 'Front-End',
-    src: '',
+    src: 'https://github.com/phonxaychampasouk/PhonxayChampasouk.com',
+    url: 'http://www.phonxay.com',
     techStack:
     {
       Javacript: {
