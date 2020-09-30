@@ -8,6 +8,7 @@ import PortalGallery from './valuesComponents/PortalGallery';
 
 
 import InfoCard from './valuesComponents/InfoCard';
+import imageInfo from './valuesComponents/imageInfo';
 
 
 
@@ -61,22 +62,26 @@ console.log(imageData)
                   imageData={imageData}
                   photoGallery
                 /> 
-                <div className="info-child" role="button" tabIndex={-1} onClick={() => openInfo()}>
-                 i
-               </div>
-               {
+
+                <div className="portal-navigation-container">
+                  <div style={{position: 'absolute', display: 'flex', marginBottom: '100px'}}>
+                {
                  infoDisplay ? 
-               <InfoCard page={page}/>
+               <InfoCard page={imageIndex} openInfo={openInfo}/>
                :
                <> </>
                 }
-                <div className="portal-navigation-container">
+                 </div>
+                <div className="info-child" role="button" tabIndex={-1} onClick={() => openInfo()}>
+                 i
+               </div>
                 <div className="prev" role="button" tabIndex={-1} onKeyDown={() => paginate(-1)} onClick={() => {paginate(-1);}}>
                  ‣
                </div>
                <div className="next" role="button" tabIndex={0} onKeyUp={() => paginate(1)} onClick={() => {paginate(1); }}>
                  ‣
                </div>
+
                </div>
                </>
         :

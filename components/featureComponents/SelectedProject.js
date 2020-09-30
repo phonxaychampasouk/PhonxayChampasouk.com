@@ -1,6 +1,6 @@
 import GitHubIcon from '@material-ui/icons/GitHub';
 import Button from '@material-ui/core/Button';
-import imageData from '../valuesComponents/imagedata';
+import imageData from '../valuesComponents/imageData';
 
 import Portal from '../Portal';
 

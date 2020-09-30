@@ -17,6 +17,9 @@ const useStyles = makeStyles((theme) => ({
     minWidth: '300px',
     maxHeight: '500px',
     margin: '25px',
+    backgroundColor: '#f7f7f7',
+    borderRadius: '30px',
+  
   },
   media: {
     display: 'flex',
@@ -87,7 +90,7 @@ const ProjectCard = ({ data, index, onArrowClick }) => {
     setExpanded(!expanded);
   };
   return (
-    <Card id={`project-id${index}`} className={classes.root} elevation="24">
+    <Card id={`project-id${index}`} className={classes.root} elevation="12">
       <h1 className={classes.title}>
         {data.title}
         <h2 className={classes.endType}>

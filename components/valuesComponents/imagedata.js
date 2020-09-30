@@ -10,7 +10,6 @@ const imageData = [
   'https://phonxaydocuments.blob.core.windows.net/phonxayblob/moosesmiles.JPG',
   'https://phonxaydocuments.blob.core.windows.net/phonxayblob/open.jpg',
   'https://phonxaydocuments.blob.core.windows.net/phonxayblob/stickme.jpg',
-  'https://phonxaydocuments.blob.core.windows.net/phonxayblob/tree.jpg',
   'https://phonxaydocuments.blob.core.windows.net/phonxayblob/wood.jpg',
   'https://phonxaydocuments.blob.core.windows.net/phonxayblob/yellow.jpg',
 ];
