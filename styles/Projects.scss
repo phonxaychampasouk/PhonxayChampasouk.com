@@ -22,18 +22,17 @@ cursor: pointer;
 
 }
 
-.project-card{
+#project-card{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    overflow: scroll ;
-    scrollbar-width: thin;
+    overflow: auto ;
     padding-bottom: 25px;
     background-color: #76c1d4;
     
 }
 
-.card-container {
+#card-container {
 display: flex;
 flex-direction: column;
 background-color: #76c1d4;
@@ -74,3 +73,21 @@ margin: 15px 0;
 
 }
 
+#shift-right,
+#shift-left {
+    position: absolute;
+    justify-self: center;
+    background: #f7f7f7;
+    border-radius: 30px;
+    width: 40px;
+    height: 40px;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+    z-index: 2;
+}

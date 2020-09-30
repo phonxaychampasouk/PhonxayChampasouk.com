@@ -146,10 +146,16 @@ class Projects extends Component {
     this.state = {
       displayProject: false,
       cardPage: 0,
+      scrollElement: [],
     };
     this.onArrowClick = this.onArrowClick.bind(this);
     this.onLeftClick = this.onLeftClick.bind(this);
     this.onRightClick = this.onRightClick.bind(this);
+    this.scrollOver = this.scrollOver.bind(this);
+  }
+
+  componentDidMount() {
+
   }
 
   onArrowClick(e, index) {
@@ -173,6 +179,13 @@ class Projects extends Component {
     });
   }
 
+  scrollOver(e) {
+    const element = document.getElementById('project-card');
+    e
+      ? element.scrollLeft += 100
+      : element.scrollLeft -= 100;
+  }
+
   render() {
     const { displayProject, cardPage } = this.state;
     const projectCard = [];
@@ -182,11 +195,11 @@ class Projects extends Component {
     return (
       <section id="projects-container">
         <div className="project-cards-container">
-          <div className="card-container">
+          <div id="card-container">
             <h1 style={{ fontSize: '3rem', marginBottom: '10px' }}>
               Projects
             </h1>
-            <div className="project-card">
+            <div id="project-card">
               {projectCard}
             </div>
           </div>
