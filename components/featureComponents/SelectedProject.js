@@ -1,7 +1,7 @@
 import GitHubIcon from '@material-ui/icons/GitHub';
 import Button from '@material-ui/core/Button';
-import ChatBot from '../ChatBot';
 import Portal from '../Portal';
+// import ChatBotEditor from '../ChatBotEditor';
 
 const imageData = [
   'https://phonxaydocuments.blob.core.windows.net/phonxayblob/tree.jpg',
@@ -22,15 +22,9 @@ const SelectedProject = ({
   data, cardPage, onLeftClick, onRightClick,
 }) => {
   let photoGallery = '';
-  let chatBot = '';
   if (data[cardPage].title === 'Photo Gallery') {
     photoGallery = (
       <Portal imageData={imageData} photoGallery />
-    );
-  }
-  if (data[cardPage].title === 'Microsoft Botframe Work') {
-    chatBot = (
-      <ChatBot />
     );
   }
 
@@ -42,7 +36,7 @@ const SelectedProject = ({
         {data[cardPage].title}
       </h1>
       {
-        photoGallery || chatBot || (
+        photoGallery || (
         <Portal
           imageData={data}
           cardPage={cardPage}

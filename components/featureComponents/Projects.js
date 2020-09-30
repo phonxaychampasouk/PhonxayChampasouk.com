@@ -60,9 +60,10 @@ const projectsData = [
   // },
   {
     title: 'Microsoft Webchat Editor',
-    description: 'The app provides a GUI to allow a user to customize the look and feel of a webchat instance, see the results of these customizations, and export the custom settings to their own web-chat instance. \n \n The basic framework and proof-of-concept was already been built out by a member of Microsofts web-chat team. \n \n Our group is working to add a more robust feature set to this app, as well as an improved design and user-experience. The most recent version (shown below) has an option to change every customization currently offered by the webchat API. Our designer is currently working on wireframes for the layout, as well as for each of the various selector types. (ie color, percentage, integer, css...) ',
+    description: 'The app provides a GUI to allow a user to customize the look and feel of a webchat instance, see the results of these customizations, and export the custom settings to their own web-chat instance. \n The basic framework and proof-of-concept was already been built out by a member of Microsofts web-chat team. \n \n Our group is working to add a more robust feature set to this app, as well as an improved design and user-experience. Our designer is currently working on wireframes for the layout, as well as for each of the various selector types. (ie color, percentage, integer, css...) ',
     end: 'Front-End',
     src: 'https://github.com/pavolum/WebChat-Editor',
+    url: 'http://webchateditor.azurewebsites.net',
     techStack:
     {
       TypeScript: {
@@ -78,7 +79,7 @@ const projectsData = [
         color: '#0089D6',
       },
     },
-    image: '',
+    image: 'https://media.giphy.com/media/ZVStSndgyOWpgtsIxf/giphy.gif',
   }, {
     title: 'Vapor Games',
     description: 'Overhauled back-end service of original code to increase through-put success rates by 300%. Gameplay finder has the ability to display reviews, gameplay image and developer information while filtering through 10 million entries.',

@@ -16,6 +16,7 @@ import '../styles/ScrollGallery.scss';
 import '../styles/InfoCard.scss';
 import '../styles/Projects.scss';
 import '../styles/Contact.scss';
+import '../styles/ChatBotEditor.scss';
 
 function MyApp({ Component, pageProps }) {
   return (

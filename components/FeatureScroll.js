@@ -8,7 +8,7 @@ import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 import Zoom from '@material-ui/core/Zoom';
 import Feature from './Feature';
 
-import ChatBot from './ChatBot';
+// import ChatBot from './ChatBot';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -53,7 +53,6 @@ function ScrollTop(props) {
           <Fab color="secondary" size="large" aria-label="scroll back to top">
             <KeyboardArrowUpIcon />
           </Fab>
-          <ChatBot handleClick={handleClick} mooseBotDisplay={mooseBotDisplay} />
         </div>
       </Zoom>
     </>
@@ -66,9 +65,7 @@ export default function FeatureScroll() {
       <CssBaseline />
       <Toolbar id="back-to-top-anchor" />
       <Feature />
-      <ScrollTop>
-        <ChatBot />
-      </ScrollTop>
+      <ScrollTop />
     </>
 
   );
