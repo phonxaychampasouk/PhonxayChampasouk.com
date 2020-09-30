@@ -1,4 +1,4 @@
-import KEYS from '../keys';
+// import KEYS from '../keys';
 
 const ChatBot = () => (
   <header id="bot-content">
