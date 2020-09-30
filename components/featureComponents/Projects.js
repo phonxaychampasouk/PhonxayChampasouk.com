@@ -160,14 +160,12 @@ class Projects extends Component {
   }
 
   onArrowClick(e, index) {
-    console.log(e.target);
     this.setState({
       displayProject: true,
       cardPage: index,
     });
     e.target.scrollIntoView();
   }
-  // TODO: Create function that that paginates slider with gallery arrow
 
   onLeftClick(index) {
     this.setState({
@@ -180,9 +178,6 @@ class Projects extends Component {
       cardPage: index,
     });
   }
-
-
-
 
   render() {
     const { displayProject, cardPage } = this.state;
