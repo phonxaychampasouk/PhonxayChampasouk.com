@@ -25,7 +25,6 @@ description: '',
 src: ''
 },
 ];
-//TODO: make function that displays project data
 const InfoCard = ({ screenWidth, page }) => {
   const constraintsRef = useRef(null);
 const rightLimit = screenWidth < 767 ? 0 : 100; 
@@ -49,8 +48,8 @@ Check out my progress!          </ul>
   return (
     <div className="info-card-container">
       <motion.div className="drag-area" ref={constraintsRef} />
-      <motion.div drag dragConstraints={{ left:-170, right:`${rightLimit}`, top:-350, bottom:0}}>
-      <Paper elevation={3} style={{ minWidth: `${projectCardMinWidth}`, position: 'relative', textAlign: 'left'}}>
+      <motion.div drag dragConstraints={{ left:-170, right: 100, top:-350, bottom:0}}>
+      <Paper elevation={3} style={{ position: 'relative', textAlign: 'left'}}>
      <div className="image-card">{projectCard[page]}</div>
      <div>test</div>
       </Paper>

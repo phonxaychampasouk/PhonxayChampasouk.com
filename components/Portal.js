@@ -9,22 +9,7 @@ import PortalGallery from './valuesComponents/PortalGallery';
 
 import InfoCard from './valuesComponents/InfoCard';
 
-// const imageData = [
-//   '/tree.jpg',
-//   '/bug.JPG',
-//   '/flow.jpg',
-//   '/flower.JPG',
-//   '/gardenofgods.JPG',
-//   '/lake.JPG',
-//   '/yellow.jpg',
-//   '/flow.jpg',
-//   '/moosesmiles.JPG',
-//   '/open.jpg',
-//   '/stickme.jpg',
-//   '/tree.jpg',
-//   '/wood.jpg',
-//   '/yellow.jpg',
-// ];
+
 
 const sidebar = {
   open: (height = 200) => ({
@@ -46,27 +31,56 @@ const sidebar = {
   }
 };
 
-const Portal = ({screenWidth,imageData, cardIndex, onLeftClick, onRightClick}) => {
+const Portal = ({screenWidth,imageData, cardIndex, onLeftClick, onRightClick, photoGallery}) => {
   const [[page, direction], setPage] = useState([0, 0]);
   const [infoDisplay, setInfoDisplay] = useState('false');
   const [isOpen, toggleOpen] = useCycle(false, true);
   // const containerRef = useRef(null);
   // const { height } = useDimensions(containerRef);
-
+console.log(imageData)
   const paginate = (newDirection) => {
     setPage([page + newDirection, newDirection]);
   };
-  console.log('imageData[cardIndex]:', imageData[cardIndex])
   const imageIndex = wrap(0, imageData.length, page);
 
   const openInfo = () => {
     setInfoDisplay(!infoDisplay);
   };
-  console.log('page:', imageIndex)
+  console.log('page:', imageData)
 
   return (
-
       <section className="portal-outer-container">
+        {photoGallery ? 
+                  <>
+                  <PortalGallery
+                  className="portal-grid-display"
+                  paginate={paginate}
+                  imageIndex={imageIndex}
+                  direction={direction}
+                  page={page}
+                  imageData={imageData}
+                  photoGallery
+                /> 
+                <div className="info-child" role="button" tabIndex={-1} onClick={() => openInfo()}>
+                 i
+               </div>
+               {
+                 infoDisplay ? 
+               <InfoCard page={page}/>
+               :
+               <> </>
+                }
+                <div className="portal-navigation-container">
+                <div className="prev" role="button" tabIndex={-1} onKeyDown={() => paginate(-1)} onClick={() => {paginate(-1);}}>
+                 ‣
+               </div>
+               <div className="next" role="button" tabIndex={0} onKeyUp={() => paginate(1)} onClick={() => {paginate(1); }}>
+                 ‣
+               </div>
+               </div>
+               </>
+        :
+          <>
           <PortalGallery
             className="portal-grid-display"
             paginate={paginate}
@@ -77,25 +91,19 @@ const Portal = ({screenWidth,imageData, cardIndex, onLeftClick, onRightClick}) =
             onLeftClick={onLeftClick}
             onRightClick={onRightClick}
           />
-          
-        
-        <div className="portal-navigation-container">
-         
+          <div className="portal-navigation-container">
              <div className="prev" role="button" tabIndex={-1} onKeyDown={() => paginate(-1)} onClick={() => {paginate(-1); onLeftClick(imageIndex)}}>
             ‣
           </div>
           <div className="next" role="button" tabIndex={0} onKeyUp={() => paginate(1)} onClick={() => {paginate(1); onRightClick(imageIndex)}}>
             ‣
           </div>
-         
-        </div>         
-            
-        
-
-      
-      </section>
-  );
-};
+          </div>
+</>
+}
+</section>
+)
+}
 
 export default Portal;
 

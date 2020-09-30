@@ -46,7 +46,7 @@ function Feature() {
                     {' '}
                     Hi! My name is Phonxay! I like to tell people that Phonxay is pronounced like Banzai, but with a "P". Greetings,
                     I am so happy that you have viewed my site. You can be here for many reasons, such as for photography,
-                    web development, or a social media connection. Any ways, I hope you enjoy the functionalities of my web application. It is still in Development.
+                    web development, or a social media connection. Anyways, I hope you enjoy the functionalities of my web application. It is still in Development.
                     I will continue to deploy my application as I complete features.
                   </p>
                   <div className="row">

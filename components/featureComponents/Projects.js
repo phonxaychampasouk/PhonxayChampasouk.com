@@ -4,13 +4,6 @@ import SelectedProject from './SelectedProject';
 import ProjectCard from './ProjectCard';
 // import { useDimensions } from "./valuesComponents/useDimensions";
 
-/*
-![Searching](https://media.giphy.com/media/jPM6MCEVEDPwT5KVYr/giphy.gif)
-![Searching](https://media.giphy.com/media/TiD5KnzynJFiqAj9EZ/giphy.gif)
-![Screencast](https://i.imgur.com/Qp9I81j.gif)
-
-*/
-
 const projectsData = [
   {
     title: 'Find and Dine',
@@ -101,34 +94,6 @@ const projectsData = [
     images: ['https://media.giphy.com/media/jPM6MCEVEDPwT5KVYr/giphy.gif'],
       additionalImages: [],
   }, {
-    title: 'phonxay.com',
-    description: 'A mobile web application I am building for myself. The primary focus for this website is to have the ability to display my portfolio. [Development]',
-    end: 'Front-End',
-    src: '',
-    techStack:
-    {
-      Javacript: {
-        src: 'https://simpleicons.org/icons/javascript.svg',
-        color: '#F7DF1E',
-      },
-      React: {
-        src: 'https://simpleicons.org/icons/react.svg',
-        color: '#61DAFB',
-      },
-      Azure: {
-        src: 'https://simpleicons.org/icons/microsoftazure.svg',
-        color: '#0089D6',
-      },
-      Docker: {
-        src: 'https://simpleicons.org/icons/docker.svg',
-        color: '#2496ED',
-      },
-    },
-    images: ['https://media.giphy.com/media/jPM6MCEVEDPwT5KVYr/giphy.gif'],
-    additionalImages: [],
-
-  },
-  {
     title: 'phonxay.com',
     description: 'A mobile web application I am building for myself. The primary focus for this website is to have the ability to display my portfolio. [Development]',
     end: 'Front-End',

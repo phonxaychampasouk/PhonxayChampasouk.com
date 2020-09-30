@@ -1,0 +1,16 @@
+const imageData = [
+  '/tree.jpg',
+  '/bug.JPG',
+  '/flow.jpg',
+  '/flower.JPG',
+  '/gardenofgods.JPG',
+  '/lake.JPG',
+  '/yellow.jpg',
+  '/flow.jpg',
+  '/moosesmiles.JPG',
+  '/open.jpg',
+  '/stickme.jpg',
+  '/tree.jpg',
+  '/wood.jpg',
+  '/yellow.jpg',
+];
