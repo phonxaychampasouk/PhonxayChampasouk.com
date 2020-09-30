@@ -1,7 +1,6 @@
 import GitHubIcon from '@material-ui/icons/GitHub';
 import Button from '@material-ui/core/Button';
-// import imageData from '../valuesComponents/imageData';
-
+import ChatBot from '../ChatBot';
 import Portal from '../Portal';
 
 const imageData = [
@@ -23,20 +22,27 @@ const SelectedProject = ({
   data, cardPage, onLeftClick, onRightClick,
 }) => {
   let photoGallery = '';
+  let chatBot = '';
   if (data[cardPage].title === 'Photo Gallery') {
     photoGallery = (
       <Portal imageData={imageData} photoGallery />
     );
   }
+  if (data[cardPage].title === 'Microsoft Botframe Work') {
+    chatBot = (
+      <ChatBot />
+    );
+  }
+
   return (
 
-    <div style={{paddingBottom: '20px'}}>
+    <div style={{ paddingBottom: '20px' }}>
       <h1 style={{ fontSize: '2rem' }}>
         {' '}
         {data[cardPage].title}
       </h1>
       {
-        photoGallery || (
+        photoGallery || chatBot || (
         <Portal
           imageData={data}
           cardPage={cardPage}
@@ -45,10 +51,7 @@ const SelectedProject = ({
         />
         )
       }
-      <p style={{
-        fontSize: '1rem', maxWidth: '500px', display: 'flex', justifyContent: 'center',
-      }}
-      >
+      <p id="data-description">
         {data[cardPage].description}
       </p>
       <Button
