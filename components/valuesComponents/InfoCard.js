@@ -16,7 +16,8 @@ const InfoCard = ({ screenWidth, page, openInfo }) => {
   const photoCard = [];
   imageInfo.forEach((data) => photoCard.push(
     <>
-      <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+        <span>[Drag me around!]</span>
         <HighlightOffIcon onClick={openInfo} />
       </div>
       <h1 style={{ textAlign: 'center', fontSize: '2rem' }}>
@@ -34,7 +35,6 @@ const InfoCard = ({ screenWidth, page, openInfo }) => {
       </div>
     </>,
   ));
-  console.log(page);
   return (
     <div className="info-card-container">
       <motion.div className="drag-area" ref={constraintsRef} />

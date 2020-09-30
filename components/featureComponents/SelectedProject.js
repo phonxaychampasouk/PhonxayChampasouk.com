@@ -30,9 +30,8 @@ const SelectedProject = ({
   }
   return (
 
-    <>
+    <div style={{paddingBottom: '20px'}}>
       <h1 style={{ fontSize: '2rem' }}>
-        Title:
         {' '}
         {data[cardPage].title}
       </h1>
@@ -62,12 +61,7 @@ const SelectedProject = ({
       >
         View Repo
       </Button>
-      <ul>
-        src:
-        {' '}
-        {data[cardPage].src}
-      </ul>
-    </>
+    </div>
   );
 };
 export default SelectedProject;

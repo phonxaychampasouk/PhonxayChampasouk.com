@@ -32,7 +32,7 @@ const sidebar = {
   }
 };
 
-const Portal = ({screenWidth,imageData, cardIndex, onLeftClick, onRightClick, photoGallery}) => {
+const Portal = ({screenWidth,imageData, cardPage, onLeftClick, onRightClick, photoGallery}) => {
   const [[page, direction], setPage] = useState([0, 0]);
   const [infoDisplay, setInfoDisplay] = useState('false');
   const [isOpen, toggleOpen] = useCycle(false, true);
@@ -47,7 +47,6 @@ console.log(imageData)
   const openInfo = () => {
     setInfoDisplay(!infoDisplay);
   };
-  console.log('page:', imageData)
 
   return (
       <section className="portal-outer-container">
@@ -89,7 +88,7 @@ console.log(imageData)
           <PortalGallery
             className="portal-grid-display"
             paginate={paginate}
-            imageIndex={imageIndex}
+            imageIndex={cardPage}
             direction={direction}
             page={page}
             imageData={imageData}

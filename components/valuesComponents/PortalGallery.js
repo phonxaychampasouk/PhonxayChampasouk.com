@@ -22,22 +22,18 @@ const swipePower = (offset, velocity) => Math.abs(offset) * velocity;
 
 const PortalGallery = ({
   paginate, imageIndex, direction, page, imageData, onLeftClick, onRightClick, photoGallery,
-}) => {
-  console.log('imageIndex', imageIndex);
-
-  console.log('imageData[imageIndex].images', imageData[imageIndex].images);
-  return (
-    <>
-      <div className="portal-inner-container">
-        <AnimatePresence initial={false} custom={direction}>
-          {
+}) => (
+  <>
+    <div className="portal-inner-container">
+      <AnimatePresence initial={false} custom={direction}>
+        {
             !photoGallery
               ? (
                 <motion.img
                   className="portal-imgs"
                   zIndex={0}
                   key={page}
-                  src={imageData[imageIndex].images[0]}
+                  src={imageData[imageIndex].image}
                   custom={direction}
                   variants={variants}
                   initial="enter"
@@ -92,10 +88,8 @@ const PortalGallery = ({
               )
 
 }
-        </AnimatePresence>
-      </div>
-    </>
-
-  );
-};
+      </AnimatePresence>
+    </div>
+  </>
+);
 export default PortalGallery;
