@@ -1,18 +1,10 @@
 {
   "../components/ScrollGallery": [
     {
-      "id": "./components/ScrollGallery.js",
+      "id": "migV",
       "name": "./components/ScrollGallery.js",
-      "file": "static/chunks/1.js",
-      "publicPath": "static/chunks/1.js"
-    }
-  ],
-  "./dev/noop": [
-    {
-      "id": "./node_modules/next/dist/client/dev/noop.js",
-      "name": "./node_modules/next/dist/client/dev/noop.js",
-      "file": "static/chunks/0.js",
-      "publicPath": "static/chunks/0.js"
+      "file": "static/chunks/10.a6c6aaa761e41513aad9.js",
+      "publicPath": "static/chunks/10.a6c6aaa761e41513aad9.js"
     }
   ]
 }
