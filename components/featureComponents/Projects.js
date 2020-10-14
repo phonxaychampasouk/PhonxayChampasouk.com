@@ -179,7 +179,6 @@ class Projects extends Component {
   }
 
   onArrowClick(e, index) {
-    console.log('cardPage', this.state.cardPage);
     this.setState({
       displayProject: true,
       cardPage: index,
@@ -216,9 +215,17 @@ class Projects extends Component {
       <section id="projects-container">
         <div className="project-cards-container">
           <div id="card-container">
-            <h1 style={{ fontSize: '3rem', marginBottom: '10px' }}>
-              Projects
-            </h1>
+            <div className="buttons-container">
+              <div className="prev" style={{ alignSelf: 'center' }} role="button" tabIndex={-1} onKeyDown={() => window.scrollBy(-30)} onClick={() => this.scrollOver(false)}>
+                ‣
+              </div>
+              <h1 style={{ fontSize: '3rem', marginBottom: '20px' }}>
+                Projects
+              </h1>
+              <div className="next" style={{ alignSelf: 'center' }} role="button" tabIndex={0} onKeyUp={() => window.scrollBy(30)} onClick={() => this.scrollOver(true)}>
+                ‣
+              </div>
+            </div>
             <div id="project-card">
               {projectCard}
             </div>
